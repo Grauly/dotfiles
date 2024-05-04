@@ -3,6 +3,7 @@
     ../packages/grauly_home_packages.nix
     ./git.nix
     ./default_programs.nix
+    ./sway.nix
   ];
   home.stateVersion = "23.11";
   home.username = "grauly";
