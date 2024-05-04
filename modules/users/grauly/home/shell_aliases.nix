@@ -1,5 +1,5 @@
 {
   home.shellAliases = [
-    ll='ls -lah'
+    ll='ls -lah';
   ];
 }
