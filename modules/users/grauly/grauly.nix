@@ -1,4 +1,4 @@
-{ home-manager, pkgs, ... }:
+{ home-manager, pkgs, pkgs-unstable, ... }:
 
 {
   imports = [
@@ -11,6 +11,5 @@
     shell = pkgs.zsh;
   };
   #do it here, so it actually gets recognized
-  programs.zsh.enable = true;
   home-manager.users.grauly = import ./home/home.nix;
 }

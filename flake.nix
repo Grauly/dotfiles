@@ -5,18 +5,28 @@
     nixpkgs = {
       url = "nixpkgs/nixos-23.11";
     };
+    nixpkgs-unstable =
+      {
+        url = "nixpkgs/nixos-unstable";
+      };
     home-manager = {
       url = "github:nix-community/home-manager/release-23.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, ... }@inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
       #setup packages to only use my system, and configure them to use unfree
       pkgs = import nixpkgs {
+        inherit system;
+        config = {
+          allowUnfree = true;
+        };
+      };
+      pkgs-unstable = import nixpkgs-unstable {
         inherit system;
         config = {
           allowUnfree = true;
@@ -34,6 +44,9 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
+              home-manager.extraSpecialArgs = {
+                inherit pkgs-unstable;
+              };
             }
           ];
         };

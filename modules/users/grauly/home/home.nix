@@ -6,6 +6,7 @@
     ./sway.nix
     ./shell_aliases.nix
     ./zsh.nix
+    ./kde_connect.nix
   ];
   home.stateVersion = "23.11";
   home.username = "grauly";
