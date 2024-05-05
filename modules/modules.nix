@@ -8,5 +8,6 @@
 		./printing.nix
 		./users.nix
 		./packages/system_packages.nix
+    ./disks.nix
   ];
 }
