@@ -13,6 +13,5 @@
     xfce.thunar
     jetbrains.idea-community
     mangohud
-    swayrbar
   ];
 }

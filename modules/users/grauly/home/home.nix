@@ -4,6 +4,7 @@
     ./git.nix
     ./default_programs.nix
     ./sway.nix
+    ./swaybar.nix
     ./shell_aliases.nix
     ./zsh.nix
     ./kde_connect.nix
