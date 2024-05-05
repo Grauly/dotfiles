@@ -11,5 +11,7 @@
     vscode
     nixpkgs-fmt
     xfce.thunar
+    jetbrains.idea-community
+    mangohud
   ];
 }
