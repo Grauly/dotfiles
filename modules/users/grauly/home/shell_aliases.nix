@@ -1,6 +1,6 @@
 {
   home.shellAliases = {
-    ll = "ls - lah";
+    ll = "ls -lah";
     lsstick = "lsblk | grep -v  \"nvme\"";
     mntstick = "() {udisksctl mount -b \"/dev/\$1\"}";
     umntstick = "() {udisksctl unmount -b \"/dev/\$1\"}";
