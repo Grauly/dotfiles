@@ -6,5 +6,6 @@
     git
     btop
     zsh
+    unzip
   ];
 }
