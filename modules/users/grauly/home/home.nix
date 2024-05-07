@@ -1,12 +1,10 @@
 {
   imports = [
     ../packages/grauly_home_packages.nix
-    ./git.nix
     ./default_programs.nix
     ./sway/sway.nix
     ./shell_aliases.nix
-    ./zsh.nix
-    ./kde_connect.nix
+    ./programs/programs.nix
   ];
   home.stateVersion = "23.11";
   home.username = "grauly";

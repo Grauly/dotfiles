@@ -15,5 +15,6 @@
     mangohud
     pavucontrol
     kitty
+    xorg.xev
   ];
 }
