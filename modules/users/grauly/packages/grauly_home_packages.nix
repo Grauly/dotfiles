@@ -15,5 +15,6 @@
     mangohud
     pavucontrol
     xorg.xev
+    wl-clipboard
   ];
 }
