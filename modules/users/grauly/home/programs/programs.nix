@@ -5,5 +5,6 @@
     ./neovim.nix
     ./zsh.nix
     ./kitty.nix
+    ./wofi.nix
   ];
 }
