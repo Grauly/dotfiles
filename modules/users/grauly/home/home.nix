@@ -1,7 +1,6 @@
 {
   imports = [
     ../packages/grauly_home_packages.nix
-    ./default_programs.nix
     ./sway/sway.nix
     ./shell_aliases.nix
     ./programs/programs.nix
