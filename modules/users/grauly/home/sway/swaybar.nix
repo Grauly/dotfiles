@@ -46,7 +46,9 @@
           tooltip-format-ethernet = "@ {bandwidthUpBytes} up,{bandwidthDownBytes} down";
           format-wifi = "WIFI: {essid} @ {signalStrength}/{ipaddr}";
           tooltip-format-wifi = "@ {bandwidthUpBytes} up,{bandwidthDownBytes} down";
+          format-linked = "LINK LOST";
           format-disconnect = "SIGNAL LOST";
+          on-click = "zsh -c 'nmtui'";
         };
 
         cpu = {

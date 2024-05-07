@@ -10,9 +10,10 @@
     prismlauncher
     vscode
     nixpkgs-fmt
-    xfce.thunar
+    libsForQt5.dolphin
     jetbrains.idea-community
     mangohud
     pavucontrol
+    kitty
   ];
 }
