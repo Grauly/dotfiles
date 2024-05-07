@@ -41,14 +41,15 @@
         };
 
         network = {
-          format = "";
+          interval = 10;
+          format = "SIGNAL LOST";
           format-ethernet = "ETH: {ipaddr}";
           tooltip-format-ethernet = "@ {bandwidthUpBytes} up,{bandwidthDownBytes} down";
           format-wifi = "WIFI: {essid} @ {signalStrength}/{ipaddr}";
           tooltip-format-wifi = "@ {bandwidthUpBytes} up,{bandwidthDownBytes} down";
           format-linked = "LINK LOST";
-          format-disconnect = "SIGNAL LOST";
-          on-click = "zsh -c 'nmtui'";
+          format-disconnect = "NETWORK DISCONNECTED";
+          on-click = "kitty";
         };
 
         cpu = {
