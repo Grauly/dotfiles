@@ -1,4 +1,4 @@
-{pkgs, config, ... }:
+{ pkgs, config, lib, ... }:
 
 {
   imports = [
@@ -12,6 +12,7 @@
     {
       enable = true;
       config = {
+        #todo: assign left and right, throws "already defined"
         bars = [ ];
         terminal = "kitty";
         input = {
@@ -19,7 +20,7 @@
             xkb_layout = "de";
           };
         };
-        keybindings = (import ./keybindings.nix {inherit pkgs swaycfg;});
+        keybindings = (import ./keybindings.nix { inherit pkgs swaycfg; });
       };
     };
 }
