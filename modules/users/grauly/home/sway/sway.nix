@@ -13,6 +13,7 @@
       enable = true;
       config = {
         #todo: assign left and right, throws "already defined"
+        menu = "${pkgs.wofi}/bin/wofi --show=drun";
         bars = [ ];
         terminal = "kitty";
         input = {

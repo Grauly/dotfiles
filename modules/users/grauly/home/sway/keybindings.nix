@@ -38,6 +38,7 @@
   "${swaycfg.modifier}+Shift+0" = "move container to workspace number 10";
   "${swaycfg.modifier}+tab" = "workspace back_and_forth";
 
+  # Define own hotkeys
   # Define FN key behavior
   "XF86AudioMute" = "exec ${pkgs.pulseaudio}/bin/pactl set-sink-mute @DEFAULT_SINK@ toggle";
   "--locked XF86MonBrightnessDown" = "exec ${pkgs.brightnessctl}/bin/brightnessctl set 5%-";
@@ -45,5 +46,6 @@
   "XF86AudioRaiseVolume" = "exec ${pkgs.pulseaudio}/bin/pactl set-sink-volume @DEFAULT_SINK@ +5%";
   "XF86AudioLowerVolume" = "exec ${pkgs.pulseaudio}/bin/pactl set-sink-volume @DEFAULT_SINK@ -5%";
 
-  # Define own hotkeys
+  # Define wofi launcher
+  "Super_L" = "exec ${swaycfg.menu}";
 }
