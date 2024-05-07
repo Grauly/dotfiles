@@ -3,8 +3,7 @@
     ../packages/grauly_home_packages.nix
     ./git.nix
     ./default_programs.nix
-    ./sway.nix
-    ./swaybar.nix
+    ./sway/sway.nix
     ./shell_aliases.nix
     ./zsh.nix
     ./kde_connect.nix
