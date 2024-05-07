@@ -14,7 +14,6 @@
     jetbrains.idea-community
     mangohud
     pavucontrol
-    kitty
     xorg.xev
   ];
 }
