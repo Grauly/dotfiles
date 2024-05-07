@@ -10,5 +10,6 @@
     rsrc = "source ~/.zshrc";
     rebar = "systemctl --user restart waybar";
     reswitch-bar = "reswitch; rebar";
+    ssh-ag = "eval \"$(ssh-agent -s)\"; ssh-add ~/.ssh/githubkey; ssh-add ~/.ssh/gitlabkey";
   };
 }
