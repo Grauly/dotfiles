@@ -48,4 +48,8 @@
 
   # Define wofi launcher
   "Super_L" = "exec ${swaycfg.menu}";
+  "${swaycfg.modifier}+d" = "exec ${swaycfg.menu}";
+
+  # Define extra kill command
+  "Control+d" = "kill";
 }
