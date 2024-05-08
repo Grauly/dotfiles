@@ -16,5 +16,6 @@
     pavucontrol
     xorg.xev
     wl-clipboard
+    evince
   ];
 }
