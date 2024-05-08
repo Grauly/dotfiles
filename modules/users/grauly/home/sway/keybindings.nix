@@ -5,7 +5,6 @@
   # Basics
   "${swaycfg.modifier}+Return" = "exec ${swaycfg.terminal}";
   "${swaycfg.modifier}+q" = "kill";
-  "${swaycfg.modifier}+space" = "exec ${swaycfg.menu}";
   "${swaycfg.modifier}+Control+r" = "reload";
 
   # Moving
@@ -46,9 +45,13 @@
   "XF86AudioRaiseVolume" = "exec ${pkgs.pulseaudio}/bin/pactl set-sink-volume @DEFAULT_SINK@ +5%";
   "XF86AudioLowerVolume" = "exec ${pkgs.pulseaudio}/bin/pactl set-sink-volume @DEFAULT_SINK@ -5%";
 
+  # Define logout command
+  "Super_L+l" = "exec swaylock";
+
   # Define wofi launcher
   "Super_L" = "exec ${swaycfg.menu}";
   "${swaycfg.modifier}+d" = "exec ${swaycfg.menu}";
+  "${swaycfg.modifier}+space" = "exec ${swaycfg.menu}";
 
   # Define extra kill command
   "Control+d" = "kill";
