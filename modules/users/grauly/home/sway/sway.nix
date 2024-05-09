@@ -3,11 +3,11 @@
 {
   imports = [
     ./swaybar.nix
+    ./mako.nix
   ];
 
   home.packages = with pkgs; [
     wl-clipboard
-    mako
   ];
 
   wayland.windowManager.sway =
