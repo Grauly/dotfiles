@@ -5,6 +5,11 @@
     ./swaybar.nix
   ];
 
+  home.packages = with pkgs; [
+    wl-clipboard
+    mako
+  ];
+
   wayland.windowManager.sway =
     let
       swaycfg = config.wayland.windowManager.sway.config;
