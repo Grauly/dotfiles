@@ -18,7 +18,7 @@
       enable = true;
       config = {
         #todo: assign left and right, throws "already defined"
-        menu = "${pkgs.wofi}/bin/wofi --show=drun";
+        menu = "${pkgs.rofi}/bin/rofi -show drun";
         bars = [ ];
         terminal = "kitty";
         input = {
