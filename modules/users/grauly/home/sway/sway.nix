@@ -1,4 +1,4 @@
-{ pkgs, config, lib, ... }:
+{ pkgs, pkgs-unstable, config, lib, ... }:
 
 {
   imports = [
@@ -18,7 +18,7 @@
       enable = true;
       config = {
         #todo: assign left and right, throws "already defined"
-        menu = "${pkgs.rofi}/bin/rofi -show drun";
+        menu = "${pkgs.rofi}/bin/rofi -show combi -modes combi -combi-modes \"drun,run,calc\"";
         bars = [ ];
         terminal = "kitty";
         input = {
