@@ -6,7 +6,6 @@
     bitwarden
     element-desktop
     blender
-    inkscape
     prismlauncher
     vscode
     nixpkgs-fmt

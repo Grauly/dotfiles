@@ -6,5 +6,6 @@
     ./zsh.nix
     ./kitty.nix
     ./rofi.nix
+    ./inkscape.nix
   ];
 }
