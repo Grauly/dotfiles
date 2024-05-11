@@ -26,6 +26,10 @@
             xkb_layout = "de";
           };
         };
+        fonts.names = [
+          "JetBrainsMono Nerd Font"
+          "Sans Serif"
+        ];
         keybindings = (import ./keybindings.nix { inherit pkgs swaycfg; });
       };
       extraConfig = ''
