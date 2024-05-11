@@ -28,5 +28,8 @@
         };
         keybindings = (import ./keybindings.nix { inherit pkgs swaycfg; });
       };
+      extraConfig = ''
+        for_window [title="floating_shell"] floating enable, border pixel 1, sticky enable
+      '';
     };
 }

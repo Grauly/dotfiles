@@ -1,3 +1,12 @@
+{ pkgs, ... }:
+
+let
+  terminal = "${pkgs.kitty}/bin/kitty";
+  shell = "${pkgs.zsh}/bin/zsh";
+  nmtui = "${pkgs.networkmanager}/bin/nmtui";
+  pulsemixer = "${pkgs.pulsemixer}/bin/pulsemixer";
+  floating_shell = "exec ${terminal} --detach -T floating_shell ${shell} -c";
+in
 {
   programs.waybar = {
     enable = true;
@@ -6,9 +15,9 @@
       grauly = {
         layer = "top";
         position = "top";
-        modules-left = ["sway/workspaces"];
-        modules-center = ["clock#minimal" "sway/window"];
-        modules-right = ["cpu" "memory" "network" "pulseaudio" "backlight" "battery" "clock"];
+        modules-left = [ "sway/workspaces" ];
+        modules-center = [ "clock#minimal" "sway/window" ];
+        modules-right = [ "cpu" "memory" "network" "pulseaudio" "backlight" "battery" "clock" ];
 
         battery = {
           states = {
@@ -49,7 +58,7 @@
           tooltip-format-wifi = "@ {bandwidthUpBytes} up,{bandwidthDownBytes} down";
           format-linked = "LINK LOST";
           format-disconnect = "NETWORK DISCONNECTED";
-          on-click = "kitty";
+          on-click = "${floating_shell} ${nmtui}";
         };
 
         cpu = {
@@ -76,7 +85,7 @@
         pulseaudio = {
           format = "Volume:\n{volume}%";
           format-muted = "MUTED";
-          on-click = "pavucontrol";
+          on-click = "${floating_shell} ${pulsemixer}";
         };
 
         backlight = {
