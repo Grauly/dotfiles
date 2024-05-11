@@ -1,6 +1,7 @@
 {
   home.shellAliases = {
     ll = "ls -lah";
+    cd = "() {cd $1; ll}";
     lsstick = "lsblk | grep -v  \"nvme\"";
     mntstick = "() {udisksctl mount -b \"/dev/\$1\"}";
     umntstick = "() {udisksctl unmount -b \"/dev/\$1\"}";
@@ -11,5 +12,6 @@
     rebar = "systemctl --user restart waybar";
     reswitch-bar = "reswitch; rebar";
     ssh-ag = "eval \"$(ssh-agent -s)\"; ssh-add ~/.ssh/githubkey; ssh-add ~/.ssh/gitlabkey";
+    open = "xdg-open";
   };
 }
