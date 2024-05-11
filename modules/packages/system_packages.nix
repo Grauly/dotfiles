@@ -7,5 +7,6 @@
     btop
     zsh
     unzip
+    ubsutils
   ];
 }
