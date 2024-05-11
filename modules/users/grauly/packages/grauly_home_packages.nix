@@ -9,12 +9,14 @@
     prismlauncher
     vscode
     nixpkgs-fmt
-    libsForQt5.dolphin
     jetbrains.idea-community
     mangohud
     pavucontrol
     xorg.xev
     evince
     gnome.eog
+    xfce.thunar
+    gvfs
+    tree
   ];
 }
