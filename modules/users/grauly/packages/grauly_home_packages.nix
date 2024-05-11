@@ -15,5 +15,6 @@
     pavucontrol
     xorg.xev
     evince
+    gnome.eog
   ];
 }
