@@ -9,5 +9,6 @@
 		./users.nix
 		./packages/system_packages.nix
     ./disks.nix
+    ./udev.nix
   ];
 }
