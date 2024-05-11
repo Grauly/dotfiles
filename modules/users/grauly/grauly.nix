@@ -3,11 +3,12 @@
 {
   imports = [
     ./packages/grauly_user_packages.nix
+    ./modules/modules.nix
   ];
   users.users.grauly = {
     isNormalUser = true;
     description = "Grauly";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "lp"];
     shell = pkgs.zsh;
   };
   #do it here, so it actually gets recognized
