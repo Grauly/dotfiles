@@ -24,5 +24,9 @@
     obs-studio
     vesktop
     libreoffice-qt
+    grim
+    slurp
+    imagemagick
+    zip
   ];
 }
