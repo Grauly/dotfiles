@@ -52,4 +52,6 @@
   "Super_L" = "exec ${swaycfg.menu}";
   "${swaycfg.modifier}+d" = "exec ${swaycfg.menu}";
   "${swaycfg.modifier}+space" = "exec ${swaycfg.menu}";
+
+  "${swaycfg.modifier}+KP_Enter" = "exec calc";
 }

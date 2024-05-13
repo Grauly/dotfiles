@@ -8,9 +8,10 @@
     terminal = "${pkgs.kitty}/bin/kitty";
     plugins = with pkgs; [
       rofi-calc
+      rofi-emoji
     ];
     extraConfig = {
-      modes = "window,drun,run,ssh,calc";
+      modes = "window,drun,run,ssh,calc,emoji";
     };
   };
 }
