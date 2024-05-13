@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./swaybar.nix
+    ./waybar.nix
     ./mako.nix
   ];
 
