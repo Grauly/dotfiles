@@ -18,5 +18,11 @@
     xfce.thunar
     gvfs
     tree
+    texstudio
+    texliveFull
+    libsForQt5.konsole
+    obs-studio
+    vesktop
+    libreoffice-qt
   ];
 }
