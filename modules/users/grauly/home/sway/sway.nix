@@ -18,7 +18,7 @@
       enable = true;
       config = {
         #todo: assign left and right, throws "already defined"
-        menu = "${pkgs.rofi}/bin/rofi -show combi -modes combi -combi-modes \"drun,run,calc\"";
+        menu = "rofi -show combi -modes combi -combi-modes \"drun,run,calc\"";
         bars = [ ];
         terminal = "kitty";
         input = {

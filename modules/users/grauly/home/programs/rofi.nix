@@ -9,5 +9,8 @@
     plugins = with pkgs; [
       rofi-calc
     ];
+    extraConfig = {
+      modes = "window,drun,run,ssh,calc";
+    };
   };
 }
