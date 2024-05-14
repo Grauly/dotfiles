@@ -46,10 +46,8 @@
   "XF86AudioLowerVolume" = "exec ${pkgs.pulseaudio}/bin/pactl set-sink-volume @DEFAULT_SINK@ -5%";
 
   # Define logout command
-  "Super_L+l" = "exec swaylock";
 
   # Define wofi launcher
-  "Super_L" = "exec ${swaycfg.menu}";
   "${swaycfg.modifier}+d" = "exec ${swaycfg.menu}";
   "${swaycfg.modifier}+space" = "exec ${swaycfg.menu}";
 

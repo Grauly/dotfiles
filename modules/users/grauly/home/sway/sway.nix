@@ -17,6 +17,7 @@
     {
       enable = true;
       config = {
+        modifier = "Mod4";
         #todo: assign left and right, throws "already defined"
         menu = "rofi -show combi -modes combi -combi-modes \"drun,run,emoji\"";
         bars = [ ];
