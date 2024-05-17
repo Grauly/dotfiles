@@ -13,5 +13,6 @@
     extraConfig = {
       modes = "window,drun,run,ssh,calc,emoji";
     };
+    theme = ./rofi-theme.rasi;
   };
 }
