@@ -14,5 +14,6 @@
     ssh-ag = "eval \"$(ssh-agent -s)\"; ssh-add ~/.ssh/githubkey; ssh-add ~/.ssh/gitlabkey";
     open = "xdg-open";
     calc = "rofi -show calc";
+    psg = "ps -xf | grep";
   };
 }
