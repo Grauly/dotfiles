@@ -26,6 +26,9 @@
           "type:keyboard" = {
             xkb_layout = "de";
           };
+          "type:touchpad" = {
+            natural_scroll = "enabled";
+          };
         };
         fonts.names = [
           "JetBrainsMono Nerd Font"
