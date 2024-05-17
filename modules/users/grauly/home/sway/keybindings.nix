@@ -52,4 +52,7 @@
   "${swaycfg.modifier}+space" = "exec ${swaycfg.menu}";
 
   "${swaycfg.modifier}+KP_Enter" = "exec rofi -show calc";
+
+  "${swaycfg.modifier}+e" = "exec thunar";
+  "Alt+Return" = "exec ${swaycfg.terminal}";
 }
