@@ -16,6 +16,7 @@
     evince
     gnome.eog
     xfce.thunar
+    xfce.tumbler
     gvfs
     tree
     texstudio
