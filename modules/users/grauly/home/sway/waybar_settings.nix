@@ -11,7 +11,7 @@ in
   layer = "top";
   position = "top";
   modules-left = [ "sway/workspaces" ];
-  modules-center = [ "clock#minimal" "sway/window" ];
+  modules-center = [ "clock#minimal" "sway/mode" ];
   modules-right = [ "cpu" "memory" "network" "pulseaudio" "backlight" "battery" "clock" ];
 
   battery = {

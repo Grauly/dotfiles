@@ -1,4 +1,4 @@
-{ pkgs, swaycfg, ... }:
+{ pkgs, swaycfg, resize-mode, shutdown-mode, ... }:
 
 {
   # Reimplement Sway hotkeys, because this overrides them
@@ -7,11 +7,27 @@
   "${swaycfg.modifier}+q" = "kill";
   "${swaycfg.modifier}+Control+r" = "reload";
 
+  # Focus
+  "${swaycfg.modifier}+${swaycfg.left}" = "focus left";
+  "${swaycfg.modifier}+${swaycfg.down}" = "focus down";
+  "${swaycfg.modifier}+${swaycfg.up}" = "focus up";
+  "${swaycfg.modifier}+${swaycfg.right}" = "focus right";
+
+  "${swaycfg.modifier}+Left" = "focus left";
+  "${swaycfg.modifier}+Down" = "focus down";
+  "${swaycfg.modifier}+Up" = "focus up";
+  "${swaycfg.modifier}+Right" = "focus right";
+
   # Moving
-  "${swaycfg.modifier}+Shift+${swaycfg.right}" = "move container to workspace next, workspace next";
-  "${swaycfg.modifier}+Shift+${swaycfg.left}" = "move container to workspace prev, workspace prev";
-  "${swaycfg.modifier}+${swaycfg.left}" = "workspace prev";
-  "${swaycfg.modifier}+${swaycfg.right}" = "workspace next";
+  "${swaycfg.modifier}+Shift+${swaycfg.left}" = "move left";
+  "${swaycfg.modifier}+Shift+${swaycfg.down}" = "move down";
+  "${swaycfg.modifier}+Shift+${swaycfg.up}" = "move up";
+  "${swaycfg.modifier}+Shift+${swaycfg.right}" = "move right";
+
+  "${swaycfg.modifier}+Shift+Left" = "move left";
+  "${swaycfg.modifier}+Shift+Down" = "move down";
+  "${swaycfg.modifier}+Shift+Up" = "move up";
+  "${swaycfg.modifier}+Shift+Right" = "move right";
 
   # Workspaces
   "${swaycfg.modifier}+1" = "workspace number 1";
@@ -37,6 +53,34 @@
   "${swaycfg.modifier}+Shift+0" = "move container to workspace number 10";
   "${swaycfg.modifier}+tab" = "workspace back_and_forth";
 
+  # Moving workspaces between outputs
+  "${swaycfg.modifier}+Control+${swaycfg.left}" = "move workspace to output left";
+  "${swaycfg.modifier}+Control+${swaycfg.down}" = "move workspace to output down";
+  "${swaycfg.modifier}+Control+${swaycfg.up}" = "move workspace to output up";
+  "${swaycfg.modifier}+Control+${swaycfg.right}" = "move workspace to output right";
+
+  "${swaycfg.modifier}+Control+Left" = "move workspace to output left";
+  "${swaycfg.modifier}+Control+Down" = "move workspace to output down";
+  "${swaycfg.modifier}+Control+Up" = "move workspace to output up";
+  "${swaycfg.modifier}+Control+Right" = "move workspace to output right";
+
+  # Splits
+  "${swaycfg.modifier}+b" = "splith";
+  "${swaycfg.modifier}+v" = "splitv";
+
+  # Layout
+  "${swaycfg.modifier}+s" = "layout stacking";
+  "${swaycfg.modifier}+w" = "layout tabbed";
+  "${swaycfg.modifier}+t" = "layout toggle split";
+  "${swaycfg.modifier}+f" = "fullscreen toggle";
+
+  "${swaycfg.modifier}+a" = "focus parent";
+
+  "${swaycfg.modifier}+Control+space" = "floating toggle";
+
+  # Resize mode
+  "${swaycfg.modifier}+r" = "mode \"${resize-mode}";
+
   # Define own hotkeys
   # Define FN key behavior
   "XF86AudioMute" = "exec ${pkgs.pulseaudio}/bin/pactl set-sink-mute @DEFAULT_SINK@ toggle";
@@ -46,12 +90,13 @@
   "XF86AudioLowerVolume" = "exec ${pkgs.pulseaudio}/bin/pactl set-sink-volume @DEFAULT_SINK@ -5%";
 
   # Define logout command
+  "${swaycfg.modifier}+Shift+e" = "mode \"${shutdown-mode}\"";
 
   # Define wofi launcher
   "${swaycfg.modifier}+d" = "exec ${swaycfg.menu}";
   "${swaycfg.modifier}+space" = "exec ${swaycfg.menu}";
 
-  "${swaycfg.modifier}+KP_Enter" = "exec rofi -show calc";
+  "${swaycfg.modifier}+KP_Enter" = "exec ${pkgs.rofi-wayland}/bin/rofi -show calc";
 
   "${swaycfg.modifier}+e" = "exec thunar";
   "Alt+Return" = "exec ${swaycfg.terminal}";

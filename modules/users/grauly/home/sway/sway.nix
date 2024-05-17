@@ -13,6 +13,8 @@
   wayland.windowManager.sway =
     let
       swaycfg = config.wayland.windowManager.sway.config;
+      resize-mode = "resize";
+      shutdown-mode = "(l) lock (o) logout (s) shutdown (k) sleep";
     in
     {
       enable = true;
@@ -34,7 +36,8 @@
           "JetBrainsMono Nerd Font"
           "Sans Serif"
         ];
-        keybindings = (import ./keybindings.nix { inherit pkgs swaycfg; });
+        keybindings = (import ./keybindings.nix { inherit pkgs swaycfg resize-mode shutdown-mode; });
+        modes = (import ./sway_modes.nix { inherit pkgs swaycfg resize-mode shutdown-mode;});
       };
       extraConfig = ''
         for_window [title="floating_shell"] floating enable, border pixel 1, sticky enable
