@@ -29,5 +29,10 @@
     slurp
     imagemagick
     zip
+    qrencode
+    gnome.zenity
+    icoutils
+    gimp
+    vlc
   ];
 }
