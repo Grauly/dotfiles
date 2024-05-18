@@ -37,7 +37,7 @@
           "Sans Serif"
         ];
         keybindings = (import ./keybindings.nix { inherit pkgs swaycfg resize-mode shutdown-mode; });
-        modes = (import ./sway_modes.nix { inherit pkgs swaycfg resize-mode shutdown-mode;});
+        modes = (import ./sway_modes.nix { inherit pkgs swaycfg resize-mode shutdown-mode; });
       };
       extraConfig = ''
         for_window [title="floating_shell"] floating enable, border pixel 1, sticky enable
