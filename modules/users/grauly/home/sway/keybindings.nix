@@ -96,7 +96,7 @@
   "${swaycfg.modifier}+d" = "exec ${swaycfg.menu}";
   "${swaycfg.modifier}+space" = "exec ${swaycfg.menu}";
 
-  "${swaycfg.modifier}+KP_Enter" = "exec ${pkgs.rofi-wayland}/bin/rofi -show calc";
+  "${swaycfg.modifier}+KP_Enter" = "exec rofi -show calc";
 
   "${swaycfg.modifier}+e" = "exec ${pkgs.xfce.thunar}/bin/thunar";
   "Alt+Return" = "exec ${swaycfg.terminal}";
