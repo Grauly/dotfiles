@@ -10,5 +10,6 @@
 		./packages/system_packages.nix
     ./disks.nix
     ./udev.nix
+    ./gtk.nix
   ];
 }
