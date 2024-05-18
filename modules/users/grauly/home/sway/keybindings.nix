@@ -98,6 +98,6 @@
 
   "${swaycfg.modifier}+KP_Enter" = "exec ${pkgs.rofi-wayland}/bin/rofi -show calc";
 
-  "${swaycfg.modifier}+e" = "exec thunar";
+  "${swaycfg.modifier}+e" = "exec ${pkgs.xfce.thunar}/bin/thunar";
   "Alt+Return" = "exec ${swaycfg.terminal}";
 }
