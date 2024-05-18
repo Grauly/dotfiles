@@ -14,7 +14,7 @@
     let
       swaycfg = config.wayland.windowManager.sway.config;
       resize-mode = "resize";
-      shutdown-mode = "(l) lock (o) logout (s) shutdown (k) sleep";
+      shutdown-mode = "(l) lock (o) logout (s) shutdown (r) reboot (k) sleep";
     in
     {
       enable = true;

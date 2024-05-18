@@ -37,6 +37,7 @@ in
     "l" = "exec ${pkgs.swaylock}/bin/swaylock && ${def-mode-cmd}";
     "o" = "exec ${pkgs.systemd}/bin/loginctl terminate-user $USER && ${def-mode-cmd}";
     "s" = "exec ${pkgs.systemd}/bin/systemctl poweroff && ${def-mode-cmd}";
+    "r" = "exec ${pkgs.systemd}/bin/systemctl reboot && ${def-mode-cmd}";
     "k" = "exec ${pkgs.systemd}/bin/systemctl suspend && ${def-mode-cmd}";
   }//escapes;
 }
