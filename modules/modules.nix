@@ -11,5 +11,6 @@
     ./disks.nix
     ./udev.nix
     ./gtk.nix
+    ./thunar.nix
   ];
 }

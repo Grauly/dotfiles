@@ -15,9 +15,6 @@
     xorg.xev
     evince
     gnome.eog
-    xfce.thunar
-    xfce.tumbler
-    gvfs
     tree
     texstudio
     texliveFull
