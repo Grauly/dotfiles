@@ -4,6 +4,7 @@
     ./sway/sway.nix
     ./shell_aliases.nix
     ./programs/programs.nix
+    ./cursor.nix
   ];
   home.stateVersion = "23.11";
   home.username = "grauly";
