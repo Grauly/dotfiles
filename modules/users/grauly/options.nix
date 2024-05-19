@@ -23,12 +23,32 @@
         type = types.str;
         description = "Hex code with #, only RGB, not alpha, should be the same as background";
       };
+      background-border = mkOption {
+        type = types.str;
+        description = "Hex code with #";
+      };
+      background-border-3 = mkOption {
+        type = types.str;
+        description = "Hex code with #, only RGB, not alpha, should be the same as background";
+      };
+      highlight = mkOption {
+        type = types.str;
+        description = "Hex code with #";
+      };
+      error = mkOption {
+        type = types.str;
+        description = "Hex code with #";
+      };
       text = {
         color = mkOption {
           type = types.str;
           description = "Hex code with #";
         };
         highlight = mkOption {
+          type = types.str;
+          description = "Hex code with #";
+        };
+        lowlight = mkOption {
           type = types.str;
           description = "Hex code with #";
         };

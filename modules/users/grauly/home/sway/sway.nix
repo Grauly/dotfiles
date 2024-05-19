@@ -1,4 +1,4 @@
-{ pkgs, pkgs-unstable, config, lib, ... }:
+{ pkgs, pkgs-unstable, config, lib, osConfig, ... }:
 
 {
   imports = [
@@ -32,13 +32,10 @@
             natural_scroll = "enabled";
           };
         };
-        fonts.names = [
-          "JetBrainsMono Nerd Font"
-          "Sans Serif"
-        ];
         keybindings = (import ./keybindings.nix { inherit pkgs swaycfg resize-mode shutdown-mode; });
         modes = (import ./sway_modes.nix { inherit pkgs swaycfg resize-mode shutdown-mode; });
-      };
+        defaultWorkspace = "workspace number 1";
+      }//(import ./sway_styling.nix { inherit osConfig; });
       extraConfig = ''
         for_window [title="floating_shell"] floating enable, border pixel 1, sticky enable
       '';

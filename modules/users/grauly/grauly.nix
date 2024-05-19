@@ -21,9 +21,14 @@
       mix = "#5e15d2";
       background = "#110021a0";
       background-3 = "#110021";
+      background-border = "#302635a0";
+      background-border-3 = "#302635";
+      highlight = "#c6073a";
+      error = "#6ff904";
       text = {
         color = "#f2f2f2";
         highlight = "#c65001";
+        lowlight = "#8845b7";
       };
     };
     style = {
