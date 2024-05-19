@@ -1,10 +1,13 @@
+{ pkgs, osConfig, ... }:
+
+with osConfig.grauly.colors; pkgs.writeText "rofi-style.rasi" ''
 * {
     red:                         rgba ( 220, 50, 47, 90 % );
     blue:                        rgba ( 38, 139, 210, 90 % );
-    text-color:                  #f2f2f2;
-    border-color:		 #5e15d2;
-    gradient-image:		 linear-gradient (to right, #8c27e9a0, #2c01baa0);
-    prompt-color: 		 #c65001;
+    text-color:                  ${text.color};
+    border-color:		         ${mix};
+    gradient-image:		         linear-gradient (to right, ${gradient-from}, ${gradient-to});
+    prompt-color: 		         ${text.highlight};
     separatorcolor:              var(border-color);
 
     
@@ -20,8 +23,8 @@
     alternate-urgent-foreground: var(red);
     selected-urgent-foreground:  var(background);
     
-    lightbg:                     #110021a0;
-    background:                  #110021a0;
+    lightbg:                     ${background};
+    background:                  ${background};
     normal-background:           transparent;
     alternate-normal-background: transparent;
     selected-normal-background:  var(lightbg);
@@ -95,7 +98,7 @@ window {
     background-color: var(background);
     border:           2 solid 2 dash;
     border-color:     var(border-color);
-    border-radius:    7;
+    border-radius:    ${toString osConfig.grauly.style.border-radius};
 }
 mainbox {
     padding: 0;
@@ -177,3 +180,4 @@ textbox-prompt-colon {
     str:        ":";
     text-color: inherit;
 }
+''

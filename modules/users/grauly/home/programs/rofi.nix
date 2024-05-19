@@ -1,4 +1,4 @@
-{ pkgs, pkgs-unstable, ... }:
+{ pkgs, pkgs-unstable, osConfig, ... }:
 
 {
   #TODO get calc running
@@ -13,6 +13,6 @@
     extraConfig = {
       modes = "window,drun,run,ssh,calc,emoji";
     };
-    theme = ./rofi-theme.rasi;
+    theme = builtins.toString (import ./rofi-theme.rasi.nix{ inherit pkgs osConfig; });
   };
 }
