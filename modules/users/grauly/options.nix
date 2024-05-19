@@ -19,6 +19,10 @@
         type = types.str;
         description = "Hex code with #";
       };
+      background-3 = mkOption {
+        type = types.str;
+        description = "Hex code with #, only RGB, not alpha, should be the same as background";
+      };
       text = {
         color = mkOption {
           type = types.str;
@@ -34,6 +38,14 @@
       border-radius = mkOption {
         type = types.int;
         description = "Border radius, assumedly in pixels (the void help me if anyone does not use pixels)";
+      };
+      opacity = mkOption {
+        type = types.float;
+        description = "Opacity, if hex code opacity is not working, 0 = transparent";
+      };
+      blur = mkOption {
+        type = types.int;
+        description = "Blur factor";
       };
     };
   };

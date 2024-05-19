@@ -20,6 +20,7 @@
       gradient-to = "#2c01baa0";
       mix = "#5e15d2";
       background = "#110021a0";
+      background-3 = "#110021";
       text = {
         color = "#f2f2f2";
         highlight = "#c65001";
@@ -27,6 +28,8 @@
     };
     style = {
       border-radius = 7;
+      opacity = 0.612;
+      blur = 8;
     };
   };
 }
