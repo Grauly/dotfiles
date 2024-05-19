@@ -7,5 +7,6 @@
     ./kitty.nix
     ./rofi.nix
     ./inkscape.nix
+    ./blender.nix
   ];
 }

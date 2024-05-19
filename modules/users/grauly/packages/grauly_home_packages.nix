@@ -5,7 +5,6 @@
     discord
     bitwarden
     element-desktop
-    blender
     prismlauncher
     vscode
     nixpkgs-fmt
