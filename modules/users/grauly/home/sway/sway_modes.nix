@@ -39,7 +39,7 @@ in
   } // escapes;
   "${shutdown-mode}" = {
     "l" = "exec ${def-mode-cmd} && ${(countdown "Engaging system lock" "Lockdown in:" 3)} && ${pkgs.swaylock}/bin/swaylock && ${notify} 'Welcome back!'";
-    "o" = "exec ${def-mode-cmd} && ${(countdown "Logging out" "Lockout in:" 3)} && ${pkgs.systemd}/bin/loginctl terminate-user $USER -mode-cmd}"; 
+    "o" = "exec ${def-mode-cmd} && ${(countdown "Logging out" "Lockout in:" 3)} && ${pkgs.systemd}/bin/loginctl terminate-user $USER"; 
     "s" = "exec ${def-mode-cmd} && ${(countdown "Shutting down" "Lights out in:" 3)} && ${pkgs.systemd}/bin/systemctl poweroff";
     "r" = "exec ${def-mode-cmd} && ${(countdown "Rebooting..." "Reboot in:" 3)} && ${pkgs.systemd}/bin/systemctl reboot"; 
     "k" = "exec ${def-mode-cmd} && ${(countdown "Going to sleep" "Falling asleep:" 3)} && ${pkgs.systemd}/bin/systemctl suspend";
