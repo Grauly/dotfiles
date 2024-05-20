@@ -33,6 +33,8 @@
     };
     style = {
       border-radius = 7;
+      border-width = 1;
+      window-spacing = 3;
       opacity = 0.612;
       blur = 8;
     };

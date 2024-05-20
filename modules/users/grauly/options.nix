@@ -59,6 +59,14 @@
         type = types.int;
         description = "Border radius, assumedly in pixels (the void help me if anyone does not use pixels)";
       };
+      border-width = mkOption {
+        type = types.int;
+        description = "Border width, hopefully in pixels";
+      };
+      window-spacing = mkOption {
+        type = types.int;
+        description = "Spacing of Windows";
+      };
       opacity = mkOption {
         type = types.float;
         description = "Opacity, if hex code opacity is not working, 0 = transparent";

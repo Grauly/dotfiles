@@ -6,15 +6,15 @@
     "Sans Serif"
   ];
   gaps = {
-    inner = osConfig.grauly.style.border-radius;
+    inner = osConfig.grauly.style.window-spacing;
     smartBorders = "off";
     smartGaps = true;
   };
   window = {
-    border = 3;
+    border = osConfig.grauly.style.border-width;
   };
   floating = {
-    border = 5;
+    border = osConfig.grauly.style.border-width;
   };
   colors = with osConfig.grauly.colors; {
     background = error;
