@@ -4,6 +4,7 @@
   imports = [
     ./waybar.nix
     ./mako.nix
+    ./sway_styling.nix
   ];
 
   home.packages = with pkgs; [
@@ -18,6 +19,7 @@
     in
     {
       enable = true;
+      package = pkgs.swayfx;
       config = {
         modifier = "Mod4";
         #todo: assign left and right, throws "already defined"
@@ -35,9 +37,9 @@
         keybindings = (import ./keybindings.nix { inherit pkgs swaycfg resize-mode shutdown-mode; });
         modes = (import ./sway_modes.nix { inherit pkgs swaycfg resize-mode shutdown-mode; });
         defaultWorkspace = "workspace number 1";
-      }//(import ./sway_styling.nix { inherit osConfig; });
+      };
       extraConfig = ''
-        for_window [title="floating_shell"] floating enable, border pixel 1, sticky enable
+        for_window [title="floating_shell"] floating enable, border pixel ${toString osConfig.grauly.style.border-width}, sticky enable
       '';
     };
 }
