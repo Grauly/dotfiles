@@ -15,6 +15,7 @@ in
   modules-right = [ "cpu" "memory" "network" "pulseaudio" "backlight" "battery" "clock" ];
 
   battery = {
+    interval = 5;
     states = {
       caution = 30;
       warning = 20;
