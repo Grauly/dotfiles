@@ -38,7 +38,7 @@ in
     "${swaycfg.modifier}+plus" = "gaps inner current plus 5px";
   } // escapes;
   "${shutdown-mode}" = {
-    "l" = "exec ${def-mode-cmd} && ${(countdown "Engaging system lock" "Lockdown in:" 3)} && ${pkgs.swaylock}/bin/swaylock && ${notify} 'Welcome back!'";
+    "l" = "exec ${def-mode-cmd} && ${(countdown "Engaging system lock" "Lockdown in:" 1)} && ${pkgs.swaylock-effects}/bin/swaylock && ${notify} 'Welcome back!'";
     "o" = "exec ${def-mode-cmd} && ${(countdown "Logging out" "Lockout in:" 3)} && ${pkgs.systemd}/bin/loginctl terminate-user $USER"; 
     "s" = "exec ${def-mode-cmd} && ${(countdown "Shutting down" "Lights out in:" 3)} && ${pkgs.systemd}/bin/systemctl poweroff";
     "r" = "exec ${def-mode-cmd} && ${(countdown "Rebooting..." "Reboot in:" 3)} && ${pkgs.systemd}/bin/systemctl reboot"; 

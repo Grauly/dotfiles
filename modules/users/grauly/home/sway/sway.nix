@@ -5,6 +5,7 @@
     ./waybar.nix
     ./mako.nix
     ./sway_styling.nix
+    ./swaylock.nix
   ];
 
   home.packages = with pkgs; [
