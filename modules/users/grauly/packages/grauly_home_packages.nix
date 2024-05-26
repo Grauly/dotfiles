@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, pkgs-unstable, ... }: {
   home.packages = with pkgs; [
     firefox
     thunderbird
@@ -30,5 +30,6 @@
     icoutils
     gimp
     vlc
+    pkgs-unstable.prusa-slicer
   ];
 }
