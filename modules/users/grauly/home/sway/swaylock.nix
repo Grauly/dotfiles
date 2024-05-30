@@ -37,10 +37,10 @@ in
       clock = true;
       effect-blur = "3x1";
       grace = 2;
-      text-clear = "Access Granted";
-      text-caps-lock = "CAPS LOCK";
-      text-ver = "Verifying access code";
-      text-wrong = "Access Denied";
+      text-clear = "\"Access Granted\"";
+      text-caps-lock = "\"CAPS LOCK\"";
+      text-ver = "\"Verifying access code\"";
+      text-wrong = "\"Access Denied\"";
     };
   };
 }
