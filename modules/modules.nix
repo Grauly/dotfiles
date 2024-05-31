@@ -12,5 +12,6 @@
     ./udev.nix
     ./gtk.nix
     ./thunar.nix
+    ./nautilus.nix
   ];
 }
