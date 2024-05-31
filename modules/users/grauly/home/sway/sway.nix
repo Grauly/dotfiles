@@ -20,7 +20,7 @@
     in
     {
       enable = true;
-      package = pkgs.swayfx;
+      package = pkgs-unstable.swayfx;
       config = {
         modifier = "Mod4";
         #todo: assign left and right, throws "already defined"

@@ -8,5 +8,6 @@
     ./rofi.nix
     ./inkscape.nix
     ./blender.nix
+    ./flameshot.nix
   ];
 }
