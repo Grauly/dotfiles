@@ -20,6 +20,9 @@
     in
     {
       enable = true;
+      package = pkgs.swayfx;
+      # disable config checking to get swayfx to run: https://github.com/nix-community/home-manager/issues/5379
+      checkConfig = false;
       config = {
         modifier = "Mod4";
         #todo: assign left and right, throws "already defined"

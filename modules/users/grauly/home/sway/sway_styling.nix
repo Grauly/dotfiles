@@ -57,9 +57,9 @@
         };
       };
     };
-    #extraConfig = ''
-    #  blur enable
-    #  corner_radius ${toString osConfig.grauly.style.border-radius}
-    #'';
+    extraConfig = ''
+      blur enable
+      corner_radius ${toString osConfig.grauly.style.border-radius}
+    '';
   };
 }
