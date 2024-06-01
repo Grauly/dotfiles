@@ -20,7 +20,6 @@
     in
     {
       enable = true;
-      package = pkgs-unstable.swayfx;
       config = {
         modifier = "Mod4";
         #todo: assign left and right, throws "already defined"
@@ -39,6 +38,9 @@
         modes = (import ./sway_modes.nix { inherit pkgs swaycfg resize-mode shutdown-mode; });
         defaultWorkspace = "workspace number 1";
       };
+      extraOptions = [
+        "--unsupported-gpu"
+      ];
       extraConfig = ''
         for_window [title="floating_shell"] floating enable, border pixel ${toString osConfig.grauly.style.border-width}, sticky enable
         for_window [title="Picture-in-Picture"] floating enable, border pixel ${toString osConfig.grauly.style.border-width}, sticky enable

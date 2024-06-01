@@ -3,6 +3,9 @@
   programs.sway = {
     enable = true;
     wrapperFeatures.gtk = true;
+    extraOptions = [
+      "--unsupported-gpu"
+    ];
   };
   xdg.portal = {
     enable = true;
