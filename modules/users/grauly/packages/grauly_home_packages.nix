@@ -8,7 +8,6 @@
     prismlauncher
     vscode
     nixpkgs-fmt
-    jetbrains.idea-community
     mangohud
     pavucontrol
     xorg.xev
