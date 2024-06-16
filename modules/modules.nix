@@ -13,5 +13,6 @@
     ./gtk.nix
     ./thunar.nix
     ./nautilus.nix
+    ./kde_connect.nix
   ];
 }
