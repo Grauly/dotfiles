@@ -102,5 +102,5 @@
   "Alt+Return" = "exec ${swaycfg.terminal}";
 
   # Screenshots
-  "Pause" = "exec ${pkgs.flameshot}/bin/flameshot gui -c";
+  "Pause" = "exec ${pkgs.flameshot}/bin/flameshot gui -r | ${pkgs.wl-clipboard}/bin/wl-copy";
 }
