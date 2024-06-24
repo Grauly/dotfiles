@@ -40,6 +40,11 @@
         keybindings = (import ./keybindings.nix { inherit pkgs swaycfg resize-mode shutdown-mode; });
         modes = (import ./sway_modes.nix { inherit pkgs swaycfg resize-mode shutdown-mode; });
         defaultWorkspace = "workspace number 1";
+        output = {
+          "*" = {
+            bg = "${./background.png} fill";
+          };
+        };
       };
       extraOptions = [
         "--unsupported-gpu"
