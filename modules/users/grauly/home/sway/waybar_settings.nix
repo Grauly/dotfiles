@@ -29,6 +29,7 @@ in
     format-redalert = "RED ALERT: {capacity}%";
     tooltip = true;
     tooltip-format = "Battery at {capacity}%\nDrawing {power}W\n{timeTo}";
+    full-at = 97;
   };
 
   clock = {
