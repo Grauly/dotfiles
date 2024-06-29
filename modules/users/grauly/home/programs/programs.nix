@@ -9,5 +9,6 @@
     ./inkscape.nix
     ./blender.nix
     ./flameshot.nix
+    ./intellij.nix
   ];
 }
