@@ -99,7 +99,6 @@
   "${swaycfg.modifier}+KP_Enter" = "exec rofi -show calc";
 
   "${swaycfg.modifier}+e" = "exec ${pkgs.xfce.thunar}/bin/thunar";
-  "Alt+Return" = "exec ${swaycfg.terminal}";
 
   # Screenshots
   "Pause" = "exec ${pkgs.flameshot}/bin/flameshot gui -r | ${pkgs.wl-clipboard}/bin/wl-copy";
