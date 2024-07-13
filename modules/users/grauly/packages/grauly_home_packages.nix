@@ -2,8 +2,8 @@
   home.packages = with pkgs; [
     firefox
     thunderbird
-    discord
-    bitwarden-desktop
+    #https://github.com/bitwarden/clients/issues/8759
+    pkgs-unstable.bitwarden-desktop
     element-desktop
     prismlauncher
     vscode
