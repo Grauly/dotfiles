@@ -14,5 +14,6 @@
     ./thunar.nix
     ./nautilus.nix
     ./kde_connect.nix
+    ./platformio.nix
   ];
 }
