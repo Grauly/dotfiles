@@ -1,10 +1,16 @@
 { config, lib, pkgs, ... }:
 
 {
-  environment.variables = {
-    VDPAU_DRIVER = "va_gl";
-    LIBVA_DRIVER_NAME = "nvidia";
+  environment = {
+    variables = {
+      VDPAU_DRIVER = "va_gl";
+      LIBVA_DRIVER_NAME = "nvidia";
+    };
   };
+
+  # Load nvidia driver for Xorg and Wayland
+  services.xserver.videoDrivers = [ "nvidia" ];
+
   hardware = {
     # Enable OpenGL
     opengl = {
@@ -12,6 +18,10 @@
       driSupport = true;
       driSupport32Bit = true;
       extraPackages = with pkgs; [
+        intel-media-driver
+        intel-vaapi-driver
+        vaapiIntel
+        vaapiVdpau
         libvdpau-va-gl
       ];
     };
@@ -58,7 +68,5 @@
   };
 
 
-  # Load nvidia driver for Xorg and Wayland
-  services.xserver.videoDrivers = [ "nvidia" ];
 }
 
