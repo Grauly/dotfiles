@@ -3,7 +3,7 @@
     firefox
     thunderbird
     discord
-    bitwarden
+    bitwarden-desktop
     element-desktop
     prismlauncher
     vscode
