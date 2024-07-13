@@ -27,6 +27,7 @@
         "git"
         "colored-man-pages"
         "zoxide"
+        "sudo"
       ];
     };
   };
