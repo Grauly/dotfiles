@@ -1,5 +1,6 @@
 { pkgs, pkgs-unstable, osConfig, ... }:
 
+
 let
   #see https://github.com/NixOS/nixpkgs/issues/298539
   override = package: (
@@ -13,6 +14,9 @@ let
   ];
 in
 {
+  imports = [
+    ./qalc.nix
+  ];
   programs.rofi = {
     enable = true;
     package = pkgs.rofi-wayland.override {
