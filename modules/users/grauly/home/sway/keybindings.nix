@@ -102,4 +102,7 @@
 
   # Screenshots
   "Pause" = "exec ${pkgs.flameshot}/bin/flameshot gui -r | ${pkgs.wl-clipboard}/bin/wl-copy";
+
+  # Extra Terminal
+  "Ctrl+${swaycfg.modifier}+t" = "exec ${swaycfg.terminal} --detach -T floating_shell";
 }
