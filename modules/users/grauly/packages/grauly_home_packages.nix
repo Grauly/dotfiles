@@ -2,8 +2,6 @@
   home.packages = with pkgs; [
     firefox
     thunderbird
-    #https://github.com/bitwarden/clients/issues/8759
-    pkgs-unstable.bitwarden-desktop
     element-desktop
     prismlauncher
     vscode
@@ -18,7 +16,6 @@
     texliveFull
     libsForQt5.konsole
     obs-studio
-    vesktop
     libreoffice-qt
     grim
     slurp
@@ -29,6 +26,10 @@
     icoutils
     gimp
     vlc
-    pkgs-unstable.prusa-slicer
-  ];
+  ] ++ (with pkgs-unstable; [
+    #https://github.com/bitwarden/clients/issues/8759
+    bitwarden-desktop
+    prusa-slicer
+    vesktop
+  ]);
 }
