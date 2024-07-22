@@ -12,5 +12,6 @@
     gnome.eog
     zip
     vlc
+    libsForQt5.ark
   ];
 }
