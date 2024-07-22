@@ -27,6 +27,7 @@
     gimp
     vlc
     blockbench
+    libsForQt5.ark
   ] ++ (with pkgs-unstable; [
     #https://github.com/bitwarden/clients/issues/8759
     bitwarden-desktop
