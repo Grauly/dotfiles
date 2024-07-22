@@ -1,0 +1,18 @@
+{ pkgs, pkgs-unstable, ... }:
+
+{ 
+  imports = [
+    ../programs/blender.nix
+    ../programs/inkscape.nix
+    ../programs/flameshot.nix
+  ];
+
+  home.packages = with pkgs; [
+    gimp
+    imagemagick
+    icoutils
+    qrencode
+  ] ++ (with pkgs-unstable; [
+    prusa-slicer
+  ]);
+}
