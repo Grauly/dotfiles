@@ -10,5 +10,6 @@
     ./blender.nix
     ./flameshot.nix
     ./intellij.nix
+    ./ssh.nix
   ];
 }
