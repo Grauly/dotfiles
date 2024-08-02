@@ -1,7 +1,7 @@
-{ pkgs-unstable, ... }:
+{ pkgs-blender, ... }:
 
 {
-  home.packages = with pkgs-unstable;[
+  home.packages = with pkgs-blender;[
     (blender.override {
       cudaSupport = true;
     })

@@ -12,9 +12,12 @@
       url = "github:nix-community/home-manager/release-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixpkgs-blender = {
+      url = "nixpkgs/nixos-unstable";
+    };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, nixpkgs-blender, home-manager, ... }@inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -26,6 +29,12 @@
         };
       };
       pkgs-unstable = import nixpkgs-unstable {
+        inherit system;
+        config = {
+          allowUnfree = true;
+        };
+      };
+      pkgs-blender = import nixpkgs-blender {
         inherit system;
         config = {
           allowUnfree = true;
@@ -45,6 +54,7 @@
               home-manager.useUserPackages = true;
               home-manager.extraSpecialArgs = {
                 inherit pkgs-unstable;
+                inherit pkgs-blender;
               };
             }
           ];
