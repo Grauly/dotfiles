@@ -27,7 +27,7 @@
       sfzserver-intern = {
         host = "sfzserver-intern";
         user = "debian";
-        hostname = "10.20.42.162";
+        hostname = "10.20.42.78";
         identityFile = [
           "~/.ssh/id_ed25519_sfzkey.key"
         ];
