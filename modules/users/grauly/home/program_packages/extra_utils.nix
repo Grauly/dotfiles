@@ -5,5 +5,6 @@
     pavucontrol
     xorg.xev
     tree
+    killall
   ];
 }
