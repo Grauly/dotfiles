@@ -2,7 +2,7 @@
 
 { 
   imports = [
-    ./core-utils.nix
+    ./core_utils.nix
   ];
   #No actual python env set up, this should be done via flakes on location
 
