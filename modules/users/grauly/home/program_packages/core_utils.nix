@@ -8,6 +8,7 @@
     ../programs/rofi.nix
     ../programs/kitty.nix
     ../programs/zsh.nix
+    ../programs/vscode.nix
   ];
 
   home.packages = with pkgs; [
@@ -15,11 +16,7 @@
     libsForQt5.konsole # required by tmux (dont ask)
   ];
 
-  programs.vscode = {
-    enable = true;
-    extensions = with pkgs.vscode-extension; [
-      jnoortheen.nix-ide
-      asvetliakov.vscode-neovim
-    ];
-  };
+  programs.vscode.extensions = with pkgs.vscode-extensions; [
+    jnoortheen.nix-ide
+  ];
 }
