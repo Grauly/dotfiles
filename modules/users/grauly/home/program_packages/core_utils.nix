@@ -9,6 +9,7 @@
     ../programs/kitty.nix
     ../programs/zsh.nix
     ../programs/vscode.nix
+    ../programs/ssh.nix
   ];
 
   home.packages = with pkgs; [
