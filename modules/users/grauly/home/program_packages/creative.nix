@@ -9,6 +9,7 @@
 
   home.packages = with pkgs; [
     gimp
+    audacity
     imagemagick
     icoutils
     qrencode
