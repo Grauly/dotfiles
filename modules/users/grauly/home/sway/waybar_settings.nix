@@ -1,11 +1,11 @@
 { pkgs, ... }:
 
 let
-  terminal = "${pkgs.kitty}/bin/kitty";
+  terminal = "${pkgs.alacritty}/bin/alacritty";
   shell = "${pkgs.zsh}/bin/zsh";
   nmtui = "${pkgs.networkmanager}/bin/nmtui";
   pulsemixer = "${pkgs.pulsemixer}/bin/pulsemixer";
-  floating_shell = "exec ${terminal} --detach -T floating_shell ${shell} -c";
+  floating_shell = "exec ${terminal} -T floating_shell -e ${shell} -c";
 in
 {
   layer = "top";

@@ -21,5 +21,7 @@ in
     open = "xdg-open";
     calc = "rofi -show calc";
     psg = "ps -xf | grep";
+    #https://github.com/alacritty/alacritty/issues/3932
+    ssh = "TERM=xterm-256color ssh";
   };
 }
