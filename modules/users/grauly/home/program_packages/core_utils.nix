@@ -6,7 +6,7 @@
     ../programs/git.nix
     ../programs/neovim.nix
     ../programs/rofi.nix
-    ../programs/alacritty.nix
+    ../programs/kitty.nix
     ../programs/zsh.nix
     ../programs/vscode.nix
     ../programs/ssh.nix

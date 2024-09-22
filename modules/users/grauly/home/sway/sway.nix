@@ -28,7 +28,7 @@
         #todo: assign left and right, throws "already defined"
         menu = "rofi -show combi -modes combi -combi-modes \"drun,run,emoji\"";
         bars = [ ];
-        terminal = "alacritty";
+        terminal = "kitty";
         input = {
           "type:keyboard" = {
             xkb_layout = "de";
