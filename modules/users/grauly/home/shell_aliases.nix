@@ -21,5 +21,6 @@ in
     open = "xdg-open";
     calc = "rofi -show calc";
     psg = "ps -xf | grep";
+    ssh = "kitty +kitten ssh";
   };
 }
