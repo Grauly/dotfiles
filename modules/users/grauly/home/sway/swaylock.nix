@@ -2,7 +2,7 @@
 
 let
   clear = "#00000000";
-in 
+in
 {
   programs.swaylock = with osConfig.grauly; {
     enable = true;

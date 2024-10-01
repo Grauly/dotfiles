@@ -10,7 +10,7 @@ let
     Return = def-mode;
   };
   countdown-delay = 1;
-  countdown =  title: text: count: (builtins.concatStringsSep " && " (builtins.genList (i: ("${notify} '${title}' '${text} ${(builtins.toString (count - i))}' -t ${(builtins.toString (countdown-delay * 1000))} && sleep ${(builtins.toString countdown-delay)}")) count));
+  countdown = title: text: count: (builtins.concatStringsSep " && " (builtins.genList (i: ("${notify} '${title}' '${text} ${(builtins.toString (count - i))}' -t ${(builtins.toString (countdown-delay * 1000))} && sleep ${(builtins.toString countdown-delay)}")) count));
 in
 {
   "${resize-mode}" = {
@@ -39,9 +39,9 @@ in
   } // escapes;
   "${shutdown-mode}" = {
     "l" = "exec ${def-mode-cmd} && ${(countdown "Engaging system lock" "Lockdown in:" 1)} && ${pkgs.swaylock-effects}/bin/swaylock && ${notify} 'Welcome back!'";
-    "o" = "exec ${def-mode-cmd} && ${(countdown "Logging out" "Lockout in:" 3)} && ${pkgs.systemd}/bin/loginctl terminate-user $USER"; 
+    "o" = "exec ${def-mode-cmd} && ${(countdown "Logging out" "Lockout in:" 3)} && ${pkgs.systemd}/bin/loginctl terminate-user $USER";
     "s" = "exec ${def-mode-cmd} && ${(countdown "Shutting down" "Lights out in:" 3)} && ${pkgs.systemd}/bin/systemctl poweroff";
-    "r" = "exec ${def-mode-cmd} && ${(countdown "Rebooting..." "Reboot in:" 3)} && ${pkgs.systemd}/bin/systemctl reboot"; 
+    "r" = "exec ${def-mode-cmd} && ${(countdown "Rebooting..." "Reboot in:" 3)} && ${pkgs.systemd}/bin/systemctl reboot";
     "k" = "exec ${def-mode-cmd} && ${(countdown "Going to sleep" "Falling asleep:" 3)} && ${pkgs.systemd}/bin/systemctl suspend";
   } // escapes;
 }

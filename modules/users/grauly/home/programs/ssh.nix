@@ -34,7 +34,7 @@
       };
       sfzserver-fast = {
         host = "sfzserver-fast";
-	proxyJump = "sfzserver";
+        proxyJump = "sfzserver";
         user = "nils";
         hostname = "10.20.42.179";
         identityFile = [

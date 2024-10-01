@@ -2,7 +2,7 @@
   programs.git = {
     enable = true;
     userEmail = "nils.dellemann@web.de";
-	  userName = "Grauly";
+    userName = "Grauly";
     extraConfig = {
       push.autoSetupRemote = true;
     };

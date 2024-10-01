@@ -1,6 +1,6 @@
 { pkgs, pkgs-unstable, ... }:
 
-{ 
+{
   imports = [
     ../programs/blender.nix
     ../programs/inkscape.nix

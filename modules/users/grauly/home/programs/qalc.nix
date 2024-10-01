@@ -1,5 +1,5 @@
 {
-  home.file.".config/qalculate/qalc.cfg" = { 
+  home.file.".config/qalculate/qalc.cfg" = {
     source = ./qalc.cfg;
   };
 }

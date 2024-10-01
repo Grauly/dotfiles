@@ -1,7 +1,7 @@
 { pkgs, ... }:
 let
   notify = "${pkgs.libnotify}/bin/notify-send";
-in 
+in
 {
   home.shellAliases = {
     ll = "ls -lah";

@@ -9,7 +9,7 @@
     borderColor = colors.mix;
     borderRadius = style.border-radius;
     borderSize = style.border-width;
-    progressColor = "over ${colors.highlight}"; 
+    progressColor = "over ${colors.highlight}";
     textColor = colors.text.color;
     extraConfig = ''
       [urgency=critical]

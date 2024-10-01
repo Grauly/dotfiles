@@ -1,4 +1,4 @@
-{ pkgs, pkgs-unstable, ...}:
+{ pkgs, pkgs-unstable, ... }:
 
 {
   # anything usefull for use with actual file explorers

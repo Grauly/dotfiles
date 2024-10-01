@@ -14,4 +14,4 @@
     #https://github.com/bitwarden/clients/issues/8759
     bitwarden-desktop
   ]);
-    }
+}

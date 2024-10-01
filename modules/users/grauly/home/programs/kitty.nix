@@ -1,4 +1,4 @@
-{ osConfig, ...}:
+{ osConfig, ... }:
 
 {
   programs.kitty = {
