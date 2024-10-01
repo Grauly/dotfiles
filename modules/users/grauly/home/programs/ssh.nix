@@ -49,6 +49,14 @@
           "~/.ssh/id_ed25519_sfzkey.key"
         ];
       };
+      link = {
+        host = "link";
+        user = "grauly";
+        hostname = "fd7a:115c:a1e0::1e";
+        identityFile = [
+          "~/.ssh/linkkey"
+        ];
+      };
     };
   };
 }
