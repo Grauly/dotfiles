@@ -15,13 +15,18 @@
     nixpkgs-blender = {
       url = "nixpkgs/nixos-unstable";
     };
+    treefmt-nix = {
+      url = "github:numtide/treefmt-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, nixpkgs-blender, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, nixpkgs-blender, home-manager, treefmt-nix, ... }@inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
       #setup packages to only use my system, and configure them to use unfree
+      treefmtEval = treefmt-nix.lib.evalModule pkgs ./treefmt.nix;
       pkgs = import nixpkgs {
         inherit system;
         config = {
@@ -42,6 +47,7 @@
       };
     in
     {
+      formatter.${system} = treefmtEval.config.build.wrapper;
       nixosConfigurations = {
         thetanix = lib.nixosSystem {
           inherit system pkgs;
