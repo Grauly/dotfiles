@@ -5,10 +5,7 @@
     enable = true;
     drivers = with pkgs; [
       hplip
-      brlaser
-      brgenml1lpr
-      brgenml1cupswrapper
-      dcp9020cdw-cupswrapper
+      (writeTextDir "share/cups/model/brother_dcp9022cdw_printer_en.ppd" (builtins.readFile ./brother_dcp9022cdw_printer_en.ppd))
     ];
   };
   hardware.printers.ensurePrinters = [
@@ -19,7 +16,7 @@
     }
     {
       name = "Home-2d-Drucker";
-      model = "brother_dcp9020cdw_printer_en.ppd";
+      model = "brother_dcp9022cdw_printer_en.ppd";
       deviceUri = "socket://192.168.11.29";
     }
   ];
