@@ -3,10 +3,11 @@
 {
   services.printing = {
     enable = true;
-    drivers = with pkgs; [
-      hplip
-      (writeTextDir "share/cups/model/brother_dcp9022cdw_printer_en.ppd" (builtins.readFile ./brother_dcp9022cdw_printer_en.ppd))
+    drivers = [
+      pkgs.hplip
+      ((pkgs.callPackage ./dcp9022cdw {}).driver)
     ];
+    logLevel = "debug";
   };
   hardware.printers.ensurePrinters = [
     {
