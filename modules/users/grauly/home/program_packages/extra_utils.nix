@@ -6,5 +6,6 @@
     xorg.xev
     tree
     killall
+    cryfs
   ];
 }
