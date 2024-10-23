@@ -5,7 +5,6 @@
     enable = true;
     drivers = [
       pkgs.hplip
-      ((pkgs.callPackage ./dcp9022cdw {}).driver)
     ];
     logLevel = "debug";
   };
@@ -17,8 +16,9 @@
     }
     {
       name = "Home-2d-Drucker";
-      model = "brother_dcp9022cdw_printer_en.ppd";
-      deviceUri = "socket://192.168.11.29";
+      # dirty hack, but works, for some reason.
+      model = "HP/hp-color_laserjet_pro_mfp_m477-ps.ppd.gz";
+      deviceUri = "ipp://192.168.11.29";
     }
   ];
 }

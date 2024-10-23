@@ -5,7 +5,7 @@
     ./network.nix
     ./locale.nix
     ./desktop/desktops.nix
-    ./printing/printing.nix
+    ./printing.nix
     ./users.nix
     ./packages/system_packages.nix
     ./disks.nix
