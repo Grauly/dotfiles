@@ -12,7 +12,7 @@
     {
       name = "Space-2d-Drucker";
       model = "HP/hp-color_laserjet_pro_mfp_m477-ps.ppd.gz";
-      deviceUri = "socket://2d.sfz-aalen.space";
+      deviceUri = "socket://10.11.42.10";
     }
     {
       name = "Home-2d-Drucker";
