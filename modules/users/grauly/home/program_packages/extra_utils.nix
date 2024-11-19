@@ -7,5 +7,6 @@
     tree
     killall
     cryfs
+    fzf
   ];
 }
