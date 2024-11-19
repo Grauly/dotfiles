@@ -14,7 +14,6 @@
 
   home.packages = with pkgs; [
     nixpkgs-fmt # required by vscode addon
-    libsForQt5.konsole # required by tmux (dont ask)
   ];
 
   programs.vscode.extensions = with pkgs.vscode-extensions; [
