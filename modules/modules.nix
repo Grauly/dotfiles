@@ -16,5 +16,6 @@
     ./kde_connect.nix
     ./platformio.nix
     ./mindustry.nix
+    ./xdg-terminal-workaround.nix
   ];
 }
