@@ -1,8 +1,11 @@
 { pkgs, pkgs-unstable, ... }:
 
 {
+  imports = [
+    ../programs/firefox.nix
+  ];
+
   home.packages = with pkgs; [
-    firefox
     thunderbird
     element-desktop
   ] ++ (with pkgs-unstable; [
