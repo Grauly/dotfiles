@@ -22,7 +22,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, nixpkgs-blender, home-manager, treefmt-nix, ... }@inputs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, treefmt-nix, ... }@inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
