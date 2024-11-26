@@ -40,12 +40,6 @@
           allowUnfree = true;
         };
       };
-      pkgs-blender = import nixpkgs-blender {
-        inherit system;
-        config = {
-          allowUnfree = true;
-        };
-      };
     in
     {
       formatter.${system} = treefmtEval.config.build.wrapper;
@@ -61,7 +55,6 @@
               home-manager.useUserPackages = true;
               home-manager.extraSpecialArgs = {
                 inherit pkgs-unstable;
-                inherit pkgs-blender;
                 inherit inputs;
               };
             }
