@@ -62,6 +62,7 @@
               home-manager.extraSpecialArgs = {
                 inherit pkgs-unstable;
                 inherit pkgs-blender;
+                inherit inputs;
               };
             }
           ];
