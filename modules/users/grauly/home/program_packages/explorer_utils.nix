@@ -9,7 +9,7 @@
 
   home.packages = with pkgs; [
     evince
-    gnome.eog
+    eog
     zip
     vlc
     libsForQt5.ark
