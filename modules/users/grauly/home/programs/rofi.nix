@@ -1,29 +1,18 @@
 { pkgs, pkgs-unstable, osConfig, ... }:
 
 
-let
-  #see https://github.com/NixOS/nixpkgs/issues/298539
-  override = package: (
-    (package.override {
-      rofi-unwrapped = pkgs.rofi-wayland-unwrapped;
-    })
-  );
-  plugins = with pkgs; [
-    (override rofi-calc)
-    (override rofi-emoji)
-  ];
-in
 {
   imports = [
     ./qalc.nix
   ];
   programs.rofi = {
     enable = true;
-    package = pkgs.rofi-wayland.override {
-      inherit plugins;
-    };
+    package = pkgs.rofi-wayland;
     terminal = "${pkgs.kitty}/bin/kitty";
-    inherit plugins;
+    plugins = with pkgs; [
+      rofi-calc
+      rofi-emoji
+    ];
     extraConfig = {
       modes = "window,drun,run,ssh,calc,emoji";
     };
