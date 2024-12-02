@@ -15,6 +15,7 @@
       vim.o.nu = true
       vim.o.cursorline = true
       vim.o.autoindent = true
+      vim.cmd "colorscheme vim" 
       local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
       if not (vim.uv or vim.loop).fs_stat(lazypath) then
         vim.fn.system({
