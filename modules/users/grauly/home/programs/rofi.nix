@@ -10,8 +10,8 @@
     package = pkgs.rofi-wayland;
     terminal = "${pkgs.kitty}/bin/kitty";
     plugins = with pkgs; [
-      (rofi-calc.overrideAttrs {rofi-unwrapped = rofi-wayland-unwrapped;})
-      (rofi-emoji.overrideAttrs {rofi-unwrapped = rofi-wayland-unwrapped;})
+      (rofi-calc.override { rofi-unwrapped = rofi-wayland-unwrapped; })
+      rofi-emoji-wayland
     ];
     extraConfig = {
       modes = "window,drun,run,ssh,calc,emoji";
