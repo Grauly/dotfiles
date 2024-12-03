@@ -17,5 +17,6 @@
     ./platformio.nix
     ./mindustry.nix
     ./xdg-terminal-workaround.nix
+    ./tlp.nix
   ];
 }
