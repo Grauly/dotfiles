@@ -6,7 +6,7 @@
     ./cursor.nix
     ./program_packages
   ];
-  home.stateVersion = "23.11";
+  home.stateVersion = "24.11";
   home.username = "grauly";
   home.homeDirectory = "/home/grauly";
 
