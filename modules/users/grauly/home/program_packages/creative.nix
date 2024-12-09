@@ -5,10 +5,10 @@
     ../programs/blender.nix
     ../programs/inkscape.nix
     ../programs/flameshot.nix
+    ../programs/gimp.nix
   ];
 
   home.packages = with pkgs; [
-    gimp
     audacity
     imagemagick
     icoutils

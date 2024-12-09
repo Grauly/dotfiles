@@ -4,12 +4,12 @@
   imports = [
     ../programs/intellij.nix
     ./core_utils.nix
+    ../programs/gimp.nix
   ];
 
   home.packages = with pkgs; [
     prismlauncher
     blockbench
-    gimp
     bitwarden-desktop
   ] ++ (with pkgs-unstable; [
   ]);
