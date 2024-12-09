@@ -8,9 +8,9 @@
   home.packages = with pkgs; [
     thunderbird
     element-desktop
+    bitwarden-desktop
   ] ++ (with pkgs-unstable; [
     #https://github.com/bitwarden/clients/issues/8759
-    bitwarden-desktop
     vesktop
   ]);
 }
