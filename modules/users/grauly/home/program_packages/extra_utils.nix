@@ -8,7 +8,7 @@
     killall
     cryfs
     fzf
-    rg
+    ripgrep
     nmap
   ];
 }
