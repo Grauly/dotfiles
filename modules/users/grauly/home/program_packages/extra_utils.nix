@@ -8,5 +8,7 @@
     killall
     cryfs
     fzf
+    rg
+    nmap
   ];
 }
