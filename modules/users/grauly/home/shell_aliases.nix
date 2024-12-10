@@ -22,5 +22,6 @@ in
     calc = "rofi -show calc";
     psg = "ps -xf | grep";
     ssh = "kitty +kitten ssh";
+    ssh-nk = "${pkgs.openssh}/bin/ssh";
   };
 }
