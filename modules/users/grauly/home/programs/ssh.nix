@@ -18,8 +18,7 @@
       sfzserver = {
         host = "sfzserver";
         user = "debian";
-        hostname = "sfz-aalen.space";
-        port = 29;
+        hostname = "100.64.0.64";
         identityFile = [
           "~/.ssh/id_ed25519_sfzkey.key"
         ];
