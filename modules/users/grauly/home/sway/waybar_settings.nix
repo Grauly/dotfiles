@@ -59,7 +59,7 @@ in
   };
 
   cpu = {
-    format = "CPU: {usage}% @ {avg_frequency}mHz";
+    format = "CPU: {usage}% @ {avg_frequency}MHz";
     states = {
       ok = 50;
       in-use = 70;
