@@ -6,7 +6,6 @@ in
   home.shellAliases = {
     ll = "ls -lah";
     lsg = "ls -lah | grep";
-    cd = "() {cd $1; ll}";
     lsstick = "lsblk | grep -v  \"nvme\"";
     mntstick = "() {udisksctl mount -b \"/dev/\$1\"}";
     umntstick = "() {udisksctl unmount -b \"/dev/\$1\"}";
