@@ -6,13 +6,14 @@ let
   nmtui = "${pkgs.networkmanager}/bin/nmtui";
   pulsemixer = "${pkgs.pulsemixer}/bin/pulsemixer";
   floating_shell = "exec ${terminal} --detach -T floating_shell ${shell} -c";
+  conn_stats_script = "${pkgs.unixtools.ping}/bin/ping 8.8.8.8 -i 1 -c 5 -q | ${pkgs.gnused}/bin/sed -rn 's#([0-9]+) packets transmitted, ([0-9]+) received, ([0-9]+)% packet loss, time [0-9]+ms#{\"text\":\"\\2/\\1 Packets received, \\3% Packet loss\", \"alt\":\"\\2/\\1@\\3%\", \"tooltip\":\"\\2/\\1@\\3% packet loss\", \"class\":\"noclass\",\"percentage\":\"\\3\"}#p'";
 in
 {
   layer = "top";
   position = "top";
   modules-left = [ "sway/workspaces" ];
   modules-center = [ "clock#minimal" "sway/mode" ];
-  modules-right = [ "cpu" "memory" "network" "pulseaudio" "backlight" "battery" "clock" ];
+  modules-right = [ "cpu" "memory" "custom/arrow_left" "custom/connectivity" "network" "custom/arrow_right" "pulseaudio" "backlight" "battery" "clock" ];
 
   battery = {
     interval = 5;
@@ -46,13 +47,35 @@ in
     format = "{:%H:%M}";
   };
 
+  "custom/connectivity" = {
+    exec = "${conn_stats_script}";
+    interval = 10;
+    return-type = "json";
+    format = "{icon}";
+    format-icons = [
+      "" #globe - connected
+      "󰨹" #question mark cloud - connection shaky
+      "󱘖" #connection lost
+      ];
+  };
+
+  "custom/arrow_right" = {
+    format = "";
+    tooltip = false;
+  };
+
+  "custom/arrow_left" = {
+    format = "";
+    tooltip = false;
+  };
+
   network = {
     interval = 10;
-    format = "SIGNAL LOST";
-    format-ethernet = "ETH: {ipaddr}";
-    tooltip-format-ethernet = "@ {bandwidthUpBytes} up,{bandwidthDownBytes} down";
-    format-wifi = "WIFI: {essid} @ {signalStrength}/{ipaddr}";
-    tooltip-format-wifi = "@ {bandwidthUpBytes} up,{bandwidthDownBytes} down";
+    format = "";
+    format-ethernet = "󰈁";
+    tooltip-format-ethernet = "{ipaddr}@{ifname} via {gwaddr}";
+    format-wifi = "";
+    tooltip-format-wifi = "{ipaddr}@{essid} ({signalStrength}%)";
     format-linked = "LINK LOST";
     format-disconnect = "NETWORK DISCONNECTED";
     on-click = "${floating_shell} ${nmtui}";

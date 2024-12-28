@@ -71,3 +71,20 @@ tooltip label {
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
+
+/* networking section */
+
+#custom-arrow_left, #custom-arrow_right {
+    background: none;
+    color: #aaa;
+    font-size: 26px;
+}
+
+#network, #custom-connectivity {
+    background: #aaa;
+    color: white;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 8px;
+}

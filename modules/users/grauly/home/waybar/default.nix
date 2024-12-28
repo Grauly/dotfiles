@@ -7,5 +7,6 @@
     settings = {
       grauly = (import ./waybar_settings.nix { inherit pkgs; });
     };
+    style = ./waybar_style.css;
   };
 }
