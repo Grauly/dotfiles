@@ -74,7 +74,7 @@ tooltip label {
 
 /* networking section */
 
-#custom-arrow_left, #custom-arrow_right {
+#custom-arrow_left, #custom-arrow_right, #custom-inv_arrow_right, #custom-inv_arrow_left {
     background: none;
     color: #aaa;
     font-size: 26px;

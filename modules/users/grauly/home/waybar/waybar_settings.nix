@@ -13,7 +13,7 @@ in
   position = "top";
   modules-left = [ "sway/workspaces" ];
   modules-center = [ "clock#minimal" "sway/mode" ];
-  modules-right = [ "cpu" "memory" "custom/arrow_left" "custom/connectivity" "network" "custom/arrow_right" "pulseaudio" "backlight" "battery" "clock" ];
+  modules-right = [ "custom/arrow_left" "cpu" "memory" "custom/inv_arrow_right" "custom/arrow_left" "custom/connectivity" "network" "custom/arrow_right" "custom/inv_arrow_left" "pulseaudio" "backlight" "battery" "custom/arrow_right" "custom/inv_arrow_left" "clock" ];
 
   battery = {
     interval = 5;
@@ -66,6 +66,16 @@ in
 
   "custom/arrow_left" = {
     format = "";
+    tooltip = false;
+  };
+
+  "custom/inv_arrow_left" = {
+    format = "";
+    tooltip = false;
+  };
+  
+  "custom/inv_arrow_right" = {
+    format = "";
     tooltip = false;
   };
 
