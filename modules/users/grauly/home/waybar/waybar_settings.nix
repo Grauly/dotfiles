@@ -6,7 +6,7 @@ let
   nmtui = "${pkgs.networkmanager}/bin/nmtui";
   pulsemixer = "${pkgs.pulsemixer}/bin/pulsemixer";
   floating_shell = "exec ${terminal} --detach -T floating_shell ${shell} -c";
-  conn_stats_script = "${pkgs.unixtools.ping}/bin/ping 8.8.8.8 -i 1 -c 5 -q | ${pkgs.gnused}/bin/sed -rn 's#([0-9]+) packets transmitted, ([0-9]+) received, ([0-9]+)% packet loss, time [0-9]+ms#{\"text\":\"\\2/\\1 Packets received, \\3% Packet loss\", \"alt\":\"\\2/\\1@\\3%\", \"tooltip\":\"\\2/\\1@\\3% packet loss\", \"class\":\"noclass\",\"percentage\":\"\\3\"}#p'";
+  conn_stats_script = "${pkgs.unixtools.ping}/bin/ping 8.8.8.8 -i 1 -c 5 -q | ${pkgs.gnused}/bin/sed -rn 's#([0-9]+) packets transmitted, ([0-9]+) received, ([0-9]+)% packet loss, time [0-9]+ms#{\"text\":\"\\2/\\1 Packets received, \\3% Packet loss\", \"alt\":\"\\2/\\1@\\3%\", \"tooltip\":\"\\2/\\1@\\3% packet loss\", \"class\":\"noclass\",\"percentage\":\\3}#p'";
 in
 {
   layer = "top";
@@ -81,10 +81,10 @@ in
 
   network = {
     interval = 10;
-    format = "";
-    format-ethernet = "󰈁";
+    format = ""; #X symbol
+    format-ethernet = "󰈁"; #ethernet symbol bm44     4
     tooltip-format-ethernet = "{ipaddr}@{ifname} via {gwaddr}";
-    format-wifi = "";
+    format-wifi = ""; #wifi symbol
     tooltip-format-wifi = "{ipaddr}@{essid} ({signalStrength}%)";
     format-linked = "LINK LOST";
     format-disconnect = "NETWORK DISCONNECTED";

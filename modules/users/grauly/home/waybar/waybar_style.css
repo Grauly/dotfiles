@@ -13,11 +13,12 @@ window#waybar {
 }
 
 tooltip {
-  background: rgba(43, 48, 59, 0.5);
-  border: 1px solid rgba(100, 114, 125, 0.5);
+    background: rgba(43, 48, 59, 0.5);
+    border: 1px solid rgba(100, 114, 125, 0.5);
 }
+
 tooltip label {
-  color: white;
+    color: white;
 }
 
 #workspaces button {
@@ -32,7 +33,9 @@ tooltip label {
     border-bottom: 3px solid white;
 }
 
-#mode, #clock, #battery {
+#mode,
+#clock,
+#battery {
     padding: 0 10px;
 }
 
@@ -72,19 +75,33 @@ tooltip label {
     animation-direction: alternate;
 }
 
-/* networking section */
 
-#custom-arrow_left, #custom-arrow_right, #custom-inv_arrow_right, #custom-inv_arrow_left {
+#custom-arrow_left,
+#custom-arrow_right,
+#custom-inv_arrow_right,
+#custom-inv_arrow_left {
     background: none;
     color: #aaa;
     font-size: 26px;
 }
 
-#network, #custom-connectivity {
+/* networking section */
+
+#network,
+#custom-connectivity {
     background: #aaa;
     color: white;
     padding-top: 0px;
     padding-bottom: 0px;
     padding-left: 0px;
     padding-right: 8px;
+}
+
+#cpu,
+#memory,
+#pulseaudio,
+#backlight,
+#battery,
+#clock {
+    background: #aaa;
 }
