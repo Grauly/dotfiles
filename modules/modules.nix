@@ -18,5 +18,6 @@
     ./mindustry.nix
     ./xdg-terminal-workaround.nix
     ./tlp.nix
+    ./rpi_setup.nix
   ];
 }
