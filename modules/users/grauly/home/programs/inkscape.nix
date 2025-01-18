@@ -1,10 +1,11 @@
-{ pkgs, ... }:
+{ pkgs, pkgs-unstable, ... }:
 
 {
   home.packages = [
     (pkgs.inkscape-with-extensions.override {
-      inkscapeExtensions = with pkgs.inkscape-extensions; [
+      inkscapeExtensions = with pkgs-unstable.inkscape-extensions; [
         silhouette
+        inkstitch
       ];
     })
   ];
