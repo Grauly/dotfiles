@@ -15,18 +15,26 @@
         ];
       };
 
-      sfzserver = {
+      sfzserver-builder = {
+        host = "sfzserver-builder";
+        user = "root";
+        hostname = "100.64.0.76";
+        identityFile = [
+          "~/.ssh/id_ed25519_sfzkey.key"
+        ];
+      };
+      sfzserver= {
         host = "sfzserver";
-        user = "debian";
-        hostname = "100.64.0.64";
+        user = "grauly";
+        hostname = "100.64.0.76";
         identityFile = [
           "~/.ssh/id_ed25519_sfzkey.key"
         ];
       };
       sfzserver-intern = {
         host = "sfzserver-intern";
-        user = "debian";
-        hostname = "10.20.42.78";
+        user = "grauly";
+        hostname = "10.20.42.79";
         identityFile = [
           "~/.ssh/id_ed25519_sfzkey.key"
         ];
