@@ -8,5 +8,6 @@
         inkstitch
       ];
     })
+    pkgs.adwaita-icon-theme
   ];
 }
