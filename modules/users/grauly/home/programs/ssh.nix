@@ -20,7 +20,7 @@
         user = "root";
         hostname = "100.64.0.76";
         identityFile = [
-          "~/.ssh/id_ed25519_sfzkey.key"
+          "~/.ssh/sfzkey"
         ];
       };
       sfzserver= {
@@ -28,7 +28,7 @@
         user = "grauly";
         hostname = "100.64.0.76";
         identityFile = [
-          "~/.ssh/id_ed25519_sfzkey.key"
+          "~/.ssh/sfzkey"
         ];
       };
       sfzserver-intern = {
@@ -36,7 +36,7 @@
         user = "grauly";
         hostname = "10.20.42.79";
         identityFile = [
-          "~/.ssh/id_ed25519_sfzkey.key"
+          "~/.ssh/sfzkey"
         ];
       };
       sfzserver-fast = {
