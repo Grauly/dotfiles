@@ -1,7 +1,7 @@
 {
   imports = [
     ./home.nix
-    ./sway/sway.nix
+    ./sway
     ./shell_aliases.nix
     ./cursor.nix
     ./program_packages
