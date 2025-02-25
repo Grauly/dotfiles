@@ -7,6 +7,12 @@
     extraGroups = [ "networkmanager" "wheel" "lp" ];
     shell = pkgs.zsh;
   };
+
+  # stuff that needs to be enabled on system level for some reason or another
+  programs.zsh.enable = true;
+  programs.steam.enable = true;
+
+  
   #do it here, so it actually gets recognized
   home-manager.users.grauly = import ./home;
   grauly = {
