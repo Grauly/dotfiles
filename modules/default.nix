@@ -4,7 +4,7 @@
     ./nix.nix
     ./network.nix
     ./locale.nix
-    ./desktop/desktops.nix
+    ./desktop
     ./printing.nix
     ./users.nix
     ./packages/system_packages.nix

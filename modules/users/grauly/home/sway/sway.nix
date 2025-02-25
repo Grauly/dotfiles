@@ -1,13 +1,6 @@
 { pkgs, pkgs-unstable, config, lib, osConfig, ... }:
 
 {
-  imports = [
-    ../waybar
-    ./mako.nix
-    ./sway_styling.nix
-    ./swaylock.nix
-  ];
-
   home.packages = with pkgs; [
     wl-clipboard
   ];

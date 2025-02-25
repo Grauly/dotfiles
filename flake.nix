@@ -47,7 +47,7 @@
         thetanix = lib.nixosSystem {
           inherit system pkgs;
           modules = [
-            ./modules/modules.nix
+            ./modules
             ./hardware/hardware.nix
             home-manager.nixosModules.home-manager
             {

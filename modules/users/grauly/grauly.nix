@@ -1,11 +1,6 @@
 { home-manager, pkgs, pkgs-unstable, ... }:
 
 {
-  imports = [
-    ./options.nix
-    ./packages/grauly_user_packages.nix
-    ./modules/modules.nix
-  ];
   users.users.grauly = {
     isNormalUser = true;
     description = "Grauly";
@@ -13,7 +8,7 @@
     shell = pkgs.zsh;
   };
   #do it here, so it actually gets recognized
-  home-manager.users.grauly = import ./home/home.nix;
+  home-manager.users.grauly = import ./home;
   grauly = {
     colors = {
       gradient-from = "#8c27e9a0";

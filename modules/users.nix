@@ -1,5 +1,5 @@
 {
   imports = [
-    ./users/grauly/grauly.nix
+    ./users/grauly
   ];
 }
