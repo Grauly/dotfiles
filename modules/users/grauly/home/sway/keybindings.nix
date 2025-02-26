@@ -98,7 +98,7 @@
 
   "${swaycfg.modifier}+KP_Enter" = "exec rofi -show calc";
 
-  "${swaycfg.modifier}+e" = "exec ${pkgs.xfce.thunar}/bin/thunar";
+  "${swaycfg.modifier}+e" = "exec ${swaycfg.terminal} --detach ${pkgs.zsh}/bin/zsh -c ${pkgs.yazi}/bin/yazi";
 
   # Screenshots
   "Pause" = "exec ${pkgs.flameshot}/bin/flameshot gui -r | ${pkgs.wl-clipboard}/bin/wl-copy";

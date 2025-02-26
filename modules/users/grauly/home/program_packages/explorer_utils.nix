@@ -5,6 +5,7 @@
   # note that the actual file browsers are on system level
   imports = [
     ./core_utils.nix
+    ../programs/yazi.nix
   ];
 
   home.packages = with pkgs; [
