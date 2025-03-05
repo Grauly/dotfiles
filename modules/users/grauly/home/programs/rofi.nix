@@ -3,7 +3,7 @@
 
 {
   imports = [
-    ./qalc.nix
+    ./qalc
   ];
   programs.rofi = {
     enable = true;
