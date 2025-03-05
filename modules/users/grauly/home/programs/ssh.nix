@@ -23,7 +23,7 @@
           "~/.ssh/sfzkey"
         ];
       };
-      sfzserver= {
+      sfzserver = {
         host = "sfzserver";
         user = "grauly";
         hostname = "100.64.0.76";

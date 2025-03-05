@@ -1,4 +1,4 @@
-{ config, ...}:
+{ config, ... }:
 
 {
   # https://github.com/rubenhoenle/pi-nixos

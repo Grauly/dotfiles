@@ -12,7 +12,7 @@
   programs.zsh.enable = true;
   programs.steam.enable = true;
 
-  
+
   #do it here, so it actually gets recognized
   home-manager.users.grauly = import ./home;
   grauly = {

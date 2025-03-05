@@ -56,7 +56,7 @@ in
       "" #globe - connected
       "󰨹" #question mark cloud - connection shaky
       "󱘖" #connection lost
-      ];
+    ];
   };
 
   "custom/arrow_right" = {
@@ -73,7 +73,7 @@ in
     format = "";
     tooltip = false;
   };
-  
+
   "custom/inv_arrow_right" = {
     format = "";
     tooltip = false;
