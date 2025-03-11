@@ -48,7 +48,7 @@
           inherit system pkgs;
           modules = [
             ./modules
-            ./hardware/hardware.nix
+            ./hardware
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
