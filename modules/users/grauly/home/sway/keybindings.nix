@@ -1,4 +1,4 @@
-{ pkgs, swaycfg, resize-mode, shutdown-mode, ... }:
+{ pkgs, pkgs-unstable, swaycfg, resize-mode, shutdown-mode, ... }:
 
 {
   # Reimplement Sway hotkeys, because this overrides them
@@ -98,7 +98,7 @@
 
   "${swaycfg.modifier}+KP_Enter" = "exec rofi -show calc";
 
-  "${swaycfg.modifier}+e" = "exec ${swaycfg.terminal} --detach ${pkgs.zsh}/bin/zsh -c ${pkgs.yazi}/bin/yazi";
+  "${swaycfg.modifier}+e" = "exec ${swaycfg.terminal} --detach ${pkgs.zsh}/bin/zsh -c ${pkgs-unstable.yazi}/bin/yazi";
 
   # Screenshots
   "Pause" = "exec ${pkgs.flameshot}/bin/flameshot gui -r | ${pkgs.wl-clipboard}/bin/wl-copy";
