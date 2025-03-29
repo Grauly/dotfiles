@@ -30,6 +30,9 @@ let
   };
 in
 {
+  home.packages = with pkgs; [
+    librewolf
+  ];
   xdg.desktopEntries."Firefox" = {
     name = "Firefox";
     genericName = "Web Browser, Actually LibreWolf in disguise";
