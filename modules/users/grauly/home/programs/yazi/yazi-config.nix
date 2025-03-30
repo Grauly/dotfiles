@@ -1,5 +1,3 @@
-{ ... }:
-
 let 
   simpleProgams = [
     "nvim"
