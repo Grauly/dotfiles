@@ -8,7 +8,7 @@
     ../programs/rofi.nix
     ../programs/kitty.nix
     ../programs/zsh.nix
-    ../programs/vscode.nix
+    ../programs/vscode
     ../programs/ssh.nix
   ];
 
