@@ -23,6 +23,14 @@
           "~/.ssh/sfzkey"
         ];
       };
+      sfzserver-builder-intern = {
+        host = "sfzserver-builder-intern";
+        user = "root";
+        hostname = "10.20.42.79";
+        identityFile = [
+          "~/.ssh/sfzkey"
+        ];
+      };
       sfzserver = {
         host = "sfzserver";
         user = "grauly";
