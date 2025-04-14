@@ -1,4 +1,4 @@
-let 
+let
   simpleProgams = [
     "nvim"
     "blender"
@@ -9,7 +9,7 @@ let
     "blockbench"
     "prusa-slicer"
   ];
-in 
+in
 {
   manager = {
     sort_by = "mtime";
@@ -31,29 +31,32 @@ in
       }
     ];
   } // (
-    builtins.listToAttrs (map (command:
-      ({
-        name = "${command}";
-        value = [{run = "${command} \"$@\""; block = true;}];
-      })
-    ) simpleProgams)
+    builtins.listToAttrs (map
+      (command:
+        ({
+          name = "${command}";
+          value = [{ run = "${command} \"$@\""; block = true; }];
+        })
+      )
+      simpleProgams)
   ));
   open = {
     rules = [
-      {mime = "text/html"; use = ["nvim" "librewolf"];}
-      {name = "*.gcode"; use = "prusa-slicer";}
-      {name = "*.bgcode"; use = "prusa-slicer";}
-      {mime = "text/*"; use = "nvim";}
-      {mime = "video/*"; use = "vlc";}
-      {mime = "audio/*"; use = "vlc";}      
-      {mime = "image/svg+xml"; use = ["inkscape" "nvim"];}
-      {mime = "image/*"; use = "gimp";}
-      {name = "*.bbmodel"; use = "blockbench";}
-      {name = "*.json"; use = ["nvim" "blockbench" "librewolf"];}
-      {name = "*.zip"; use = "ark";}
-      {name = "*.stl"; use = "prusa-slicer";}
-      {name = "*.pdf"; use = ["evince" "librewolf"];}
-      {mime = "application/x-blender"; use = "blender";}
+      { mime = "text/html"; use = [ "nvim" "librewolf" ]; }
+      { name = "*.gcode"; use = "prusa-slicer"; }
+      { name = "*.bgcode"; use = "prusa-slicer"; }
+      { mime = "text/*"; use = "nvim"; }
+      { mime = "video/*"; use = "vlc"; }
+      { mime = "audio/*"; use = "vlc"; }
+      { mime = "image/svg+xml"; use = [ "inkscape" "nvim" ]; }
+      { mime = "image/*"; use = "gimp"; }
+      { name = "*.bbmodel"; use = "blockbench"; }
+      { name = "*.json"; use = [ "nvim" "blockbench" "librewolf" ]; }
+      { name = "*.zip"; use = "ark"; }
+      { name = "*.stl"; use = "prusa-slicer"; }
+      { name = "*.pdf"; use = [ "evince" "librewolf" "gimp"]; }
+      { mime = "application/blender"; use = "blender"; }
+      { mime = "*"; use = "nvim"; }
     ];
   };
 }

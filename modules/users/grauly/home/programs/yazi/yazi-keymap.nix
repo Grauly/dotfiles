@@ -1,8 +1,8 @@
 {
-  pick = {
-    append_keymap = [
+  manager = {
+    prepend_keymap = [
       {
-        on = "<BackTab>";
+        on = "<S-x>";
         run = "plugin xdg-mime";
       }
     ];
