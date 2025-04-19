@@ -5,6 +5,7 @@
     userName = "Grauly";
     extraConfig = {
       push.autoSetupRemote = true;
+      init.defaultBranch = "main";
     };
   };
 }
