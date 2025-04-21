@@ -1,6 +1,7 @@
 {
   imports = [
     ./yazi.nix
+    ./yazi_nix-commands.nix
     ./yazi-plugins.nix
     #./yazi-init.nix
     #TODO: 1) zipping/unzipping

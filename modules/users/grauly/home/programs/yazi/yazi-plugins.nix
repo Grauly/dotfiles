@@ -13,10 +13,10 @@ let
   ];
 in
 {
-  home.file = (builtins.listToAttrs
+  xdg.configFile = (builtins.listToAttrs
     (map
       (plugin:
-        lib.nameValuePair ".config/yazi/plugins/${plugin}.yazi/" {
+        lib.nameValuePair "yazi/plugins/${plugin}.yazi/" {
           source = ./plugins/${plugin};
         }
       )
@@ -24,10 +24,20 @@ in
   ) // (builtins.listToAttrs
     (map
       (plugin:
-        lib.nameValuePair ".config/yazi/plugins/${plugin.repo}/" {
+        lib.nameValuePair "yazi/plugins/${plugin.repo}/" {
           source = (pkgs.fetchgit { url = "https://github.com/${plugin.user}/${plugin.repo}"; hash = "${plugin.hash}";}).outPath;      
         }
       )
       enabledGitPlugins)
   );
+  yazi.nix-commands = {
+    enable = true;
+    commands = [
+      {
+        enable = true;
+        name = "dragon";
+        command = "${pkgs.xdragon}/bin/dragon";
+      }
+    ];
+  };
 }
