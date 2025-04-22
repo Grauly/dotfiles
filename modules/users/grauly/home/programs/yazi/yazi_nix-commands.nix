@@ -37,7 +37,7 @@ in
       commands = {
     '' +
     (lib.concatLines (builtins.map (c:
-      ''${c.name} = "${c.command}"''
+      ''${c.name} = "${c.command}",''
     ) (builtins.filter (c: c.enable) cfg.commands))) + 
     ''
       }
