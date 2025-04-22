@@ -3,13 +3,13 @@
 let
   cfg = config.yazi.nix-commands;
 in
-{ 
+{
   options.yazi.nix-commands = {
     enable = lib.mkEnableOption "Enable yazi nix commands";
 
     commands = lib.mkOption {
-      default = [];
-      type = lib.types.listOf ( lib.types.submodule ({ config, ...}: {
+      default = [ ];
+      type = lib.types.listOf (lib.types.submodule ({ config, ... }: {
         options = {
           enable = lib.mkEnableOption "Enable this specific command";
           name = lib.mkOption {
@@ -28,20 +28,22 @@ in
 
   #now actually do the stuff
   config = lib.mkIf cfg.enable {
-    xdg.configFile."yazi/plugins/nix-commands.yazi/main.lua".text = 
-    ''
-    return {
-      entry = function()
+    xdg.configFile."yazi/plugins/nix-commands.yazi/main.lua".text =
+      ''
+        return {
+          entry = function()
 
-      end,
-      commands = {
-    '' +
-    (lib.concatLines (builtins.map (c:
-      ''${c.name} = "${c.command}",''
-    ) (builtins.filter (c: c.enable) cfg.commands))) + 
-    ''
-      }
-    }
-    '';
+          end,
+          commands = {
+      '' +
+      (lib.concatLines (builtins.map
+        (c:
+          ''${c.name} = "${c.command}",''
+        )
+        (builtins.filter (c: c.enable) cfg.commands))) +
+      ''
+          }
+        }
+      '';
   };
 }

@@ -1,7 +1,7 @@
 {
-  "extensions.autoCheckUpdates"= false;
-  "update.mode"= "none";
+  "extensions.autoCheckUpdates" = false;
+  "update.mode" = "none";
   "extensions.experimental.affinity" = {
-    "asvetliakov.vscode-neovim"= 1;
+    "asvetliakov.vscode-neovim" = 1;
   };
 }

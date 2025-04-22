@@ -54,7 +54,7 @@ in
       { name = "*.json"; use = [ "nvim" "blockbench" "librewolf" ]; }
       { name = "*.zip"; use = "ark"; }
       { name = "*.stl"; use = "prusa-slicer"; }
-      { name = "*.pdf"; use = [ "evince" "librewolf" "gimp"]; }
+      { name = "*.pdf"; use = [ "evince" "librewolf" "gimp" ]; }
       { mime = "application/blender"; use = "blender"; }
       { mime = "*"; use = "nvim"; }
     ];

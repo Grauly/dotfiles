@@ -25,7 +25,7 @@ in
     (map
       (plugin:
         lib.nameValuePair "yazi/plugins/${plugin.repo}/" {
-          source = (pkgs.fetchgit { url = "https://github.com/${plugin.user}/${plugin.repo}"; hash = "${plugin.hash}";}).outPath;      
+          source = (pkgs.fetchgit { url = "https://github.com/${plugin.user}/${plugin.repo}"; hash = "${plugin.hash}"; }).outPath;
         }
       )
       enabledGitPlugins)
