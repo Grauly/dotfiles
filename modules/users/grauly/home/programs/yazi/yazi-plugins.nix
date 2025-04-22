@@ -10,6 +10,11 @@ let
       repo = "xdg-mime.yazi";
       hash = "sha256-vyLnfneOcm1YkNzWfCWxRkfOXNSRkYtHdKnJ3ZCS47c=";
     }
+    {
+      user = "Grauly";
+      repo = "dragon.yazi";
+      hash = "sha256-hrdMHdZqyr8sWnlPesXmDN+O3Uj1KmAV/dNi3/2VLIo=";
+    }
   ];
 in
 {
