@@ -38,6 +38,21 @@ in
         name = "dragon";
         command = "${pkgs.xdragon}/bin/dragon";
       }
+      {
+        enable = true;
+        name = "wget";
+        command = "${pkgs.wget}/bin/wget";
+      }
+      {
+        enable = true;
+        name = "ls";
+        command = "${pkgs.coreutils}/bin/ls";
+      }
+      {
+        enable = true;
+        name = "cp";
+        command = "${pkgs.coreutils}/bin/cp";
+      }
     ];
   };
 }
