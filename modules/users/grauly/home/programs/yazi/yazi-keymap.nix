@@ -13,6 +13,10 @@
         on = "<G>";
         run = "plugin dragon";
       }
+      {
+        on = "<M>";
+        run = "plugin mount";
+      }
     ];
   };
 }

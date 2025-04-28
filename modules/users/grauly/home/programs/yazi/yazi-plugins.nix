@@ -9,11 +9,19 @@ let
       user = "Grauly";
       repo = "xdg-mime.yazi";
       hash = "sha256-vyLnfneOcm1YkNzWfCWxRkfOXNSRkYtHdKnJ3ZCS47c=";
+      path = "/";
     }
     {
       user = "Grauly";
       repo = "dragon.yazi";
       hash = "sha256-hrdMHdZqyr8sWnlPesXmDN+O3Uj1KmAV/dNi3/2VLIo=";
+      path = "/";
+    }
+    {
+      user = "yazi-rs";
+      repo = "plugins";
+      hash = "sha256-m3709h7/AHJAtoJ3ebDA40c77D+5dCycpecprjVqj/k=";
+      path = "/mount.yazi/";
     }
   ];
 in
@@ -29,8 +37,8 @@ in
   ) // (builtins.listToAttrs
     (map
       (plugin:
-        lib.nameValuePair "yazi/plugins/${plugin.repo}/" {
-          source = (pkgs.fetchgit { url = "https://github.com/${plugin.user}/${plugin.repo}"; hash = "${plugin.hash}"; }).outPath;
+        lib.nameValuePair "yazi/plugins/${if(plugin.path == "/") then plugin.repo else plugin.path}/" {
+          source = "${(pkgs.fetchgit { url = "https://github.com/${plugin.user}/${plugin.repo}"; hash = "${plugin.hash}"; }).outPath}${plugin.path}";
         }
       )
       enabledGitPlugins)
