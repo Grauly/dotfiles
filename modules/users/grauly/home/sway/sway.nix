@@ -47,7 +47,7 @@
         for_window [title="Picture-in-Picture"] floating enable, border pixel ${toString osConfig.grauly.style.border-width}, sticky enable
         for_window [title="Discord Popout"] floating enable, border pixel ${toString osConfig.grauly.style.border-width}, sticky enable
       '';
-        # output eDP-1 color_profile icc ${./Monitor_1_1_2025-05-06_22-28_2.2_F-S_XYZLUT+MTX.icc}
-        # https://github.com/WillPower3309/swayfx/issues/348
+      # output eDP-1 color_profile icc ${./Monitor_1_1_2025-05-06_22-28_2.2_F-S_XYZLUT+MTX.icc}
+      # https://github.com/WillPower3309/swayfx/issues/348
     };
 }
