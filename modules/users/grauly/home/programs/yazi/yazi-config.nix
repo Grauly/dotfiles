@@ -35,7 +35,7 @@ in
       (command:
         ({
           name = "${command}";
-          value = [{ run = "${command} \"$@\""; block = true; }];
+          value = [{ run = "${command} \"$@\""; orphan = true; }];
         })
       )
       simpleProgams)
