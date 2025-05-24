@@ -3,6 +3,7 @@
 {
   imports = [
     ../programs/browser.nix
+    ../programs/kde_connect.nix
   ];
 
   home.packages = with pkgs; [
