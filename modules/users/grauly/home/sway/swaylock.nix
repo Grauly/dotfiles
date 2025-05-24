@@ -36,7 +36,6 @@ in
       text-wrong-color = colors.text.color;
       clock = true;
       effect-blur = "3x1";
-      grace = 2;
       text-clear = "Reset";
       text-caps-lock = "CAPS LOCK";
       text-ver = "Verifying";
