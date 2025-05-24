@@ -16,7 +16,7 @@
     nixpkgs-fmt # required by vscode addon
   ];
 
-  programs.vscode.extensions = with pkgs.vscode-extensions; [
+  programs.vscode.profiles.default.extensions = with pkgs.vscode-extensions; [
     jnoortheen.nix-ide
   ];
 }
