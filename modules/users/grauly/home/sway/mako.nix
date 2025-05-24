@@ -4,14 +4,14 @@
   services.mako = with osConfig.grauly; {
     enable = true;
     settings = {
-      defaultTimeout = 10 * 1000;
+      default-timeout = 10 * 1000;
       anchor = "bottom-right";
-      backgroundColor = colors.background;
-      borderColor = colors.mix;
-      borderRadius = style.border-radius;
-      borderSize = style.border-width;
-      progressColor = "over ${colors.highlight}";
-      textColor = colors.text.color;
+      background-color = colors.background;
+      border-color = colors.mix;
+      border-radius = style.border-radius;
+      border-size = style.border-width;
+      progress-color = "over ${colors.highlight}";
+      text-color = colors.text.color;
       "urgency=critical" = {
         border-color="${colors.highlight}";
       };
