@@ -1,6 +1,5 @@
 let
   simpleProgams = [
-    "nvim"
     "blender"
     "inkscape"
     "ark"
@@ -28,6 +27,12 @@ in
       {
         run = "librewolf --new-window \"$@\"";
         orphan = true;
+      }
+    ];
+    nvim = [
+      {
+        run = "nvim \"$@\"";
+        block = true;
       }
     ];
   } // (
