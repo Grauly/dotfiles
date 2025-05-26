@@ -1,0 +1,3 @@
+{
+  services.rpcbind.enable = true;
+}
