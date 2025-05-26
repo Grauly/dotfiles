@@ -49,7 +49,7 @@ in
       {
         enable = true;
         name = "dragon";
-        command = "${pkgs.xdragon}/bin/dragon";
+        command = "${pkgs.xdragon}/bin/dragon-drop";
       }
       {
         enable = true;
