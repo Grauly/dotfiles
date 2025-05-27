@@ -66,6 +66,11 @@ in
         name = "cp";
         command = "${pkgs.coreutils}/bin/cp";
       }
+      {
+        enable = true;
+        name = "gdbus";
+        command = "${pkgs.glib}/bin/gdbus";
+      }
     ];
   };
 }
