@@ -23,6 +23,12 @@ let
       hash = "sha256-m3709h7/AHJAtoJ3ebDA40c77D+5dCycpecprjVqj/k=";
       path = "/mount.yazi/";
     }
+    {
+      user = "yazi-rs";
+      repo = "plugins";
+      hash = "sha256-m3709h7/AHJAtoJ3ebDA40c77D+5dCycpecprjVqj/k=";
+      path = "/types.yazi/";
+    }
   ];
 in
 {
