@@ -7,12 +7,6 @@ let
   enabledGitPlugins = [
     {
       user = "Grauly";
-      repo = "xdg-mime.yazi";
-      hash = "sha256-vyLnfneOcm1YkNzWfCWxRkfOXNSRkYtHdKnJ3ZCS47c=";
-      path = "/";
-    }
-    {
-      user = "Grauly";
       repo = "dragon.yazi";
       hash = "sha256-CApGYs/+6LFE5r+xb7+F0oF9qy7AtCPvIKkfzFRgnQc=";
       path = "/";
