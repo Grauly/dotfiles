@@ -14,7 +14,7 @@ let
     {
       user = "Grauly";
       repo = "dragon.yazi";
-      hash = "sha256-hrdMHdZqyr8sWnlPesXmDN+O3Uj1KmAV/dNi3/2VLIo=";
+      hash = "sha256-CApGYs/+6LFE5r+xb7+F0oF9qy7AtCPvIKkfzFRgnQc=";
       path = "/";
     }
     {
