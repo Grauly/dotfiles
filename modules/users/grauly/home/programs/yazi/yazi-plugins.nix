@@ -20,13 +20,13 @@ let
     {
       user = "yazi-rs";
       repo = "plugins";
-      hash = "sha256-m3709h7/AHJAtoJ3ebDA40c77D+5dCycpecprjVqj/k=";
+      hash = "sha256-TtVaWazkk2xnomhJFinElbUsXUKAbDDhLEVq5Ah3nAk=";
       path = "/mount.yazi/";
     }
     {
       user = "yazi-rs";
       repo = "plugins";
-      hash = "sha256-m3709h7/AHJAtoJ3ebDA40c77D+5dCycpecprjVqj/k=";
+      hash = "sha256-TtVaWazkk2xnomhJFinElbUsXUKAbDDhLEVq5Ah3nAk=";
       path = "/types.yazi/";
     }
   ];

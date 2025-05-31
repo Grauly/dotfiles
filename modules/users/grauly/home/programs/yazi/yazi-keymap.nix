@@ -18,6 +18,10 @@
         run = "plugin mount";
       }
       {
+        on = "<T>";
+        run = "plugin test";
+      }
+      {
         on = "<z>";
         run = "plugin zoxide";
         desc = "Jump to a directory via zoxide";
