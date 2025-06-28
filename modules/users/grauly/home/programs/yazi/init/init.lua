@@ -1,1 +1,3 @@
-require('linemode.lua')
+require("zoxide"):setup {
+	update_db = true,
+}
