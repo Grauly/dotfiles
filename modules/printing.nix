@@ -5,6 +5,7 @@
     enable = true;
     drivers = [
       pkgs.hplip
+      (pkgs.callPackage ./printer_drivers/pebble.nix {})
     ];
     logLevel = "debug";
   };
@@ -19,6 +20,11 @@
       # dirty hack, but works, for some reason.
       model = "HP/hp-color_laserjet_pro_mfp_m477-ps.ppd.gz";
       deviceUri = "ipp://192.168.11.29";
+    }
+    {
+      name = "Pebble4";
+      model = "evolis-pebbleE.ppd.gz";
+      deviceUri = "usb://EVOLIS/Pebble";
     }
   ];
 }
