@@ -37,6 +37,9 @@
           "*" = {
             bg = "${./background.png} fill";
           };
+          "BOE 0x0974 Unknown" = {
+            scale = "1.3";
+          };
         };
       };
       extraOptions = [
