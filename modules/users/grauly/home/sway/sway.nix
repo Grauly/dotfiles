@@ -41,14 +41,28 @@
             scale = "1.3";
           };
         };
+        floating = {
+          criteria = [
+            {
+              title = "floating_shell";
+            }
+            {
+              title = "Picture-in-Picture";
+            }
+            {
+              title = "Discord Popout";
+            }
+          ];
+          border = osConfig.grauly.style.border-width;
+        };
       };
       extraOptions = [
         "--unsupported-gpu"
       ];
       extraConfig = ''
-        for_window [title="floating_shell"] floating enable, border pixel ${toString osConfig.grauly.style.border-width}, sticky enable
-        for_window [title="Picture-in-Picture"] floating enable, border pixel ${toString osConfig.grauly.style.border-width}, sticky enable
-        for_window [title="Discord Popout"] floating enable, border pixel ${toString osConfig.grauly.style.border-width}, sticky enable
+        for_window [title="floating_shell"] sticky enable
+        for_window [title="Picture-in-Picture"] sticky enable
+        for_window [title="Discord Popout"] sticky enable
       '';
       # output eDP-1 color_profile icc ${./Monitor_1_1_2025-05-06_22-28_2.2_F-S_XYZLUT+MTX.icc}
       # https://github.com/WillPower3309/swayfx/issues/348
