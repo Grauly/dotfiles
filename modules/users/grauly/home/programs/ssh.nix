@@ -80,6 +80,22 @@
           "~/.ssh/id_ed25519_sfzkey.key"
         ];
       };
+      octoprint = {
+        host = "octoprint";
+        user = "root";
+        hostname = "10.20.42.45";
+        identityFile = [
+          "~/.ssh/sfzkey"
+        ];
+      };
+      matekasse = {
+        host = "matekasse";
+        user = "root";
+        hostname = "10.20.42.120";
+        identityFile = [
+          "~/.ssh/sfzkey"
+        ];
+      };
     };
   };
 }
