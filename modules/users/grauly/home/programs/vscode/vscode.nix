@@ -3,6 +3,7 @@
 {
   programs.vscode = {
     enable = true;
+    package = (import ./vscode-WL-electron.nix { inherit pkgs; });
     mutableExtensionsDir = false;
     profiles.default = {
       enableUpdateCheck = false;
