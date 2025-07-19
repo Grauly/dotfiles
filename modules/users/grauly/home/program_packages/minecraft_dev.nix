@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../programs/intellij.nix
+    ../programs/intellij
     ./core_utils.nix
     ../programs/gimp.nix
   ];
