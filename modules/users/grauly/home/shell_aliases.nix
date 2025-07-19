@@ -22,6 +22,10 @@ in
     psg = "ps -xf | grep";
     ssh = "kitty +kitten ssh";
     ssh-nk = "${pkgs.openssh}/bin/ssh";
-    trace = ''() {readlink -f "$(which $1)"}'';
   };
+  
+  # effective aliases, just as program to use it deeper nestedly
+  home.packages = [
+    (import ./programs/trace-package.nix { inherit pkgs; })
+  ];
 }
