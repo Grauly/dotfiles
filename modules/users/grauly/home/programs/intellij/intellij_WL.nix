@@ -4,7 +4,7 @@ let
   mc-depencencies = with pkgs; [
     libpulseaudio
     libGL
-    glfw
+    (import ../glfw-minecraft { inherit pkgs; })
     openal
     stdenv.cc.cc.lib  
   ];
