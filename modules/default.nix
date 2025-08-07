@@ -20,5 +20,6 @@
     ./tlp.nix
     ./rpi_setup.nix
     ./rpcbind.nix
+    ./swap.nix
   ];
 }
