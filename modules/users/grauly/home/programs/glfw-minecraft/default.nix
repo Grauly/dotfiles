@@ -4,7 +4,7 @@
   pname = "glfw3-minecraft-wayland";
   src = pkgs.fetchgit {
     url = "https://github.com/llyyr/glfw-minecraft-wayland";
-    hash = "sha256-gO/X/Rpf50c3GnX2pUNdeBiT9ugWtQVJnj9YHufkFd8=";
+    hash = "sha256-lv7IWChTwTUsN3+4lsZDoM+pGGMc5KfP5iL3v2jCctw=";
   };
   patches = [
     # yes, I basically patch the thing in the other patch patches out
