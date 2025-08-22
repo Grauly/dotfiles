@@ -19,7 +19,7 @@
       name = "Home-2d-Drucker";
       # dirty hack, but works, for some reason.
       model = "HP/hp-color_laserjet_pro_mfp_m477-ps.ppd.gz";
-      deviceUri = "ipp://192.168.11.29";
+      deviceUri = "ipp://192.168.178.22";
     }
 #    {
 #      name = "Pebble4";
