@@ -77,7 +77,7 @@
         user = "root";
         hostname = "10.12.42.165";
         identityFile = [
-          "~/.ssh/id_ed25519_sfzkey.key"
+          "~/.ssh/sfzkey"
         ];
       };
       octoprint = {
