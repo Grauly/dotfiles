@@ -47,23 +47,6 @@
           "~/.ssh/sfzkey"
         ];
       };
-      sfzserver-fast = {
-        host = "sfzserver-fast";
-        proxyJump = "sfzserver";
-        user = "nils";
-        hostname = "10.20.42.179";
-        identityFile = [
-          "~/.ssh/id_ed25519_sfzkey.key"
-        ];
-      };
-      sfzserver-intern-fast = {
-        host = "sfzserver-intern-fast";
-        user = "nils";
-        hostname = "10.20.42.179";
-        identityFile = [
-          "~/.ssh/id_ed25519_sfzkey.key"
-        ];
-      };
       link = {
         host = "link";
         user = "grauly";
