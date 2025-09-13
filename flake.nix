@@ -20,9 +20,13 @@
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    agenix = {
+      url = "github:ryantm/agenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, treefmt-nix, ... }@inputs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, treefmt-nix, agenix, ... }@inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -57,6 +61,12 @@
                 inherit pkgs-unstable;
                 inherit inputs;
               };
+            }
+            agenix.nixosModules.default
+            {
+              environment.systemPackages = [
+                agenix.packages."${system}".default
+              ];
             }
           ];
         };
