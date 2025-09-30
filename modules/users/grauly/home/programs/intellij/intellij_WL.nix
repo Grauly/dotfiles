@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, pkgs-unstable, ... }:
 
 let
   mc-depencencies = with pkgs; [
@@ -11,7 +11,7 @@ let
 in
 pkgs.symlinkJoin {
   name = "IntelliJ Minecraft Support";
-  paths = [ pkgs.jetbrains.idea-community];
+  paths = [ pkgs-unstable.jetbrains.idea-community];
   buildInputs = [ pkgs.makeWrapper ];
   postBuild = ''
     wrapProgram $out/bin/idea-community \

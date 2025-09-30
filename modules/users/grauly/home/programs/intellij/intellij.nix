@@ -1,8 +1,8 @@
-{ pkgs, ... }:
+{ pkgs, pkgs-unstable, ... }:
 
 {
   home.packages = with pkgs; [
-    (import ./intellij_WL.nix { inherit pkgs; })
+    (import ./intellij_WL.nix { inherit pkgs pkgs-unstable; })
   ];
 
   home.file = {
