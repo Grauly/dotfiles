@@ -3,7 +3,7 @@
 {
   home.packages = with pkgs; [
     (prismlauncher.override {
-      glfw3-minecraft = (import ./glfw-minecraft { inherit pkgs; });
+      #glfw3-minecraft = (import ./glfw-minecraft { inherit pkgs; });
     })
   ];
 }
