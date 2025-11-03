@@ -6,10 +6,11 @@
   # but here we are.
   # ...and hell followed at a leisurly stroll
 
-  virtualisation.podman = {
-    enable = true;
-    dockerCompat = true;
-  };
+  programs.virt-manager.enable = true;
 
-  environment.systemPackages = [ pkgs.distrobox ];
+  users.groups.libvirtd.members = ["grauly"];
+
+  virtualisation.libvirtd.enable = true;
+
+  virtualisation.spiceUSBRedirection.enable = true;
 }
