@@ -21,5 +21,6 @@
     ./rpi_setup.nix
     ./rpcbind.nix
     ./swap.nix
+    ./matlab.nix
   ];
 }
