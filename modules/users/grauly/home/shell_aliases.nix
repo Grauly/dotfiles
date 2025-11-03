@@ -23,7 +23,7 @@ in
     ssh = "kitty +kitten ssh";
     ssh-nk = "${pkgs.openssh}/bin/ssh";
   };
-  
+
   # effective aliases, just as program to use it deeper nestedly
   home.packages = [
     (import ./programs/trace-package.nix { inherit pkgs; })

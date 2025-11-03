@@ -1,8 +1,7 @@
-{ 
-  stdenv,
-  autoPatchelfHook,
-  cups,
-  dpkg
+{ stdenv
+, autoPatchelfHook
+, cups
+, dpkg
 }:
 
 stdenv.mkDerivation rec {
@@ -22,7 +21,7 @@ stdenv.mkDerivation rec {
   buildInputs = [
     cups
   ];
-  
+
   unpackPhase = "dpkg-deb -x $src $out";
 
   installPhase = ''

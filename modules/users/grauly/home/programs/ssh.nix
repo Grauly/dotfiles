@@ -14,7 +14,7 @@
           "~/.ssh/gitlabkey"
         ];
       };
-      
+
       sfzserver-aux = {
         host = "sfzserver-aux";
         user = "grauly";

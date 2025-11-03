@@ -13,7 +13,7 @@
       progress-color = "over ${colors.highlight}";
       text-color = colors.text.color;
       "urgency=critical" = {
-        border-color="${colors.highlight}";
+        border-color = "${colors.highlight}";
       };
     };
   };

@@ -6,12 +6,12 @@ let
     libGL
     (import ../glfw-minecraft { inherit pkgs; })
     openal
-    stdenv.cc.cc.lib  
+    stdenv.cc.cc.lib
   ];
 in
 pkgs.symlinkJoin {
   name = "IntelliJ Minecraft Support";
-  paths = [ pkgs-unstable.jetbrains.idea-community];
+  paths = [ pkgs-unstable.jetbrains.idea-community ];
   buildInputs = [ pkgs.makeWrapper ];
   postBuild = ''
     wrapProgram $out/bin/idea-community \
