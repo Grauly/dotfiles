@@ -10,7 +10,10 @@
 
   users.groups.libvirtd.members = ["grauly"];
 
-  virtualisation.libvirtd.enable = true;
+  virtualisation.libvirtd = {
+    enable = true;
+    qemu.vhostUserPackages = with pkgs; [ virtiofsd ];
+  };
 
   virtualisation.spiceUSBRedirection.enable = true;
 }
