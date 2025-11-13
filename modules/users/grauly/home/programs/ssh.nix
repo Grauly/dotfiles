@@ -31,6 +31,22 @@
           "~/.ssh/sfzkey"
         ];
       };
+      sfzserver-aux-builder = {
+        host = "sfzserver-aux-builder";
+        user = "root";
+        hostname = "100.64.0.5";
+        identityFile = [
+          "~/.ssh/sfzkey"
+        ];
+      };
+      sfzserver-aux-builder-intern = {
+        host = "sfzserver-aux-builder";
+        user = "root";
+        hostname = "10.20.42.78";
+        identityFile = [
+          "~/.ssh/sfzkey"
+        ];
+      };
 
       sfzserver-builder = {
         host = "sfzserver-builder";
