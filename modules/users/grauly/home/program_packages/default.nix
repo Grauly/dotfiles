@@ -11,5 +11,6 @@
     ./python_dev.nix
     ./recording.nix
     ./work.nix
+    ./godot_dev.nix
   ];
 }
