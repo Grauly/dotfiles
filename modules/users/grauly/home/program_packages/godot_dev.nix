@@ -8,6 +8,6 @@
   ];
 
   home.packages = with pkgs; [
-    godot
+    godotPackages_4_5.godot
   ];
 }
