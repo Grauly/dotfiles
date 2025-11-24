@@ -107,7 +107,7 @@
       matekasse = {
         host = "matekasse";
         user = "root";
-        hostname = "10.10.42.159";
+        hostname = "10.10.42.156";
         identityFile = [
           "~/.ssh/sfzkey"
         ];
