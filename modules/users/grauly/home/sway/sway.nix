@@ -28,6 +28,7 @@
           };
           "type:touchpad" = {
             natural_scroll = "enabled";
+            tap = "enabled";
           };
         };
         keybindings = (import ./keybindings.nix { inherit pkgs pkgs-unstable swaycfg resize-mode shutdown-mode; });
