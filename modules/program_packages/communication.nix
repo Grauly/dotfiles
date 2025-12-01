@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../programs/browser.nix
+    ../programs/browser
     ../programs/kde_connect.nix
   ];
 
