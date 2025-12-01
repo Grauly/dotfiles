@@ -5,7 +5,6 @@
     wget
     git
     btop
-    zsh
     unzip
     usbutils
     pciutils
