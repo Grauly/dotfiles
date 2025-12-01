@@ -53,6 +53,7 @@
           modules = [
             ./modules
             ./hardware
+            ./user
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
