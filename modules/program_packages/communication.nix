@@ -6,7 +6,7 @@
     ../programs/kde_connect.nix
   ];
 
-  home.packages = with pkgs; [
+  environment.systemPackages = with pkgs; [
     thunderbird
     element-desktop
     bitwarden-desktop
