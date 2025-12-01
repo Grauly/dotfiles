@@ -2,12 +2,12 @@
 
 {
   imports = [
-    ../programs/rofi.nix
+    ../programs/application_launcher
     ../programs/flameshot.nix
     ../programs/prismlauncher.nix
   ];
 
-  home.packages = with pkgs; [
+  environment.systemPackages = with pkgs; [
     mangohud
     bitwarden-desktop
   ] ++ (with pkgs-unstable; [

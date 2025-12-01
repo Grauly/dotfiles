@@ -6,5 +6,6 @@
     ./creative.nix
     ./explorer_utils.nix
     ./extra_packages.nix
+    ./gaming.nix
   ];
 }
