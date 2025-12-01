@@ -1,7 +1,5 @@
+{ home-manager, ... }:
+
 {
-  imports = [
-    ./sway.nix
-    ./sway_styling.nix
-    ./swaylock.nix
-  ];
+  home-manager.user.grauly = import ./sway_home.nix;
 }
