@@ -9,5 +9,6 @@
     ./gaming.nix
     ./godot_dev.nix
     ./minecraft_dev.nix
+    ./python_dev.nix
   ];
 }
