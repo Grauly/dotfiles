@@ -1,14 +1,11 @@
 { pkgs, pkgs-unstable, ... }:
 
 {
-  # anything usefull for use with actual file explorers
-  # note that the actual file browsers are on system level
   imports = [
-    ./core_utils.nix
-    ../programs/yazi
+    ../programs/file_explorer
   ];
 
-  home.packages = with pkgs; [
+  environment.systemPackages = with pkgs; [
     evince
     eog
     zip
