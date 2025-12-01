@@ -7,7 +7,7 @@
     ../programs/prismlauncher.nix
   ];
 
-  home.packages = with pkgs; [
+  environment.systemPackages = with pkgs; [
     blockbench
     bitwarden-desktop
   ] ++ (with pkgs-unstable; [

@@ -5,7 +5,7 @@
     ../programs/browser
   ];
 
-  home.packages = with pkgs; [
+  environment.systemPackages = with pkgs; [
     thunderbird
     libreoffice-qt
     bitwarden-desktop
