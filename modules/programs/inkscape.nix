@@ -1,7 +1,7 @@
 { pkgs, pkgs-unstable, ... }:
 
 {
-  home.packages = [
+  environment.systemPackages = [
     (pkgs.inkscape-with-extensions.override {
       inkscapeExtensions = with pkgs-unstable.inkscape-extensions; [
         silhouette
