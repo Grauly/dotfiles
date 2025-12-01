@@ -1,5 +1,5 @@
 { home-manager, ... }:
 
 {
-  home-manager.users.grauly = import ./rofi.nix
+  home-manager.users.grauly = import ./rofi.nix;
     }

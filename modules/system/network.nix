@@ -1,6 +1,6 @@
 { config, pkgs, ... }: {
 
-  environment.systemPackaged = with pkgs; [
+  environment.systemPackages = with pkgs; [
     wget
     curl
     dnsutils

@@ -5,7 +5,7 @@
     ./communication.nix
     ./creative.nix
     ./explorer_utils.nix
-    ./extra_packages.nix
+    ./extra_utils.nix
     ./gaming.nix
     ./godot_dev.nix
     ./minecraft_dev.nix
