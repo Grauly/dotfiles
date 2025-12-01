@@ -70,6 +70,9 @@
               ];
             }
           ];
+          specialArgs = {
+            inherit pkgs-unstable;
+          };
         };
       };
     };
