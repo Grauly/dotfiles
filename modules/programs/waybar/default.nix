@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  programs.waybar = {
+  home-manager.users.grauly.programs.waybar = {
     enable = true;
     systemd.enable = true;
     settings = {
