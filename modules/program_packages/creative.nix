@@ -8,7 +8,7 @@
     ../programs/gimp.nix
   ];
 
-  home.packages = with pkgs; [
+  environment.systemPackages = with pkgs; [
     audacity
     imagemagick
     icoutils
