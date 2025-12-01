@@ -8,5 +8,6 @@
     ./extra_packages.nix
     ./gaming.nix
     ./godot_dev.nix
+    ./minecraft_dev.nix
   ];
 }

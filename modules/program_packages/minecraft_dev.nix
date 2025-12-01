@@ -3,7 +3,6 @@
 {
   imports = [
     ../programs/intellij
-    ./core_utils.nix
     ../programs/gimp.nix
     ../programs/prismlauncher.nix
   ];
