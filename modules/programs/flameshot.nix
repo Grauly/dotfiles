@@ -1,7 +1,7 @@
-{ pkgs, osConfig, ... }:
+{ home-manager, pkgs, osConfig, ... }:
 
 {
-  services.flameshot = {
+  home-manager.users.grauly.services.flameshot = {
     enable = true;
     settings.General = with osConfig.grauly; {
       savePath = "/home/grauly/Pictures";

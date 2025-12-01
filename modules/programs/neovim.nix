@@ -1,7 +1,11 @@
-{ pkgs, ... }:
+{ home-manager, pkgs, ... }:
 
 {
-  programs.neovim = {
+  environment.systemPackages = with pkgs; [
+    neovim
+  ];
+
+  home-manager.users.grauly.rograms.neovim = {
     enable = true;
     defaultEditor = true;
     extraPackages = with pkgs; [

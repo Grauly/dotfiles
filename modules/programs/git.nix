@@ -1,5 +1,11 @@
+{ home-manager, pkgs, ... }:
+
 {
-  programs.git = {
+  environment.systemPackages = with pkgs; [
+    git
+  ];
+
+  home-manager.users.grauly.programs.git = {
     enable = true;
     userEmail = "nils.dellemann@web.de";
     userName = "Grauly";

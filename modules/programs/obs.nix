@@ -1,7 +1,7 @@
-{ pkgs, ... }:
+{ home-manager, pkgs, ... }:
 
 {
-  programs.obs-studio = {
+  home-manager.users.grauly.programs.obs-studio = {
     enable = true;
     plugins = with pkgs.obs-studio-plugins; [
       wlrobs
