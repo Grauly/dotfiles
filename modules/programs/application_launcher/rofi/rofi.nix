@@ -3,7 +3,7 @@
 
 {
   imports = [
-    ./qalc
+    /modules/programs/qalc
   ];
   programs.rofi = {
     enable = true;
