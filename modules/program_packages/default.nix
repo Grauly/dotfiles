@@ -7,5 +7,6 @@
     ./explorer_utils.nix
     ./extra_packages.nix
     ./gaming.nix
+    ./godot_dev.nix
   ];
 }
