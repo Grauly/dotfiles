@@ -1,7 +1,7 @@
-{ osConfig, ... }:
+{ home-manager, osConfig, ... }:
 
 {
-  services.mako = with osConfig.grauly; {
+  home-manager.users.grauly.services.mako = with osConfig.grauly; {
     enable = true;
     settings = {
       default-timeout = 10 * 1000;
