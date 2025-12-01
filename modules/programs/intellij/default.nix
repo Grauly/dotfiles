@@ -1,3 +1,3 @@
 {
-  home-manager.user.grauly = import ./intellij.nix;
+  home-manager.users.grauly = import ./intellij.nix;
 }
