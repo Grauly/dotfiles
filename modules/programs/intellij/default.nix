@@ -1,5 +1,3 @@
 {
-  imports = [
-    ./intellij.nix
-  ];
+  home-manager.user.grauly = import ./intellij.nix;
 }
