@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../programs/browser.nix
+    ../programs/browser
   ];
 
   home.packages = with pkgs; [
