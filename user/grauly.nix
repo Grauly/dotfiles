@@ -17,5 +17,9 @@
     home.homeDirectory = "/home/grauly";
 
     programs.home-manager.enable = true;
+    
+    imports = [
+      ./grauly
+    ];
   };
 }
