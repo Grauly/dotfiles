@@ -1,5 +1,7 @@
+{ home-manager, ... }:
+
 {
-  programs.ssh = {
+  home-manager.users.grauly.programs.ssh = {
     enable = true;
     matchBlocks = {
       "github.com" = {

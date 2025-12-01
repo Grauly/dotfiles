@@ -1,20 +1,4 @@
-{ home-manager, pkgs, pkgs-unstable, ... }:
-
 {
-  users.users.grauly = {
-    isNormalUser = true;
-    description = "Grauly";
-    extraGroups = [ "networkmanager" "wheel" "lp" ];
-    shell = pkgs.zsh;
-  };
-
-  # stuff that needs to be enabled on system level for some reason or another
-  programs.zsh.enable = true;
-  programs.steam.enable = true;
-
-
-  #do it here, so it actually gets recognized
-  home-manager.users.grauly = import ./home;
   grauly = {
     colors = {
       gradient-from = "#8c27e9a0";

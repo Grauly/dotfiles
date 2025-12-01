@@ -15,7 +15,6 @@
     vlc
     libsForQt5.ark
     mount
-    nfs-utils
     openmpi
     ior
   ];

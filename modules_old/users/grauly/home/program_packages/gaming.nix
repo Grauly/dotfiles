@@ -9,7 +9,6 @@
 
   home.packages = with pkgs; [
     mangohud
-    #steam, but that is fucky around the edges and needs to be installed system wide
     bitwarden-desktop
   ] ++ (with pkgs-unstable; [
   ]);

@@ -8,7 +8,7 @@
 
   programs.virt-manager.enable = true;
 
-  users.groups.libvirtd.members = ["grauly"];
+  users.groups.libvirtd.members = [ "grauly" ];
 
   virtualisation.libvirtd = {
     enable = true;
