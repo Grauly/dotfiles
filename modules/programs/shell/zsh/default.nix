@@ -7,5 +7,9 @@
 
   programs.zsh.enable = true;
 
-  home-manager.users.grauly = (import ./zsh_home.nix { inherit pkgs config; });
+  home-manager.users.grauly = {
+    imports = [
+      ./zsh_home.nix
+    ];
+  };
 }
