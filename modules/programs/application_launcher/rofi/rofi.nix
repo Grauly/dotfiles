@@ -16,6 +16,6 @@
     extraConfig = {
       modes = "window,drun,run,ssh,calc,emoji";
     };
-    theme = builtins.toString (import ./rofi-theme.rasi.nix { inherit pkgs osConfig; });
+    theme = builtins.toString (import ./rofi-theme.rasi.nix { inherit pkgs config; });
   };
 }
