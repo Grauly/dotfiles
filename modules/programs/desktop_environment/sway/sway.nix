@@ -1,4 +1,4 @@
-{ pkgs, pkgs-unstable, config, lib, config, ... }:
+{ pkgs, pkgs-unstable, lib, config, ... }:
 
 {
   home.packages = with pkgs; [
