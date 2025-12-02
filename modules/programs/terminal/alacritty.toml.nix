@@ -1,14 +1,14 @@
-{ osConfig, ... }:
+{ config, ... }:
 
 {
   window = {
-    opacity = osConfig.grauly.style.opacity;
-    blur = osConfig.grauly.style.blur != 0;
+    opacity = config.grauly.style.opacity;
+    blur = config.grauly.style.blur != 0;
   };
   colors = {
     primary = {
-      foreground = osConfig.grauly.colors.text.color;
-      background = osConfig.grauly.colors.background-3;
+      foreground = config.grauly.colors.text.color;
+      background = config.grauly.colors.background-3;
     };
   };
   font = {

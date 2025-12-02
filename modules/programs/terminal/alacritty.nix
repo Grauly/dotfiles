@@ -1,4 +1,4 @@
-{ osConfig, ... }:
+{ config, ... }:
 
 {
   programs.alacritty = {

@@ -1,6 +1,6 @@
-{ pkgs, osConfig, ... }:
+{ pkgs, config, ... }:
 
-with osConfig.grauly.colors; pkgs.writeText "rofi-style.rasi" ''
+with config.grauly.colors; pkgs.writeText "rofi-style.rasi" ''
   * {
       red:                         rgba ( 220, 50, 47, 90 % );
       blue:                        rgba ( 38, 139, 210, 90 % );
@@ -98,7 +98,7 @@ with osConfig.grauly.colors; pkgs.writeText "rofi-style.rasi" ''
       background-color: var(background);
       border:           2 solid 2 dash;
       border-color:     var(border-color);
-      border-radius:    ${toString osConfig.grauly.style.border-radius};
+      border-radius:    ${toString config.grauly.style.border-radius};
   }
   mainbox {
       padding: 0;
