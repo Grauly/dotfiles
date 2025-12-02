@@ -7,5 +7,7 @@
     ../programs/shell
     ../programs/terminal
     ../programs/waybar
+    ../programs/fonts.nix
+    ../programs/mako.nix
   ];
 }
