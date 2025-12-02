@@ -1,7 +1,8 @@
 {
   imports = [
-    ./hardware-configuration_tmp.nix
+    ./hardware-xmg-neo.nix
     ./gpu.nix
+    ./tuxedo.nix
     ./power-mangement.nix
   ];
 }
