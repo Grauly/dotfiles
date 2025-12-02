@@ -1,5 +1,5 @@
 {
   imports = [
-    ./boralis.nix
+    ./borealis.nix
   ];
 }
