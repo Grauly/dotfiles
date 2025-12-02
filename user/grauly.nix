@@ -3,6 +3,7 @@
 {
   imports = [
     ./gtk
+    ./desktop
   ];
 
   users.users.grauly = {
