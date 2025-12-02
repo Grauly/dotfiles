@@ -71,7 +71,7 @@
             }
           ];
           specialArgs = {
-            inherit pkgs-unstable;
+            inherit pkgs-unstable inputs;
           };
         };
       };
