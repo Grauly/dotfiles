@@ -10,7 +10,7 @@
     eog
     zip
     vlc
-    libsForQt5.ark
+    kdePackages.ark
     mount
     openmpi
     ior

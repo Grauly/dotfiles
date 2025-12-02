@@ -5,10 +5,12 @@
     git
   ];
 
-  home-manager.users.grauly.programs.git = {
+  home-manager.users.grauly.programs.git.settings = {
     enable = true;
-    userEmail = "nils.dellemann@web.de";
-    userName = "Grauly";
+    user = {
+      email = "nils.dellemann@web.de";
+      name = "Grauly";
+    };
     extraConfig = {
       push.autoSetupRemote = true;
       init.defaultBranch = "main";

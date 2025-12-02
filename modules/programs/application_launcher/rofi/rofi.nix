@@ -7,11 +7,10 @@
   ];
   programs.rofi = {
     enable = true;
-    package = pkgs.rofi-wayland;
     terminal = "${pkgs.kitty}/bin/kitty";
     plugins = with pkgs; [
-      (rofi-calc.override { rofi-unwrapped = rofi-wayland-unwrapped; })
-      rofi-emoji-wayland
+      rofi-calc
+      rofi-emoji
     ];
     extraConfig = {
       modes = "window,drun,run,ssh,calc,emoji";
