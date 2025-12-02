@@ -1,7 +1,11 @@
-{ config, ... }:
+{ home-manager, config, pkgs, ... }:
 
 {
-  programs.kitty = {
+  environment.systemPackages = with pkgs; [
+    kitty
+  ];
+
+  home-manager.users.grauly.programs.kitty = {
     enable = true;
     font.name = "JetBrainsMono Nerd Font";
     settings = {
