@@ -1,10 +1,10 @@
-{ pkgs, config, ... }:
+{ pkgs, osConfig, ... }:
 
 let
   clear = "#00000000";
 in
 {
-  programs.swaylock = with config.grauly; {
+  programs.swaylock = with osConfig.grauly; {
     enable = true;
     package = pkgs.swaylock-effects;
     settings = {
