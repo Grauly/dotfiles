@@ -14,13 +14,13 @@ let
     {
       user = "yazi-rs";
       repo = "plugins";
-      hash = "sha256-TtVaWazkk2xnomhJFinElbUsXUKAbDDhLEVq5Ah3nAk=";
+      hash = "sha256-B6zhZfp3SEaiviIzosI2aD8fk+hQF0epOTKi1qm8V3E=";
       path = "/mount.yazi/";
     }
     {
       user = "yazi-rs";
       repo = "plugins";
-      hash = "sha256-TtVaWazkk2xnomhJFinElbUsXUKAbDDhLEVq5Ah3nAk=";
+      hash = "sha256-B6zhZfp3SEaiviIzosI2aD8fk+hQF0epOTKi1qm8V3E=";
       path = "/types.yazi/";
     }
   ];
