@@ -1,4 +1,4 @@
-{ home-manager, pkgs, ... }:
+{ home-manager, pkgs, config, ... }:
 
 {
   users.users.grauly = {
@@ -7,5 +7,5 @@
 
   programs.zsh.enable = true;
 
-  home-manager.users.grauly.home = import ./zsh_home.nix;
+  home-manager.users.grauly.home = (import ./zsh_home.nix { inherit pkgs config; });
 }
