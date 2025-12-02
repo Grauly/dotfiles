@@ -5,7 +5,7 @@
     neovim
   ];
 
-  home-manager.users.grauly.rograms.neovim = {
+  home-manager.users.grauly.programs.neovim = {
     enable = true;
     defaultEditor = true;
     extraPackages = with pkgs; [
