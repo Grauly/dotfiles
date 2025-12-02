@@ -1,4 +1,4 @@
-{ config, ... }:
+{ osConfig, ... }:
 
 {
   wayland.windowManager.sway = {
@@ -8,17 +8,17 @@
         "Sans Serif"
       ];
       gaps = {
-        inner = config.grauly.style.window-spacing;
+        inner = osConfig.grauly.style.window-spacing;
         smartBorders = "off";
         smartGaps = true;
       };
       window = {
-        border = config.grauly.style.border-width;
+        border = osConfig.grauly.style.border-width;
       };
       floating = {
-        border = config.grauly.style.border-width;
+        border = osConfig.grauly.style.border-width;
       };
-      colors = with config.grauly.colors; {
+      colors = with osConfig.grauly.colors; {
         background = error;
         focused = {
           background = mix;
@@ -59,7 +59,7 @@
     };
     extraConfig = ''
       blur enable
-      corner_radius ${toString config.grauly.style.border-radius}
+      corner_radius ${toString osConfig.grauly.style.border-radius}
     '';
   };
 }

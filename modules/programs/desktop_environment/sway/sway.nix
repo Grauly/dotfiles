@@ -1,4 +1,4 @@
-{ pkgs, pkgs-unstable, lib, config, ... }:
+{ pkgs, pkgs-unstable, lib, config, osConfig, ... }:
 
 {
   home.packages = with pkgs; [
@@ -54,7 +54,7 @@
               title = "Discord Popout";
             }
           ];
-          border = config.grauly.style.border-width;
+          border = osConfig.grauly.style.border-width;
         };
       };
       extraOptions = [
