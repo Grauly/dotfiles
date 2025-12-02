@@ -5,15 +5,17 @@
     git
   ];
 
-  home-manager.users.grauly.programs.git.settings = {
+  home-manager.users.grauly.programs.git = {
     enable = true;
-    user = {
-      email = "nils.dellemann@web.de";
-      name = "Grauly";
-    };
-    extraConfig = {
-      push.autoSetupRemote = true;
-      init.defaultBranch = "main";
+    settings = {
+      user = {
+        email = "nils.dellemann@web.de";
+        name = "Grauly";
+      };
+      extraConfig = {
+        push.autoSetupRemote = true;
+        init.defaultBranch = "main";
+      };
     };
   };
 }
