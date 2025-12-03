@@ -3,6 +3,7 @@
 {
   imports = [
     ../programs/file_explorer
+    ../programs/udisks.nix
   ];
 
   environment.systemPackages = with pkgs; [
