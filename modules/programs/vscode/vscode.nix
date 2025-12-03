@@ -8,10 +8,11 @@
     profiles.default = {
       enableUpdateCheck = false;
       enableExtensionUpdateCheck = false;
-      userSettings = (import ./settings.json.nix);
+      userSettings = (import ./settings.json.nix { inherit pkgs; });
       extensions = with pkgs.vscode-extensions; [
         asvetliakov.vscode-neovim
         sumneko.lua
+        jnoortheen.nix-ide
       ];
     };
   };
