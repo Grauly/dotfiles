@@ -10,5 +10,6 @@
     ../programs/shell
     ../programs/vscode
     ../programs/ssh.nix
+    ../programs/ssh_server.nix
   ];
 }
