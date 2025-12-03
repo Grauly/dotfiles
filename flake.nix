@@ -74,7 +74,7 @@
               ];
             }
             disko.nixosModules.disko
-            (import ./disko/raid-luks.nix)
+            (import ./disko/luks-separate-disks.nix)
           ];
           specialArgs = {
             inherit pkgs-unstable inputs;
