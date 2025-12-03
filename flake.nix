@@ -24,9 +24,13 @@
       url = "github:ryantm/agenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, treefmt-nix, agenix, ... }@inputs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, treefmt-nix, agenix, disko, ... }@inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -69,6 +73,8 @@
                 agenix.packages."${system}".default
               ];
             }
+            disko.nixosModules.disko
+            (import ./disko/raid-luks.nix)
           ];
           specialArgs = {
             inherit pkgs-unstable inputs;
