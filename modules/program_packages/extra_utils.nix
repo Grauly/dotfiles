@@ -10,5 +10,6 @@
     fzf
     ripgrep
     nmap
+    systemctl-tui
   ];
 }

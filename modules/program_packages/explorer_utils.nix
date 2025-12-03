@@ -15,5 +15,6 @@
     mount
     openmpi
     ior
+    ncdu
   ];
 }
