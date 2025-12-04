@@ -1,10 +1,9 @@
-{ pkgs, swaycfg, resize-mode, shutdown-mode }:
+{ pkgs, swaycfg, shutdown-mode }:
 
 let
   def-mode-cmd = "${pkgs.sway}/bin/swaymsg ${def-mode}";
   def-mode = "mode default";
   notify = "${pkgs.libnotify}/bin/notify-send";
-  action-delay = "sleep 3";
   escapes = {
     Escape = def-mode;
     Return = def-mode;
@@ -13,7 +12,7 @@ let
   countdown = title: text: count: (builtins.concatStringsSep " && " (builtins.genList (i: ("${notify} '${title}' '${text} ${(builtins.toString (count - i))}' -t ${(builtins.toString (countdown-delay * 1000))} && sleep ${(builtins.toString countdown-delay)}")) count));
 in
 {
-  "${resize-mode}" = {
+  "resize" = {
     "${swaycfg.modifier}+${swaycfg.left}" = "resize grow width 10px";
     "${swaycfg.modifier}+${swaycfg.down}" = "resize shrink height 10px";
     "${swaycfg.modifier}+${swaycfg.up}" = "resize grow height 10px";

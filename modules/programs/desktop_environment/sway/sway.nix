@@ -8,7 +8,6 @@
   wayland.windowManager.sway =
     let
       swaycfg = config.wayland.windowManager.sway.config;
-      resize-mode = "resize";
       shutdown-mode = "(l) lock (o) logout (s) shutdown (r) reboot (k) sleep";
     in
     {
@@ -31,8 +30,8 @@
             tap = "enabled";
           };
         };
-        keybindings = (import ./keybindings.nix { inherit pkgs pkgs-unstable swaycfg resize-mode shutdown-mode; });
-        modes = (import ./sway_modes.nix { inherit pkgs swaycfg resize-mode shutdown-mode; });
+        keybindings = (lib.mkOptionDefault (import ./keybindings.nix { inherit pkgs pkgs-unstable swaycfg shutdown-mode; }));
+        modes = (lib.mkOptionDefault (import ./sway_modes.nix { inherit pkgs swaycfg shutdown-mode; }));
         defaultWorkspace = "workspace number 1";
         output = {
           "*" = {
