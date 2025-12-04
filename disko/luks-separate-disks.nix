@@ -48,7 +48,7 @@
               content = {
                 type = "filesystem";
                 format = "ext4";
-                mountpoint = "/steam";
+                mountpoint = "/bulk";
               };
             };
           };
