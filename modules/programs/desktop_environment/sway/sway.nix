@@ -58,6 +58,9 @@
             {
               title = "Welcome to IntelliJ IDEA";
             }
+            {
+              title = "Confirm Exit";
+            }
           ];
           border = osConfig.grauly.style.border-width;
         };
