@@ -7,7 +7,10 @@
 
   home-manager.users.grauly.programs.kitty = {
     enable = true;
-    font.name = "JetBrainsMono Nerd Font";
+    font = {
+      name = "JetBrainsMono Nerd Font";     
+      size = 15;
+    };
     settings = {
       enable_audio_bell = false;
       background = config.grauly.colors.background-3;
