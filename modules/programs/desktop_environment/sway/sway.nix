@@ -52,6 +52,12 @@
             {
               title = "Discord Popout";
             }
+            {
+              title = "Steam - Update News";
+            }
+            {
+              title = "Welcome to IntelliJ IDEA";
+            }
           ];
           border = osConfig.grauly.style.border-width;
         };
