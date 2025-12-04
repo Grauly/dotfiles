@@ -11,5 +11,6 @@
     ../programs/vscode
     ../programs/ssh.nix
     ../programs/ssh_server.nix
+    ../programs/tailscale.nix
   ];
 }
