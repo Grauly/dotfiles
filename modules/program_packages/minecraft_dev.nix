@@ -10,6 +10,7 @@
   environment.systemPackages = with pkgs; [
     blockbench
     bitwarden-desktop
+    recaf-launcher
   ] ++ (with pkgs-unstable; [
   ]);
 }
