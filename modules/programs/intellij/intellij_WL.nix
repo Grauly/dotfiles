@@ -6,7 +6,7 @@ let
     libGL
     glfw3-minecraft
     openal
-    stdenv.cc.cc.lib
+    (lib.getLib stdenv.cc.cc)
   ];
 in
 pkgs.symlinkJoin {
@@ -15,7 +15,6 @@ pkgs.symlinkJoin {
   buildInputs = [ pkgs.makeWrapper ];
   postBuild = ''
     wrapProgram $out/bin/idea-community \
-      --add-flag -Dawt.toolkit.name=WLToolkit \
       --prefix LD_LIBRARY_PATH : ${pkgs.lib.makeLibraryPath mc-depencencies}
   '';
 }
