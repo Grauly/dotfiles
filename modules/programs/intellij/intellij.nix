@@ -2,7 +2,8 @@
 
 {
   home.packages = with pkgs; [
-    (import ./intellij_WL.nix { inherit pkgs pkgs-unstable; })
+    #(import ./intellij_WL.nix { inherit pkgs pkgs-unstable; })
+    pkgs-unstable.jetbrains.idea-community
   ];
 
   home.file = {
