@@ -12,10 +12,8 @@
         email = "nils.dellemann@web.de";
         name = "Grauly";
       };
-      extraConfig = {
-        push.autoSetupRemote = true;
-        init.defaultBranch = "main";
-      };
+      push.autoSetupRemote = true;
+      init.defaultBranch = "main";
     };
   };
 }
