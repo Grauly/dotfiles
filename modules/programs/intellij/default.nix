@@ -7,6 +7,7 @@
   };
   
   environment.systemPackages = with pkgs; [
-    (import ./intellij_WL.nix { inherit pkgs pkgs-unstable pkgs-old; })
+    #(import ./intellij_WL.nix { inherit pkgs pkgs-unstable pkgs-old; })
+    jetbrains-toolbox
   ];
 }
