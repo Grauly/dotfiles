@@ -3,6 +3,7 @@
 {
   imports = [
     ../programs/system_information.nix
+    ../programs/printing.nix
   ];
   
   environment.systemPackages = with pkgs; [
