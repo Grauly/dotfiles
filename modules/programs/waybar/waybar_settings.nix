@@ -16,9 +16,9 @@ in
   modules-left = [ "niri/workspaces" ];
   modules-center = [ "clock#minimal" "sway/mode" ];
   modules-right = [
-    "image#seperator#left"
-    "group/cpu"
-    "image#seperator#right"
+    "image#seperator_left"
+    "group/cpu_container"
+    "image#seperator_right"
     "memory"
     "custom/connectivity"
     "network"
@@ -28,12 +28,12 @@ in
     "clock"
     ];
 
-  "image#seperator#left" = {
+  "image#seperator_left" = {
     path = "${./assets/seperator-left.svg}";
     size = bar-height;
   };
 
-  "image#seperator#right" = {
+  "image#seperator_right" = {
     path = "${./assets/seperator-right.svg}";
     size = bar-height;
   };
@@ -49,7 +49,7 @@ in
     format-icons = [" " "▁" "▂" "▃" "▄" "▅" "▆" "▇" "█"];
   };
   
-  "group/cpu" = {
+  "group/cpu_container" = {
     orientation = "inherit";
     modules = [
       "image#cpu"
