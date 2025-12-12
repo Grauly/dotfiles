@@ -8,24 +8,29 @@ let
   floating_shell = "exec ${terminal} --detach -T floating_shell ${shell} -c";
   conn_stats_script = "${pkgs.unixtools.ping}/bin/ping 8.8.8.8 -i 1 -c 5 -q | ${pkgs.gnused}/bin/sed -rn 's#([0-9]+) packets transmitted, ([0-9]+) received, ([0-9]+)% packet loss, time [0-9]+ms#{\"text\":\"\\2/\\1 Packets received, \\3% Packet loss\", \"alt\":\"\\2/\\1@\\3%\", \"tooltip\":\"\\2/\\1@\\3% packet loss\", \"class\":\"noclass\",\"percentage\":\\3}#p'";
   cores = {core}: if core == 0 then "{icon${toString core}}" else "${cores {core = (core - 1);}}{icon${toString core}}";
-  bar-height = 40;
+  bar-height = 39;
 in
 {
   layer = "top";
   position = "top";
-  modules-left = [ "niri/workspaces" ];
-  modules-center = [ "clock#minimal" "sway/mode" ];
+  modules-left = [
+    #"sway/workspaces"
+    ];
+  modules-center = [
+    #"clock#minimal"
+    #"sway/mode"
+    ];
   modules-right = [
     "image#seperator_left"
     "group/cpu_container"
     "image#seperator_right"
-    "memory"
-    "custom/connectivity"
-    "network"
-    "pulseaudio"
-    "backlight"
-    "battery"
-    "clock"
+    #"memory"
+    #"custom/connectivity"
+    #"network"
+    #"pulseaudio"
+    #"backlight"
+    #"battery"
+    #"clock"
     ];
 
   "image#seperator_left" = {
@@ -39,14 +44,20 @@ in
   };
 
   "image#cpu" = {
+    # CSS has a padding of 2px
     path = "${./assets/cpu.svg}";
-    size = bar-height - 5;
+    size = bar-height - 2 * 2;
   };
 
   cpu = {
     interval = 1;
     format = "${(cores {core = 19; })}";
     format-icons = [" " "▁" "▂" "▃" "▄" "▅" "▆" "▇" "█"];
+    states = {
+      medium = 50;
+      high = 70;
+      extreme = 95;
+    };
   };
   
   "group/cpu_container" = {
