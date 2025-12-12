@@ -2,7 +2,7 @@
     border: none;
     border-radius: 0;
     font-family: "JetBrainsMono Nerd Font", "Helvetica", "Arial", "sans-serif";
-    font-size: 26px;
+    font-size: 20px;
     min-height: 0;
     background: none;
 }
@@ -28,14 +28,30 @@ tooltip label {
     border-bottom: 3px solid white;
 }
 
+/* CPU Section */
+
 #image.cpu {
-    padding: 2.5px;
+    padding: 2px;
 }
 
 #cpu_container {
-    background-color: rgba(100, 114, 125, 0.5);
+    background-color: rgba(40, 40, 40, 0.5);
     margin: 5px 0;
     padding: 0;
-    border-top: 3px solid white;
-    border-bottom: 3px solid white;
+}
+
+#cpu {
+    padding-right: 5px;
+}
+
+#cpu.medium {
+    color: yellow;
+}
+
+#cpu.high {
+    color: orange;
+}
+
+#cpu.extreme {
+    color: red;
 }
