@@ -28,6 +28,16 @@ tooltip label {
     border-bottom: 3px solid white;
 }
 
+/* Seperator Section */
+
+#image.seperator_left {
+    margin-left: 5px;
+}
+
+#image.seperator_right {
+    margin-right: 5px;
+}
+
 /* CPU Section */
 
 #image.cpu {

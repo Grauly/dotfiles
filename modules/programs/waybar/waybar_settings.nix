@@ -34,11 +34,13 @@ in
     ];
 
   "image#seperator_left" = {
+    # CSS has a margin-left of 5px
     path = "${./assets/seperator-left.svg}";
     size = bar-height;
   };
 
   "image#seperator_right" = {
+    # CSS has a margin-right of 5px
     path = "${./assets/seperator-right.svg}";
     size = bar-height;
   };
