@@ -44,10 +44,14 @@ in
     path = "${./assets/seperator-right.svg}";
     size = bar-height;
   };
+  
+  # --- CPU Section ---
 
   "image#cpu" = {
     # CSS has a padding of 2px
-    path = "${./assets/cpu.svg}";
+    # TODO: mode switching
+    exec = "${(import ./scripts/cpu_mode.nix { inherit pkgs; })}/bin/cpu_mode";
+    interval = 10;
     size = bar-height - 8;
   };
 
@@ -69,6 +73,8 @@ in
       "cpu"
     ];
   };
+  
+
 
   battery = {
     interval = 5;
