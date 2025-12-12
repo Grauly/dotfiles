@@ -48,7 +48,7 @@ in
   "image#cpu" = {
     # CSS has a padding of 2px
     path = "${./assets/cpu.svg}";
-    size = bar-height - 2 * 2;
+    size = bar-height - 8;
   };
 
   cpu = {
