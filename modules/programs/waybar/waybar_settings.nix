@@ -96,12 +96,23 @@ in
     tooltip = true;
     tooltip-format = "GPU Utilization {percentage} %";
   };
+
+  "custom/gpu_vram_usage" = {
+    exec = "${(import ./scripts/gpu_vram_usage.nix { inherit pkgs osConfig; })}/bin/gpu_vram_usage";
+    return-type = "json";
+    interval = 1;
+    format = "{icon}";
+    format-icons = load-bar;
+    tooltip = true;
+    tooltip-format = "VRAM Usage {percentage} %";
+  };
   
   "group/gpu_container" = {
     orientation = "inherit";
     modules = [
       "image#gpu"
       "custom/gpu_utilization"
+      "custom/gpu_vram_usage"
     ];
   };
 
