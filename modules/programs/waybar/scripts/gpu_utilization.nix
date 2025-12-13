@@ -9,7 +9,17 @@ pkgs.writeShellApplication {
     osConfig.hardware.nvidia.package
   ];
   text = ''
-    PERCENTAGE=$(nvidia-smi -q -d UTILIZATION | grep "GPU .* :" | sed "s/.*GPU.*: //" | sed "s/ %//")
-    echo "{\"percentage\": $PERCENTAGE, \"tooltip\": \"GPU Utilization: $PERCENTAGE %\"}"
+  PERCENTAGE=$(nvidia-smi -q -d UTILIZATION | grep "GPU .* :" | sed "s/.*GPU.*: //" | sed "s/ %//")
+  CLASS=""
+  if (( PERCENTAGE > 50 )); then
+    CLASS="medium"
+  fi
+  if (( PERCENTAGE > 70 )); then
+    CLASS="high"
+  fi
+  if (( PERCENTAGE > 95 )); then
+    CLASS="extreme"
+  fi
+  echo "{\"percentage\": $PERCENTAGE, \"class\": \"$CLASS\"}"
   '';
 }
