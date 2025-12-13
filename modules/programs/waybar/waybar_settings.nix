@@ -15,7 +15,7 @@ in
   layer = "top";
   position = "top";
   modules-left = [
-    #"sway/workspaces"
+    "sway/workspaces"
     ];
   modules-center = [
     #"clock#minimal"
@@ -24,9 +24,9 @@ in
   modules-right = [
     "image#seperator_left"
     "group/cpu_container"
-    "image#seperator_right"
+    
+    "image#seperator_middle"
 
-    "image#seperator_left"
     "group/gpu_container"
     "image#seperator_right"
     #"memory"
@@ -37,6 +37,14 @@ in
     #"battery"
     #"clock"
     ];
+  
+  # --- Seperator Section ---
+
+  "image#seperator_middle" = {
+    # CSS has a margin (left, right) of 5px
+    path = "${./assets/seperator-middle.svg}";
+    size = bar-height;
+  };
 
   "image#seperator_left" = {
     # CSS has a margin-left of 5px
@@ -45,7 +53,7 @@ in
   };
 
   "image#seperator_right" = {
-    # CSS has a margin-right of 5px
+    # CSS has a margin-right of 15px
     path = "${./assets/seperator-right.svg}";
     size = bar-height;
   };
