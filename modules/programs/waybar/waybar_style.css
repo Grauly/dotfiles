@@ -38,6 +38,12 @@ tooltip label {
     margin-right: 5px;
 }
 
+#image.seperator_middle {
+    margin: 5px 0;
+    background-color: rgba(40, 40, 40, 0.5);
+    padding: 0 5px;
+}
+
 /* CPU Section */
 
 #image.cpu {
