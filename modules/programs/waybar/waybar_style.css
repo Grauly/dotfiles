@@ -65,3 +65,15 @@ tooltip label {
 #cpu.extreme {
     color: red;
 }
+
+/* GPU Section */
+
+#image.gpu {
+    padding: 4px;
+}
+
+#gpu_container {
+    background-color: rgba(40, 40, 40, 0.5);
+    margin: 5px 0;
+    padding: 0;
+}
