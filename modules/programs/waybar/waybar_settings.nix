@@ -93,6 +93,8 @@ in
     interval = 1;
     format = "{icon}";
     format-icons = load-bar;
+    tooltip = true;
+    tooltip-format = "GPU Utilization {percentage} %";
   };
   
   "group/gpu_container" = {

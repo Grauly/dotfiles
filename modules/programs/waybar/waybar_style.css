@@ -77,3 +77,19 @@ tooltip label {
     margin: 5px 0;
     padding: 0;
 }
+
+#custom-gpu_utilization {
+    padding-right: 5px;
+}
+
+#custom-gpu_utilization.medium {
+    color: yellow;
+}
+
+#custom-gpu_utilization.high {
+    color: orange;
+}
+
+#custom-gpu_utilization.extreme {
+    color: red;
+}
