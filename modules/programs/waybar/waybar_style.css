@@ -93,3 +93,19 @@ tooltip label {
 #custom-gpu_utilization.extreme {
     color: red;
 }
+
+#custom-gpu_vram_usage {
+    padding-right: 5px;
+}
+
+#custom-gpu_vram_usage.medium {
+    color: yellow;
+}
+
+#custom-gpu_vram_usage.high {
+    color: orange;
+}
+
+#custom-gpu_vram_usage.extreme {
+    color: red;
+}
