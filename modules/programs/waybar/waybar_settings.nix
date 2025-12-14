@@ -9,6 +9,7 @@ let
   conn_stats_script = "${pkgs.unixtools.ping}/bin/ping 8.8.8.8 -i 1 -c 5 -q | ${pkgs.gnused}/bin/sed -rn 's#([0-9]+) packets transmitted, ([0-9]+) received, ([0-9]+)% packet loss, time [0-9]+ms#{\"text\":\"\\2/\\1 Packets received, \\3% Packet loss\", \"alt\":\"\\2/\\1@\\3%\", \"tooltip\":\"\\2/\\1@\\3% packet loss\", \"class\":\"noclass\",\"percentage\":\\3}#p'";
   cores = {core}: if core == 0 then "{icon${toString core}}" else "${cores {core = (core - 1);}}{icon${toString core}}";
   load-bar = [" " "▁" "▂" "▃" "▄" "▅" "▆" "▇" "█"];
+  load-bar-idle = ["-" "▁" "▂" "▃" "▄" "▅" "▆" "▇" "█"];
   bar-height = 39;
 in
 {
@@ -28,8 +29,11 @@ in
     "image#seperator_middle"
 
     "group/gpu_container"
+
+    "image#seperator_middle"
+    
+    "group/ram_container"
     "image#seperator_right"
-    #"memory"
     #"custom/connectivity"
     #"network"
     #"pulseaudio"
@@ -100,7 +104,7 @@ in
     return-type = "json";
     interval = 1;
     format = "{icon}";
-    format-icons = load-bar;
+    format-icons = load-bar-idle;
     tooltip = true;
     tooltip-format = "GPU Utilization {percentage} %";
   };
@@ -110,7 +114,7 @@ in
     return-type = "json";
     interval = 1;
     format = "{icon}";
-    format-icons = load-bar;
+    format-icons = load-bar-idle;
     tooltip = true;
     tooltip-format = "VRAM Usage {percentage} %";
   };
@@ -121,6 +125,45 @@ in
       "image#gpu"
       "custom/gpu_utilization"
       "custom/gpu_vram_usage"
+    ];
+  };
+
+  # --- RAM Section ---
+
+  "image#ram" = {
+    # CSS has a padding of 2px
+    path = ./assets/ram.svg;
+    size = bar-height - 8;
+  };
+  
+  memory = {
+    format = "{icon}";
+    tooltip = true;
+    tooltip-format = "RAM Usage: {used}/{total}GB";
+    format-icons = load-bar-idle;
+    states = {
+      medium = 50;
+      high = 70;
+      extreme = 95;
+    };
+  };
+  
+  "custom/swap" = {
+    exec = "${(import ./scripts/swap_usage.nix { inherit pkgs; })}/bin/swap_usage";
+    return-type = "json";
+    interval = 1;
+    format = "{icon}";
+    format-icons = load-bar-idle;
+    tooltip = true;
+    tooltip-format = "Swap usage {percentage} %\n{text}GB";
+  };
+  
+  "group/ram_container" = {
+    orientation = "inherit";
+    modules = [
+      "image#ram"
+      "memory"
+      "custom/swap"
     ];
   };
 
@@ -203,16 +246,6 @@ in
   };
 
 
-  memory = {
-    format = "RAM: {used}/{total}GB: {percentage}%";
-    tooltip-format = "Swap: {swapUsed}/{swapTotal}: {swapPercentage}%";
-    states = {
-      ok = 50;
-      in-use = 70;
-      warning = 90;
-      critical = 100;
-    };
-  };
 
   pulseaudio = {
     format = "Volume:\n{volume}%";
