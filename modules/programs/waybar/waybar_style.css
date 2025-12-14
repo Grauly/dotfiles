@@ -28,8 +28,8 @@ tooltip label {
     border-bottom: 3px solid white;
 }
 
-/* Seperator Section */
 
+/* Seperator Section */
 #image.seperator_left {
     margin-left: 5px;
 }
@@ -44,74 +44,59 @@ tooltip label {
     padding: 0 5px;
 }
 
-/* CPU Section */
 
-#image.cpu {
+/* Header Images */
+#image.cpu,
+#image.gpu,
+#image.ram 
+{
     padding: 4px;
 }
 
-#cpu_container {
+
+/* Containers */
+#cpu_container,
+#gpu_container,
+#ram_container 
+{
     background-color: rgba(40, 40, 40, 0.5);
     margin: 5px 0;
     padding: 0;
 }
 
-#cpu {
-    padding-right: 5px;
-}
 
-#cpu.medium {
+/* Warning State Colors */
+#cpu.medium,
+#custom-gpu_utilization.medium,
+#custom-gpu_vram_usage.medium,
+#memory.medium
+{
     color: yellow;
 }
 
-#cpu.high {
+#cpu.high,
+#custom-gpu_utilization.high,
+#custom-gpu_vram_usage.high,
+#memory.high 
+{
     color: orange;
 }
 
-#cpu.extreme {
+#cpu.extreme,
+#custom-gpu_utilization.extreme,
+#custom-gpu_vram_usage.extreme,
+#memory.extreme
+{
     color: red;
 }
 
-/* GPU Section */
 
-#image.gpu {
-    padding: 4px;
-}
-
-#gpu_container {
-    background-color: rgba(40, 40, 40, 0.5);
-    margin: 5px 0;
-    padding: 0;
-}
-
-#custom-gpu_utilization {
+/* Base Modules */
+#cpu,
+#custom-gpu_utilization,
+#custom-gpu_vram_usage,
+#memory,
+#custom-swap
+{
     padding-right: 5px;
-}
-
-#custom-gpu_utilization.medium {
-    color: yellow;
-}
-
-#custom-gpu_utilization.high {
-    color: orange;
-}
-
-#custom-gpu_utilization.extreme {
-    color: red;
-}
-
-#custom-gpu_vram_usage {
-    padding-right: 5px;
-}
-
-#custom-gpu_vram_usage.medium {
-    color: yellow;
-}
-
-#custom-gpu_vram_usage.high {
-    color: orange;
-}
-
-#custom-gpu_vram_usage.extreme {
-    color: red;
 }
