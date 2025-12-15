@@ -17,6 +17,13 @@
           "~/.ssh/gitlabkey"
         ];
       };
+      
+      "gitlab.uni-ulm.de" = {
+        hostname = "gitlab.uni-ulm.de";
+        identityFile = [
+          "~/.ssh/gitlabkey_uni"
+        ];
+      };
 
       sfzserver-aux = {
         host = "sfzserver-aux";
