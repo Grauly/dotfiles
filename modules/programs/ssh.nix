@@ -122,6 +122,15 @@
           "~/.ssh/sfzkey"
         ];
       };
+      foodbot = {
+        host = "foodbot";
+        user = "user";
+        hostname = "sfz-aalen.space";
+        port = 300;
+        identityFile = [
+          "~/.ssh/foodkey"
+        ];
+      };
     };
   };
 }
