@@ -37,8 +37,8 @@
           "*" = {
             bg = "${./background.png} fill";
           };
-          "BOE 0x0974 Unknown" = {
-            scale = "1.3";
+          "BOE 0x09C2 Unknown" = {
+            mode = "2560x1440@165.003Hz";
           };
         };
         floating = {
