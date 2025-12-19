@@ -4,6 +4,7 @@
     wget
     curl
     dnsutils
+    inetutils
   ];
 
   networking.hostName = "THETAPRIME"; # Define your hostname.
