@@ -4,6 +4,7 @@
   imports = [
     ../programs/file_explorer
     ../programs/udisks.nix
+    ../programs/restic.nix
   ];
 
   environment.systemPackages = with pkgs; [
