@@ -12,6 +12,10 @@ in{
       paths =  [
         "${homeDir}/Documents"
         "${homeDir}/.ssh"
+        "${homeDir}/.local/PrismLauncher"
+      ];
+      extraBackupArgs = [
+        "-v"
       ];
       timerConfig = null;
       backupCleanupCommand = ''
