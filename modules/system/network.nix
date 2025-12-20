@@ -5,6 +5,7 @@
     curl
     dnsutils
     inetutils
+    wireshark
   ];
 
   networking.hostName = "THETAPRIME"; # Define your hostname.
