@@ -6,6 +6,9 @@
       VDPAU_DRIVER = "va_gl";
       LIBVA_DRIVER_NAME = "nvidia";
     };
+    systemPackages = with pkgs; [
+      nvtopPackages.nvidia
+    ];
   };
 
   # Load nvidia driver for Xorg and Wayland
