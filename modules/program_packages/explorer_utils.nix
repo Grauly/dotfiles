@@ -16,5 +16,6 @@
     openmpi
     ior
     ncdu
+    smartmontools
   ];
 }
