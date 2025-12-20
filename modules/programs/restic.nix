@@ -1,7 +1,7 @@
 { pkgs, config, ... }:
 
 let
-  homeDir = config.users.users.grauly.homeDirectory;
+  homeDir = config.home-manager.users.grauly.home.homeDirectory;
 in{
   services.restic.backups = {
     "base" = {
