@@ -3,7 +3,8 @@
 {
   programs.vscode = {
     enable = true;
-    package = (import ./vscode-WL-electron.nix { inherit pkgs; });
+    # removed, because it is again causing problems. I should be fine tho
+    # package = (import ./vscode-WL-electron.nix { inherit pkgs; });
     mutableExtensionsDir = false;
     profiles.default = {
       enableUpdateCheck = false;
