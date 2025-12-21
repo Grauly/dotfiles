@@ -57,7 +57,8 @@ tooltip label {
 /* Containers */
 #cpu_container,
 #gpu_container,
-#ram_container 
+#ram_container,
+#clock
 {
     background-color: rgba(40, 40, 40, 0.5);
     margin: 5px 0;
@@ -99,4 +100,11 @@ tooltip label {
 #custom-swap
 {
     padding-right: 5px;
+}
+
+/* Single Module Modules
+Also required to be a container */
+#clock
+{
+    padding: 4px;
 }

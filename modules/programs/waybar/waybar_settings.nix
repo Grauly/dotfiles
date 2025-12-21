@@ -40,7 +40,9 @@ in
     #"pulseaudio"
     #"backlight"
     #"battery"
-    #"clock"
+    
+    "image#seperator_left"
+    "clock"
     ];
   
   # --- Seperator Section ---
@@ -168,7 +170,17 @@ in
     ];
   };
 
+  # --- Clock Section ---
 
+  clock = {
+    interval = 1;
+    format = "{:%H:%M}";
+    tooltip-format = "{%d.%m.%y}<tt><small>{calendar}</small></tt>";
+    calendar = {
+      mode = "month";
+      week-pos = "right";
+    };
+  };
 
   battery = {
     interval = 5;
@@ -185,17 +197,6 @@ in
     format-redalert = "RED ALERT: {capacity}%";
     tooltip = true;
     tooltip-format = "Battery at {capacity}%\nDrawing {power}W\n{timeTo}";
-  };
-
-  clock = {
-    interval = 1;
-    format = "{:%H:%M}";
-    format-alt = "{:%H:%M:%S\n%d.%m.%y}";
-    tooltip-format = "<tt><small>{calendar}</small></tt>";
-    calendar = {
-      mode = "month";
-      week-pos = "right";
-    };
   };
 
   "clock#minimal" = {
