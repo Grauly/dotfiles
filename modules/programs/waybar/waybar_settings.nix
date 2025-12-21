@@ -11,6 +11,7 @@ let
   load-bar = [" " "▁" "▂" "▃" "▄" "▅" "▆" "▇" "█"];
   load-bar-idle = ["-" "▁" "▂" "▃" "▄" "▅" "▆" "▇" "█"];
   bar-height = 39;
+  svg = (import ./scripts/tint_svg.nix { inherit pkgs; });
 in
 {
   layer = "top";
@@ -46,19 +47,19 @@ in
 
   "image#seperator_middle" = {
     # CSS has a margin (left, right) of 5px
-    path = "${./assets/seperator-middle.svg}";
+    path = (svg {color = osConfig.grauly.colors.mix; path = ./assets/seperator-middle.svg; });
     size = bar-height;
   };
 
   "image#seperator_left" = {
     # CSS has a margin-left of 5px
-    path = "${./assets/seperator-left.svg}";
+    path = (svg {color = osConfig.grauly.colors.mix; path = ./assets/seperator-left.svg; });
     size = bar-height;
   };
 
   "image#seperator_right" = {
     # CSS has a margin-right of 15px
-    path = "${./assets/seperator-right.svg}";
+    path = (svg {color = osConfig.grauly.colors.mix; path = ./assets/seperator-right.svg; });
     size = bar-height;
   };
   
