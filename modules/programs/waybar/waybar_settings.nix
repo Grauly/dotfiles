@@ -180,7 +180,7 @@ in
   clock = {
     interval = 1;
     format = "{:%H:%M}";
-    tooltip-format = "{%d.%m.%y}<tt><small>{calendar}</small></tt>";
+    tooltip-format = "{:%A, %d.%m.%y}\n\n<tt><small>{calendar}</small></tt>";
     calendar = {
       mode = "month";
       week-pos = "right";
