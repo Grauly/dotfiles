@@ -58,6 +58,7 @@ tooltip label {
 #cpu_container,
 #gpu_container,
 #ram_container,
+#control_container,
 #clock
 {
     background-color: rgba(40, 40, 40, 0.5);
@@ -70,7 +71,8 @@ tooltip label {
 #cpu.medium,
 #custom-gpu_utilization.medium,
 #custom-gpu_vram_usage.medium,
-#memory.medium
+#memory.medium,
+#battery.caution
 {
     color: yellow;
 }
@@ -78,7 +80,8 @@ tooltip label {
 #cpu.high,
 #custom-gpu_utilization.high,
 #custom-gpu_vram_usage.high,
-#memory.high 
+#memory.high,
+#battery.critical
 {
     color: orange;
 }
@@ -86,7 +89,8 @@ tooltip label {
 #cpu.extreme,
 #custom-gpu_utilization.extreme,
 #custom-gpu_vram_usage.extreme,
-#memory.extreme
+#memory.extreme,
+#battery.danger
 {
     color: red;
 }
@@ -97,7 +101,10 @@ tooltip label {
 #custom-gpu_utilization,
 #custom-gpu_vram_usage,
 #memory,
-#custom-swap
+#custom-swap,
+#backlight,
+#pulseaudio,
+#battery
 {
     padding-right: 5px;
 }
@@ -107,4 +114,11 @@ Also required to be a container */
 #clock
 {
     padding: 4px;
+}
+
+/* For some reason, backlight is super small? */
+/* also, since its the first in line, we need to shift it a bit */
+#backlight {
+    padding-right: 10px;
+    padding-left: 4px;
 }

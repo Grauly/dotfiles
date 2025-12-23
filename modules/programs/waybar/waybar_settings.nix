@@ -10,6 +10,8 @@ let
   cores = {core}: if core == 0 then "{icon${toString core}}" else "${cores {core = (core - 1);}}{icon${toString core}}";
   load-bar = [" " "▁" "▂" "▃" "▄" "▅" "▆" "▇" "█"];
   load-bar-idle = ["-" "▁" "▂" "▃" "▄" "▅" "▆" "▇" "█"];
+  bat-charge-bar = [ "󰢟" "󰢜" "󰂆" "󰂇" "󰂈" "󰢝" "󰂉" "󰢞" "󰂊" "󰂋" "󰂅" ];
+  bat-bar = [ "󰂎" "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹" ];
   bar-height = 39;
   svg = (import ./scripts/tint_svg.nix { inherit pkgs; });
 in
@@ -35,11 +37,14 @@ in
     
     "group/ram_container"
     "image#seperator_right"
+    
+    
+    "image#seperator_left"
+    "group/control_container"
+    "image#seperator_right"
+
     #"custom/connectivity"
     #"network"
-    #"pulseaudio"
-    #"backlight"
-    #"battery"
     
     "image#seperator_left"
     "clock"
@@ -181,23 +186,56 @@ in
       week-pos = "right";
     };
   };
+  
+  # --- Control Section ---
+  
+  # brightness, loudness, chargedness
+
+  backlight = {
+    format = "{icon}";
+    format-icons = [ "󰛩" "󱩎" "󱩏" "󱩐" "󱩑" "󱩒" "󱩓" "󱩔" "󱩕" "󱩖" "󰛨" ];
+    tooltip = true;
+    tooltip-format = "{percent}%";
+  };
+  
+  pulseaudio = {
+    format = "Volume:\n{volume}%";
+    format-icons = [ "󰕿" "󰖀" "󰕾"];
+    format-muted = "󰖁";
+    on-click = "${floating_shell} ${pulsemixer}";
+    tooltip = true;
+    tooltip-format = "{volume}%";
+  };
 
   battery = {
     interval = 5;
     states = {
       caution = 30;
-      warning = 20;
       critical = 10;
-      redalert = 5;
+      danger = 5;
     };
-    format = "{capacity}%";
-    format-caution = "/!\\ {capacity}%";
-    format-warning = "/!\\ {capacity}% /!\\";
-    format-critical = "/!!!\\ [{capacity}%] /!!!\\";
-    format-redalert = "RED ALERT: {capacity}%";
+    format = " {icon}";
+    format-caution = " {icon}";
+    format-critical = " {icon}";
+    format-danger = " {icon}";
+    format-charging = "󰚥{icon}";
+    format-full = " {icon}";
+    format-icons = bat-bar;
     tooltip = true;
     tooltip-format = "Battery at {capacity}%\nDrawing {power}W\n{timeTo}";
   };
+  
+  "group/control_container" = {
+    orientation = "inherit";
+    modules = [
+      "backlight"
+      "pulseaudio"
+      "battery"
+    ];
+  };
+
+  # connectivity, connection
+
 
   "clock#minimal" = {
     format = "{:%H:%M}";
@@ -215,26 +253,6 @@ in
     ];
   };
 
-  "custom/arrow_right" = {
-    format = "";
-    tooltip = false;
-  };
-
-  "custom/arrow_left" = {
-    format = "";
-    tooltip = false;
-  };
-
-  "custom/inv_arrow_left" = {
-    format = "";
-    tooltip = false;
-  };
-
-  "custom/inv_arrow_right" = {
-    format = "";
-    tooltip = false;
-  };
-
   network = {
     interval = 10;
     format = ""; #X symbol
@@ -249,13 +267,5 @@ in
 
 
 
-  pulseaudio = {
-    format = "Volume:\n{volume}%";
-    format-muted = "MUTED";
-    on-click = "${floating_shell} ${pulsemixer}";
-  };
 
-  backlight = {
-    format = "Brightness:\n{percent}%";
-  };
 }
