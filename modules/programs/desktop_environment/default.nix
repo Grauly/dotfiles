@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./sway
     ./niri
   ];
 
