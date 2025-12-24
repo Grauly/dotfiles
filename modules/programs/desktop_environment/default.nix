@@ -3,6 +3,7 @@
 {
   imports = [
     ./sway
+    ./niri
   ];
 
   xdg.portal = {
