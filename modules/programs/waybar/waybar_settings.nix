@@ -11,7 +11,7 @@ in
 {
   layer = "top";
   position = "top";
-  modules-left = [ "sway/workspaces" ];
+  modules-left = [ "niri/workspaces" ];
   modules-center = [ "clock#minimal" "sway/mode" ];
   modules-right = [ "custom/arrow_left" "cpu" "memory" "custom/inv_arrow_right" "custom/arrow_left" "custom/connectivity" "network" "custom/arrow_right" "custom/inv_arrow_left" "pulseaudio" "backlight" "battery" "custom/arrow_right" "custom/inv_arrow_left" "clock" ];
 
