@@ -9,5 +9,6 @@
     ../programs/waybar
     ../programs/fonts.nix
     ../programs/mako.nix
+    ../programs/swaylock
   ];
 }
