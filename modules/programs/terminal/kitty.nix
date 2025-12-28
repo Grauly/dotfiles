@@ -1,16 +1,9 @@
 { home-manager, config, pkgs, ... }:
 
-let
-  package = pkgs.kitty;
-in
 {
-  environment.systemPackages = [
-    package
-  ];
-
-  grauly.terminal = rec {
-    standalone = pkgs.lib.getExe package;
-    detach = "${standalone} --detach";
+  grauly.terminal = {
+    package = pkgs.kitty;
+    detach = "${config.options.grauly.terminal.standalone} --detach";
   };
 
   home-manager.users.grauly.programs.kitty = {
