@@ -1,11 +1,10 @@
 { home-manager, pkgs, config, ... }:
 
 {
-  users.users.grauly = {
-    shell = pkgs.zsh;
+  grauly.shell = {
+    package = pkgs.zsh;
+    launch-program = ["${config.grauly.shell.standalone}" "-c"];
   };
-  
-  grauly.shell.launch-program = "${config.grauly.shell.standalone} -c";
 
   programs.zsh.enable = true;
 
