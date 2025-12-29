@@ -7,19 +7,23 @@ in
   options.grauly = {
     terminal = with lib; rec {
       package = mkOption {
-        type = type.derivation;
+        type = types.package;
         description = "Package of the terminal";
       };
       standalone = mkOption {
-        type = type.str;
+        type = types.str;
         description = "Path to the terminal executable";
-        default = lib.getExe package;
+        default = lib.getExe cfg.package;
       };
       detach = mkOption {
-        type = type.listof type.str;
+        type = types.listOf types.str;
         description = "Command to execute the terminal to run a specific binary, each argument a entry in the list, detatched (append the specifics to this)";
       };
-      detach-string = lib.strings.concatStringsSep " " detach;
+      detach-string = mkOption {
+        type = types.str;
+        description = "Command to execute the terminal to run a specific binary, detatched (append the specifics to this)";
+        default = lib.strings.concatStringsSep " " cfg.detach;
+      };
     };
   };
   

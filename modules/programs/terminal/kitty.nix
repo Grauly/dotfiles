@@ -3,7 +3,7 @@
 {
   grauly.terminal = {
     package = pkgs.kitty;
-    detach = "${config.options.grauly.terminal.standalone} --detach";
+    detach = ["${config.grauly.terminal.standalone}" "--detach"];
   };
 
   home-manager.users.grauly.programs.kitty = {
