@@ -1,6 +1,14 @@
+{ niri, ... }:
+
 {
   imports = [
     ./autostart.nix
-    ./config
   ];
+  
+  home-manager.users.grauly = {
+    imports = [
+      ./config
+      niri.homeModules.niri
+    ];
+  };
 }
