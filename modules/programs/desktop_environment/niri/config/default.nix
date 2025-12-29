@@ -15,7 +15,8 @@
       binds = (import ./keybinds.nix { inherit pkgs config; });
     };
   };
-  environment.systemPackages = with pkgs; [
+  
+  home.packages = with pkgs; [
     xwayland-satellite
     wl-clipboard
   ];
