@@ -5,21 +5,25 @@ let
 in
 {
   options.grauly = {
-    shell = with lib; rec {
+    shell = with lib; {
       package = mkOption {
-        type = type.derivation;
+        type = types.package;
         description = "Package of the shell";
       };
       standalone = mkOption {
-        type = types.listOf type.str;
-        description = "Path to the shell executable";
-        default = lib.getExe package;
+        type = types.str;
+        description = "Command to execte the shell";
+        default = lib.getExe cfg.package;
       };
       launch-program = mkOption {
-        type = type.str;
-        description = "Command to execute the shell to run a specific binary (each argument a entry in the list), append the specifics to this)";
+        type = types.listOf types.str;
+        description = "Command to execute the shell to run a specific binary (each argument a entry in the list), append the specifics to this";
       };
-      launch-string = lib.strings.concatStringsSep " " launch-program;
+      launch-string = mkOption {
+        type = types.str;
+        description = "Command to execute the shell to run a specific binary, as string. append the specifics to this";
+        default = lib.strings.concatStringsSep " " cfg.launch-program;
+      };
     };
   };
   
