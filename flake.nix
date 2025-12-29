@@ -31,9 +31,13 @@
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    niri = {
+      url = "github:sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, treefmt-nix, agenix, disko, nixpkgs-old, ... }@inputs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, treefmt-nix, agenix, disko, niri, nixpkgs-old, ... }@inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -86,7 +90,7 @@
             (import ./disko/luks-separate-disks.nix)
           ];
           specialArgs = {
-            inherit pkgs-unstable pkgs-old inputs;
+            inherit pkgs-unstable pkgs-old inputs niri;
           };
         };
       };
