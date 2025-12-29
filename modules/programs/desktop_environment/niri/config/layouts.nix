@@ -36,7 +36,7 @@ in {
     gap = style.border-width + style.window-spacing;
     position = "top";
     gaps-between-tabs = style.border-width + style.window-spacing;
-    corner-radius = style.corner-radius;
+    corner-radius = style.border-radius;
     active = active;
     inactive = inactive;
     urgent = urgent;
