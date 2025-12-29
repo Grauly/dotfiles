@@ -1,6 +1,6 @@
-{ config, ... }:
+{ osConfig, ... }:
 
-with config.grauly; let
+with osConfig.grauly; let
   active = {
     gradient = {
       from = colors.gradient-from;

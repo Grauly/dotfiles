@@ -1,6 +1,10 @@
 {
   "eDP-1" = {
-    mode = "2560x1440@165.003";
+    mode = {
+      refresh = 165.003;
+      width = 2560;
+      height = 1440;
+    };
     scale = 1;
   };
 }

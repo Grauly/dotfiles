@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, config, osConfig, ... }:
 
 {
   programs.niri = {
@@ -9,10 +9,10 @@
       screenshot-path = "~/Pictures/Screenshot_%Y-%m-%d_%H-%M-%S.png";
       hotkey-overlay.skip-at-startup = true;
       input = (import ./inputs.nix);
-      output = (import ./outputs.nix);
-      layout = (import ./layouts.nix { inherit config; });
-      window-rules = (import ./window_rules.nix);
-      binds = (import ./keybinds.nix { inherit pkgs config; });
+      outputs = (import ./outputs.nix);
+      layout = (import ./layouts.nix { inherit osConfig; });
+      window-rules = (import ./window_rules.nix { inherit osConfig; });
+      binds = (import ./keybinds.nix { inherit pkgs config osConfig; });
     };
   };
   
