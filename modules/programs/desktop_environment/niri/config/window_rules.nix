@@ -7,6 +7,10 @@
         app-id = "^librewolf$";
         title = "^Picture-in-Picture$";
       }
+      {
+        app-id = "^vesktop$";
+        title = "";
+      }
     ];
     open-floating = true;
   }
