@@ -10,5 +10,6 @@
     ../programs/fonts.nix
     ../programs/mako.nix
     ../programs/swaylock
+    ../programs/multibg
   ];
 }
