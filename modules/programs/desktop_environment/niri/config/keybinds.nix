@@ -5,6 +5,7 @@ with config.lib.niri.actions; {
   "Mod+Return".action.spawn = osConfig.grauly.terminal.standalone;
   "Mod+Shift+Return".action.spawn = "kitty"; # fallback
   "Mod+D".action.spawn = ["rofi" "-show" "combi" "-modes" "combi" "-combi-modes" "drun,run,emoji"];
+  "Mod+KP_Enter".action.spawn = ["rofi" "-show" "calc"];
   "Mod+E".action.spawn = osConfig.grauly.terminal.detach ++ osConfig.grauly.shell.launch-program ++ [ "yazi" ];
   "Mod+Alt+L".action.spawn = "swaylock";
   "Mod+O".action = toggle-overview;
