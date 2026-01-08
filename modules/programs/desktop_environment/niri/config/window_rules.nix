@@ -14,6 +14,15 @@
     ];
     open-floating = true;
   }
+  { # bc regex is wierd
+    matches = [
+      {
+        app-id = "^vesktop$";
+        title = "Vesktop";
+      }
+    ];
+    open-floating = false;
+  }
   { # corner rounding. Honestly, why here?
     geometry-corner-radius = 
       let
