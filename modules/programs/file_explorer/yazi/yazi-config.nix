@@ -48,19 +48,19 @@ in
   open = {
     rules = [
       { mime = "text/html"; use = [ "nvim" "librewolf" ]; }
-      { name = "*.gcode"; use = "prusa-slicer"; }
-      { name = "*.bgcode"; use = "prusa-slicer"; }
+      { url = "*.gcode"; use = "prusa-slicer"; }
+      { url = "*.bgcode"; use = "prusa-slicer"; }
       { mime = "text/*"; use = "nvim"; }
       { mime = "video/*"; use = "vlc"; }
       { mime = "audio/*"; use = "vlc"; }
       { mime = "image/svg+xml"; use = [ "inkscape" "nvim" ]; }
       { mime = "image/*"; use = "gimp"; }
-      { name = "*.bbmodel"; use = "blockbench"; }
-      { name = "*.json"; use = [ "nvim" "blockbench" "librewolf" ]; }
-      { name = "*.zip"; use = "ark"; }
-      { name = "*.stl"; use = "prusa-slicer"; }
-      { name = "*.pdf"; use = [ "evince" "librewolf" "gimp" ]; }
-      { mime = "application/blender"; use = "blender"; }
+      { url = "*.bbmodel"; use = "blockbench"; }
+      { url = "*.json"; use = [ "nvim" "blockbench" "librewolf" ]; }
+      { url = "*.zip"; use = "ark"; }
+      { url = "*.stl"; use = "prusa-slicer"; }
+      { url = "*.pdf"; use = [ "evince" "librewolf" "gimp" ]; }
+      { url = "*.blend"; use = "blender"; }
       { mime = "*"; use = "nvim"; }
     ];
   };
