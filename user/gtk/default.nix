@@ -1,6 +1,5 @@
 {
   imports = [
-    ./gtk.nix
     ./gtk_file-picker-fix.nix
   ];
   
@@ -10,6 +9,7 @@
     gtk.enable = true;
     
     imports = [
+      ./gtk.nix
       ./cursor
     ];
   };
