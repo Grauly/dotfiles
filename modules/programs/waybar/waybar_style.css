@@ -116,6 +116,15 @@ Also required to be a container */
     padding: 4px;
 }
 
+/* Otherwise, the battery would be black */
+#battery.charging {
+    color: cyan;
+}
+
+#battery.full {
+    color: white;
+}
+
 /* For some reason, backlight is super small? */
 /* also, since its the first in line, we need to shift it a bit */
 #backlight {
