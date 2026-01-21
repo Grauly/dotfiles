@@ -121,7 +121,7 @@ Also required to be a container */
     color: cyan;
 }
 
-#battery.full {
+#battery {
     color: white;
 }
 
