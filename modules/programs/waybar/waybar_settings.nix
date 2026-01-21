@@ -199,7 +199,7 @@ in
   };
   
   pulseaudio = {
-    format = "Volume:\n{volume}%";
+    format = "{icon}";
     format-icons = [ "󰕿" "󰖀" "󰕾"];
     format-muted = "󰖁";
     on-click = "${floating_shell} ${pulsemixer}";
