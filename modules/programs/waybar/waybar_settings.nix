@@ -19,7 +19,7 @@ in
   layer = "top";
   position = "top";
   modules-left = [
-    "sway/workspaces"
+    "niri/workspaces"
     ];
   modules-center = [
     #"clock#minimal"
