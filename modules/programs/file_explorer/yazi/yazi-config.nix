@@ -7,6 +7,7 @@ let
     "evince"
     "blockbench"
     "prusa-slicer"
+    "aseprite"
   ];
 in
 {
@@ -61,6 +62,7 @@ in
       { url = "*.stl"; use = "prusa-slicer"; }
       { url = "*.pdf"; use = [ "evince" "librewolf" "gimp" ]; }
       { url = "*.blend"; use = "blender"; }
+      { url = "*.aseprite"; use = "aseprite"; }
       { mime = "*"; use = "nvim"; }
     ];
   };
