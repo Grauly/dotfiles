@@ -13,6 +13,7 @@
     imagemagick
     icoutils
     qrencode
+    aseprite
   ] ++ (with pkgs-unstable; [
     prusa-slicer
   ]);
