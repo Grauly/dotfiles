@@ -12,5 +12,6 @@
     mangohud
     bitwarden-desktop
   ] ++ (with pkgs-unstable; [
+    space-station-14-launcher
   ]);
 }
