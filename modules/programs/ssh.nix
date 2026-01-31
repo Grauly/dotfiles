@@ -61,7 +61,7 @@
       sfzserver-builder = {
         host = "sfzserver-builder";
         user = "root";
-        hostname = "100.64.0.76";
+        hostname = "100.64.0.25";
         identityFile = [
           "~/.ssh/sfzkey"
         ];
@@ -77,7 +77,7 @@
       sfzserver = {
         host = "sfzserver";
         user = "grauly";
-        hostname = "100.64.0.76";
+        hostname = "100.64.0.25";
         identityFile = [
           "~/.ssh/sfzkey"
         ];
