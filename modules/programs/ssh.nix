@@ -25,32 +25,32 @@
         ];
       };
 
-      sfzserver-aux = {
-        host = "sfzserver-aux";
+      gamescom-aux = {
+        host = "gamescom-aux";
         user = "grauly";
         hostname = "100.64.0.5";
         identityFile = [
           "~/.ssh/sfzkey"
         ];
       };
-      sfzserver-aux-intern = {
-        host = "sfzserver-aux-intern";
+      gamescom-aux-intern = {
+        host = "gamescom-aux-intern";
         user = "grauly";
         hostname = "10.20.42.78";
         identityFile = [
           "~/.ssh/sfzkey"
         ];
       };
-      sfzserver-aux-builder = {
-        host = "sfzserver-aux-builder";
+      gamescom-aux-builder = {
+        host = "gamescom-aux-builder";
         user = "root";
         hostname = "100.64.0.5";
         identityFile = [
           "~/.ssh/sfzkey"
         ];
       };
-      sfzserver-aux-builder-intern = {
-        host = "sfzserver-aux-builder";
+      gamescom-aux-builder-intern = {
+        host = "gamescom-aux-builder";
         user = "root";
         hostname = "10.20.42.78";
         identityFile = [
@@ -58,38 +58,39 @@
         ];
       };
 
-      sfzserver-builder = {
-        host = "sfzserver-builder";
-        user = "root";
-        hostname = "100.64.0.25";
-        identityFile = [
-          "~/.ssh/sfzkey"
-        ];
-      };
-      sfzserver-builder-intern = {
-        host = "sfzserver-builder-intern";
-        user = "root";
-        hostname = "10.20.42.79";
-        identityFile = [
-          "~/.ssh/sfzkey"
-        ];
-      };
-      sfzserver = {
-        host = "sfzserver";
+      gamescom = {
+        host = "gamescom";
         user = "grauly";
         hostname = "100.64.0.25";
         identityFile = [
           "~/.ssh/sfzkey"
         ];
       };
-      sfzserver-intern = {
-        host = "sfzserver-intern";
+      gamescom-intern = {
+        host = "gamescom-intern";
         user = "grauly";
         hostname = "10.20.42.79";
         identityFile = [
           "~/.ssh/sfzkey"
         ];
       };
+      gamescom-builder = {
+        host = "gamescom-builder";
+        user = "root";
+        hostname = "100.64.0.25";
+        identityFile = [
+          "~/.ssh/sfzkey"
+        ];
+      };
+      gamescom-builder-intern = {
+        host = "gamescom-builder-intern";
+        user = "root";
+        hostname = "10.20.42.79";
+        identityFile = [
+          "~/.ssh/sfzkey"
+        ];
+      };
+
       link = {
         host = "link";
         user = "grauly";
