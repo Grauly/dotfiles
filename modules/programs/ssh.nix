@@ -17,6 +17,12 @@
           "~/.ssh/gitlabkey"
         ];
       };
+      "codeberg.org" = {
+        hostname = "codeberg.org";
+        identityFile = [
+          "~/.ssh/codebergkey"
+        ];
+      };
       
       "gitlab.uni-ulm.de" = {
         hostname = "gitlab.uni-ulm.de";
