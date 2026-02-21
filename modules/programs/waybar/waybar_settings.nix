@@ -229,35 +229,6 @@ in
     tooltip = true;
     tooltip-format = "Battery at {capacity}%\nDrawing {power}W\n{timeTo}";
   };
-  
-  "group/control_container" = {
-    orientation = "inherit";
-    modules = [
-      "backlight"
-      "pulseaudio"
-      "custom/wdisplays"
-      "battery"
-    ];
-  };
-
-  # connectivity, connection
-
-
-  "clock#minimal" = {
-    format = "{:%H:%M}";
-  };
-
-  "custom/connectivity" = {
-    exec = "${conn_stats_script}";
-    interval = 10;
-    return-type = "json";
-    format = "{icon}";
-    format-icons = [
-      "" #globe - connected
-      "󰨹" #question mark cloud - connection shaky
-      "󱘖" #connection lost
-    ];
-  };
 
   network = {
     interval = 10;
@@ -266,12 +237,21 @@ in
     tooltip-format-ethernet = "{ipaddr}@{ifname} via {gwaddr}";
     format-wifi = ""; #wifi symbol
     tooltip-format-wifi = "{ipaddr}@{essid} ({signalStrength}%)";
-    format-linked = "LINK LOST";
-    format-disconnect = "NETWORK DISCONNECTED";
+    format-linked = "󱘖"; #Ethernet disconnect symbol
+    tooltip-format-linked = "link lost";
+    format-disconnect = "󰌙"; # Computers disconnected symbol
+    tooltip-format-disconnect = "disconnected";
     on-click = "${floating_shell} ${nmtui}";
   };
-
-
-
-
+  
+  "group/control_container" = {
+    orientation = "inherit";
+    modules = [
+      "backlight"
+      "pulseaudio"
+      "custom/wdisplays"
+      "battery"
+      "network"
+    ];
+  };
 }
