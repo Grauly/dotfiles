@@ -5,15 +5,16 @@
     font-size: 20px;
     min-height: 0;
     background: none;
+    color: "§text_color";
 }
 
 tooltip {
-    background: rgba(43, 48, 59, 0.5);
+    background: "§background_color";
     border: 1px solid rgba(100, 114, 125, 0.5);
 }
 
 tooltip label {
-    color: white;
+    color: "§text_color";
 }
 
 /* Seperator Section */
@@ -27,7 +28,7 @@ tooltip label {
 
 #image.seperator_middle {
     margin: 5px 0;
-    background-color: rgba(40, 40, 40, 0.5);
+    background-color: "§background_color";
     padding: 0 5px;
 }
 
@@ -49,7 +50,7 @@ tooltip label {
 #clock,
 #workspaces button
 {
-    background-color: rgba(40, 40, 40, 0.5);
+    background-color: "§background_color";
     margin: 5px 0;
     padding: 0;
 }
@@ -61,7 +62,7 @@ tooltip label {
 }
 
 #workspaces button.focused {
-    background-color: #5e15d2;
+    background-color: "§highlight_color";
 }
 
 /* Warning State Colors */
@@ -120,7 +121,7 @@ Also required to be a container */
 }
 
 #battery {
-    color: white;
+    color: "§text_color";
 }
 
 /* For some reason, backlight is super small? */
