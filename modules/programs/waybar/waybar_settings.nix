@@ -20,10 +20,7 @@ in
   position = "top";
   modules-left = [
     "niri/workspaces"
-    ];
-  modules-center = [
-    #"clock#minimal"
-    #"sway/mode"
+    "image#seperator_right"
     ];
   modules-right = [
     "image#seperator_left"
