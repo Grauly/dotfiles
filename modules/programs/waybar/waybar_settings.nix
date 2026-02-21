@@ -206,6 +206,11 @@ in
     tooltip = true;
     tooltip-format = "{volume}%";
   };
+  
+  "custom/wdisplays" = {
+    format = "󰍹";
+    on-click = "${pkgs.lib.getExe pkgs.wdisplays}";
+  };
 
   battery = {
     interval = 5;
@@ -230,6 +235,7 @@ in
     modules = [
       "backlight"
       "pulseaudio"
+      "custom/wdisplays"
       "battery"
     ];
   };

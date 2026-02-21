@@ -104,9 +104,10 @@ tooltip label {
 #custom-swap,
 #backlight,
 #pulseaudio,
-#battery
+#battery,
+#custom-wdisplays
 {
-    padding-right: 5px;
+    padding-right: 7px;
 }
 
 /* Single Module Modules
