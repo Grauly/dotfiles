@@ -56,7 +56,7 @@
         ];
       };
       gamescom-aux-builder-intern = {
-        host = "gamescom-aux-builder";
+        host = "gamescom-aux-builder-intern";
         user = "root";
         hostname = "10.20.42.78";
         identityFile = [
