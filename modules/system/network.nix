@@ -5,6 +5,7 @@
     curl
     dnsutils
     inetutils
+    unixtools.netstat
   ];
   
 
