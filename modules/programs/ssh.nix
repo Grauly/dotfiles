@@ -1,4 +1,4 @@
-{ home-manager, ... }:
+{ home-manager, pkgs, ... }:
 
 {
   home-manager.users.grauly.programs.ssh = {
@@ -138,6 +138,43 @@
           "~/.ssh/foodkey"
         ];
       };
-    };
+    } //
+      (builtins.listToAttrs (map (host-info:
+        pkgs.lib.nameValuePair host-info.name {
+          hostname = host-info.ip;
+          host = host-info.name;
+          user = "root";
+          identityFile = [
+            "~/.ssh/sfzkey"
+          ];
+        })
+        [
+          {
+            name = "infobeamer-1";
+            ip = "100.64.0.44";
+          }
+          {
+            name = "infobeamer-2";
+            ip = "100.64.0.45";
+          }
+          {
+            name = "infobeamer-3";
+            ip = "100.64.0.46";
+          }
+          {
+            name = "infobeamer-4";
+            ip = "100.64.0.48";
+          }
+          {
+            name = "infobeamer-5";
+            ip = "100.64.0.49";
+          }
+          {
+            name = "infobeamer-6";
+            ip = "100.64.0.50";
+          }
+        ]
+        )
+      );
   };
 }
