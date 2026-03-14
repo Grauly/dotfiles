@@ -138,6 +138,14 @@
           "~/.ssh/foodkey"
         ];
       };
+      doordisplay = {
+        host = "doordisplay";
+        user = "root";
+        hostname = "10.12.42.58";
+        identityFile = [
+          "~/.ssh/sfzkey"
+        ];
+      };
     } //
       (builtins.listToAttrs (map (host-info:
         pkgs.lib.nameValuePair host-info.name {
