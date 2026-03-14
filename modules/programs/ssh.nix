@@ -173,6 +173,26 @@
             name = "infobeamer-6";
             ip = "100.64.0.50";
           }
+          {
+            name = "infobeamer-7";
+            ip = "100.64.0.52";
+          }
+          {
+            name = "infobeamer-8";
+            ip = "100.64.0.53";
+          }
+          {
+            name = "infobeamer-9";
+            ip = "100.64.0.54";
+          }
+          {
+            name = "infobeamer-10";
+            ip = "100.64.0.55";
+          }
+          {
+            name = "infobeamer-space-tv";
+            ip = "100.64.0.56";
+          }
         ]
         )
       );
