@@ -8,6 +8,7 @@ let
     "blockbench"
     "prusa-slicer"
     "aseprite"
+    "eog"
   ];
 in
 {
@@ -55,7 +56,7 @@ in
       { mime = "video/*"; use = "vlc"; }
       { mime = "audio/*"; use = "vlc"; }
       { mime = "image/svg+xml"; use = [ "inkscape" "nvim" ]; }
-      { mime = "image/*"; use = "gimp"; }
+      { mime = "image/*"; use = [ "eog" "gimp" ]; }
       { url = "*.bbmodel"; use = "blockbench"; }
       { url = "*.json"; use = [ "nvim" "blockbench" "librewolf" ]; }
       { url = "*.zip"; use = "ark"; }
