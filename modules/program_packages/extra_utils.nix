@@ -17,5 +17,6 @@
     ripgrep
     nmap
     systemctl-tui
+    toybox
   ];
 }
