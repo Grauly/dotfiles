@@ -18,5 +18,7 @@
     nmap
     systemctl-tui
     toybox
+    
+    remmina
   ];
 }
