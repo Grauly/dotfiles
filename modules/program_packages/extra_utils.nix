@@ -20,5 +20,6 @@
     toybox
     
     remmina
+    nh
   ];
 }
