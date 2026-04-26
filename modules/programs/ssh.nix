@@ -34,7 +34,7 @@
       gamescom-aux = {
         host = "gamescom-aux";
         user = "grauly";
-        hostname = "100.64.0.5";
+        hostname = "100.64.0.72";
         identityFile = [
           "~/.ssh/sfzkey"
         ];
@@ -50,7 +50,7 @@
       gamescom-aux-builder = {
         host = "gamescom-aux-builder";
         user = "root";
-        hostname = "100.64.0.5";
+        hostname = "100.64.0.72";
         identityFile = [
           "~/.ssh/sfzkey"
         ];
