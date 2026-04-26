@@ -5,6 +5,7 @@
     enable = true;
     drivers = [
       pkgs.hplip
+      pkgs.brlaser
     ];
     logLevel = "debug";
   };
@@ -19,6 +20,11 @@
       # dirty hack, but works, for some reason.
       model = "HP/hp-color_laserjet_pro_mfp_m477-ps.ppd.gz";
       deviceUri = "ipp://192.168.178.22";
+    }
+    {
+      name = "TPH-2d-Drucker";
+      model = "HP/hp-color_laserjet_pro_mfp_m477-ps.ppd.gz";
+      deviceUri = "ipp://mfc-l8900cdw.fiber.garden:631/ipp/print";
     }
   ];
 }
