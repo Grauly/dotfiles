@@ -6,7 +6,7 @@
   extra-packages = (with pkgs; []);
   lua-config = ''
     vim.lsp.config['clangd'] = {
-      cmd = { '${pkgs.clang}' },
+      cmd = { '${pkgs.clang-tools}/bin/clangd' },
     }
     vim.lsp.enable('clangd')
   '';
