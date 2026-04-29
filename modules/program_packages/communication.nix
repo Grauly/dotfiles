@@ -4,6 +4,7 @@
   imports = [
     ../programs/browser
     ../programs/kde_connect.nix
+    ../programs/vesktop.nix
   ];
 
   environment.systemPackages = with pkgs; [
@@ -15,6 +16,5 @@
     signal-desktop
   ] ++ (with pkgs-unstable; [
     #https://github.com/bitwarden/clients/issues/8759
-    vesktop
   ]);
 }
