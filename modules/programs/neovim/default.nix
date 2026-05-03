@@ -30,6 +30,11 @@ in {
       vim.o.sw = 4
       vim.cmd "colorscheme vim" 
       vim.opt.clipboard = 'unnamedplus'
+      
+      vim.diagnostic.enable = true
+      vim.diagnostic.config({
+        virtual_lines = true,
+      })
 
     ''
     (pkgs.lib.strings.concatMapStrings (obj: "require('modules.${obj.name}')\n") wantedPlugins)
