@@ -44,6 +44,10 @@
           type = types.str;
           description = "Hex code with #";
         };
+        color_inverse = mkOption {
+          type = types.str;
+          description = "Hex code with #";
+        };
         highlight = mkOption {
           type = types.str;
           description = "Hex code with #";

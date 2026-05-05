@@ -12,6 +12,7 @@
       error = "#6ff904";
       text = {
         color = "#f2f2f2";
+        color_inverse = "#000000";
         highlight = "#c65001";
         lowlight = "#8845b7";
       };
