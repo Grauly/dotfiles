@@ -12,6 +12,7 @@
       outputs = (import ./outputs.nix);
       layout = (import ./layouts.nix { inherit osConfig; });
       window-rules = (import ./window_rules.nix { inherit osConfig; });
+      layer-rules = (import ./layer_rules.nix { inherit osConfig; });
       binds = (import ./keybinds.nix { inherit pkgs config osConfig; });
       spawn-at-startup = (import ./startup-spawn.nix { inherit pkgs; });
     };
