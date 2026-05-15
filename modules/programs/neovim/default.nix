@@ -4,6 +4,7 @@ let
   wantedPlugins = [
     (import ./modules/telescope.nix { inherit pkgs pkgs-unstable; })
     (import ./modules/clang_lsp.nix { inherit pkgs pkgs-unstable; })
+    (import ./modules/glsl_lsp.nix { inherit pkgs pkgs-unstable; })
   ];
 in {
   environment.systemPackages = with pkgs; [
