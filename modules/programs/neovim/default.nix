@@ -19,7 +19,9 @@ in {
       fd
       fzf
     ] ++ (pkgs.lib.lists.flatten (map (obj: obj.extra-packages) wantedPlugins)));
-    plugins = (pkgs.lib.lists.flatten (map (obj: obj.plugins) wantedPlugins));
+    plugins = (pkgs.lib.lists.flatten (map (obj: obj.plugins) wantedPlugins)) ++ (with pkgs.vimPlugins; [
+      nvim-lspconfig
+    ]);
     extraLuaConfig = pkgs.lib.strings.concatStrings [''
       vim.g.mapleader = " "
       vim.o.relativenumber = true
