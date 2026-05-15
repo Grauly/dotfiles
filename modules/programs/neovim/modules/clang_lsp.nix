@@ -5,7 +5,7 @@
   plugins = (with pkgs.vimPlugins; []);
   extra-packages = (with pkgs; []);
   lua-config = ''
-    vim.lsp.config['clangd'] = {
+    vim.lsp.config('clangd', {
       cmd = { '${pkgs.clang-tools}/bin/clangd' },
       
       on_attach = function(client, bufnr)
@@ -17,7 +17,7 @@
             })
             vim.keymap.set("i", "<C-space>", vim.lsp.completion.get, { desc = "trigger autocompletion" })
           end
-    }
+    })
     vim.lsp.enable('clangd')
     vim.opt.completeopt = { "menuone", "noselect", "popup" } 
   '';
