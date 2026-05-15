@@ -4,6 +4,7 @@
   home-manager.users.grauly = {
     programs.vesktop = {
       enable = true;
+      package = pkgs-unstable.vesktop;
     };
   };
 }
