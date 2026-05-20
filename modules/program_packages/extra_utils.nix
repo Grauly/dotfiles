@@ -17,7 +17,6 @@
     ripgrep
     nmap
     systemctl-tui
-    toybox
     
     remmina
     nh
