@@ -1,4 +1,4 @@
-{ pkgs, pkgs-unstable, pkgs-old, ... }:
+{ pkgs, pkgs-unstable, ... }:
 {
   home-manager.users.grauly = import ./intellij.nix;
   
@@ -7,7 +7,7 @@
   };
   
   environment.systemPackages = with pkgs; [
-    #(import ./intellij_WL.nix { inherit pkgs pkgs-unstable pkgs-old; })
+    #(import ./intellij_WL.nix { inherit pkgs pkgs-unstable; })
     jetbrains-toolbox
   ];
 }

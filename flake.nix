@@ -5,9 +5,6 @@
     nixpkgs = {
       url = "nixpkgs/nixos-25.11";
     };
-    nixpkgs-old = {
-      url = "nixpkgs/nixos-25.05";
-    };
     nixpkgs-unstable = {
       url = "nixpkgs/nixos-unstable";
     };
@@ -37,7 +34,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, treefmt-nix, agenix, disko, niri, nixpkgs-old, ... }@inputs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, treefmt-nix, agenix, disko, niri, ... }@inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -50,12 +47,6 @@
         };
       };
       pkgs-unstable = import nixpkgs-unstable {
-        inherit system;
-        config = {
-          allowUnfree = true;
-        };
-      };
-      pkgs-old = import nixpkgs-old {
         inherit system;
         config = {
           allowUnfree = true;
@@ -90,7 +81,7 @@
             (import ./disko/luks-separate-disks.nix)
           ];
           specialArgs = {
-            inherit pkgs-unstable pkgs-old inputs niri;
+            inherit pkgs-unstable inputs niri;
           };
         };
       };

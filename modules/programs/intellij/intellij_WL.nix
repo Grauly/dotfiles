@@ -1,7 +1,7 @@
-{ pkgs, pkgs-unstable, pkgs-old, ... }:
+{ pkgs, pkgs-unstable, ... }:
 
 let
-  mc-depencencies = with pkgs-old; [
+  mc-depencencies = with pkgs; [
     libpulseaudio
     libGL
     glfw-wayland-minecraft
