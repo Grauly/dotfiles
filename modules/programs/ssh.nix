@@ -100,7 +100,7 @@
       link = {
         host = "link";
         user = "grauly";
-        hostname = "100.64.0.1";
+        hostname = "100.64.0.84";
         identityFile = [
           "~/.ssh/linkkey"
         ];
