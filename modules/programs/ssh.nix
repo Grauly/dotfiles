@@ -4,7 +4,7 @@
   home-manager.users.grauly.programs.ssh = {
     enable = true;
     enableDefaultConfig = false;
-    matchBlocks = {
+    settings = {
       "github.com" = {
         hostname = "github.com";
         identityFile = [
@@ -141,7 +141,15 @@
       doordisplay = {
         host = "doordisplay";
         user = "root";
-        hostname = "10.12.42.58";
+        hostname = "doordisplay.sfz.lab";
+        identityFile = [
+          "~/.ssh/sfzkey"
+        ];
+      };
+      doordisplay_intern = {
+        host = "doordisplay.sfz.lab";
+        user = "root";
+        hostname = "doordisplay.sfz.lab";
         identityFile = [
           "~/.ssh/sfzkey"
         ];

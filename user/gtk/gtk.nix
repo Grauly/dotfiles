@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 {
   gtk = {
@@ -14,6 +14,8 @@
       name = "Mint-Y-Dark-Purple";
     };
 
+    gtk4.theme = config.gtk.theme;
+    
     colorScheme = "dark";
   };
   

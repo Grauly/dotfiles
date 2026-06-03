@@ -9,7 +9,7 @@
   
   environment.systemPackages = with pkgs; [
     pavucontrol
-    xorg.xev
+    xev
     tree
     killall
     cryfs

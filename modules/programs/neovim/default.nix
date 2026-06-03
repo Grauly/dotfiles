@@ -23,7 +23,7 @@ in {
     plugins = (pkgs.lib.lists.flatten (map (obj: obj.plugins) wantedPlugins)) ++ (with pkgs.vimPlugins; [
       nvim-lspconfig
     ]);
-    extraLuaConfig = pkgs.lib.strings.concatStrings [''
+    initLua = pkgs.lib.strings.concatStrings [''
       vim.g.mapleader = " "
       vim.o.relativenumber = true
       vim.o.nu = true
@@ -42,6 +42,8 @@ in {
     ''
     (pkgs.lib.strings.concatMapStrings (obj: "require('modules.${obj.name}')\n") wantedPlugins)
     ];
+    withRuby = true;
+    withPython3 = true;
   };
   
   home-manager.users.grauly.xdg.configFile = builtins.listToAttrs (map (obj: {

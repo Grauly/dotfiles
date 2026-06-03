@@ -44,6 +44,9 @@
         inherit system;
         config = {
           allowUnfree = true;
+          permittedInsecurePackages = [
+            "electron-39.8.10"
+          ];
         };
       };
       pkgs-unstable = import nixpkgs-unstable {
