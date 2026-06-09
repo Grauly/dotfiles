@@ -8,7 +8,7 @@ let
     {
       user = "Grauly";
       repo = "dragon.yazi";
-      hash = "sha256-CApGYs/+6LFE5r+xb7+F0oF9qy7AtCPvIKkfzFRgnQc=";
+      hash = "sha256-q0bnjvV4xyYXO9rlPc2aingmsQ1m424dnAkJQa30qv4=";
       path = "/";
     }
     {
