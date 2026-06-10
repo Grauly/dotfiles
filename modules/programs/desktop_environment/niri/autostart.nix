@@ -1,5 +1,7 @@
 { pkgs, ... }:
 {
+  programs.niri.enable = true;
+
   services.greetd = {
     enable = true;
     settings = {
@@ -8,4 +10,6 @@
       };
     };
   };
+  
+  systemd.user.services.niri.enableDefaultPath = false;
 }
