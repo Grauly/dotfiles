@@ -14,6 +14,7 @@
     icoutils
     qrencode
     aseprite
+    dune3d
   ] ++ (with pkgs-unstable; [
     prusa-slicer
   ]);
