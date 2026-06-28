@@ -17,6 +17,7 @@
     ripgrep
     nmap
     systemctl-tui
+    usbutils
     
     remmina
     nh
