@@ -6,6 +6,7 @@
     drivers = [
       pkgs.hplip
       pkgs.brlaser
+      (pkgs.callPackage ./printer_drivers/evolis-tattoo2.nix {})
     ];
     logLevel = "debug";
   };
@@ -25,6 +26,11 @@
       name = "TPH-2d-Drucker";
       model = "HP/hp-color_laserjet_pro_mfp_m477-ps.ppd.gz";
       deviceUri = "ipp://mfc-l8900cdw.fiber.garden:631/ipp/print";
+    }
+    {
+      name = "Evolis-Tatto2";
+      model = "evolis-tattoo2E.ppd.gz";
+      deviceUri = "usb://EVOLIS/Tattoo2";
     }
   ];
 }
