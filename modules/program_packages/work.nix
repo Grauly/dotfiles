@@ -9,7 +9,7 @@
   environment.systemPackages = with pkgs; [
     thunderbird
     libreoffice-qt
-    bitwarden-desktop
+    #bitwarden-desktop
   ] ++ (with pkgs-unstable; [
   ]);
 }

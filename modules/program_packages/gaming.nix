@@ -10,7 +10,7 @@
 
   environment.systemPackages = with pkgs; [
     mangohud
-    bitwarden-desktop
+    #bitwarden-desktop
   ] ++ (with pkgs-unstable; [
   ]);
 }
