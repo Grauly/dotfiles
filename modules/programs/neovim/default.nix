@@ -13,7 +13,6 @@ in {
 
   home-manager.users.grauly.programs.neovim = {
     enable = true;
-    package = pkgs-unstable.neovim-unwrapped;
     defaultEditor = true;
     extraPackages = (with pkgs; [
       ripgrep
