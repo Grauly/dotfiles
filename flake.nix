@@ -40,16 +40,22 @@
       system = "x86_64-linux";
       #setup packages to only use my system, and configure them to use unfree
       treefmtEval = treefmt-nix.lib.evalModule pkgs ./treefmt.nix;
+      insecurities = [
+        "electron-40.10.5"
+        "electron-39.8.10"
+      ];
       pkgs = import nixpkgs {
         inherit system;
         config = {
           allowUnfree = true;
+          permittedInsecurePackages = insecurities;
         };
       };
       pkgs-unstable = import nixpkgs-unstable {
         inherit system;
         config = {
           allowUnfree = true;
+          permittedInsecurePackages = insecurities;
         };
       };
     in
