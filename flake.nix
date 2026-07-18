@@ -32,9 +32,13 @@
       url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    tuxedo-nixos = {
+      url = "github:sund3RRR/tuxedo-nixos";
+      #inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, treefmt-nix, agenix, disko, niri, ... }@inputs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, treefmt-nix, agenix, disko, niri, tuxedo-nixos, ... }@inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -66,6 +70,7 @@
           inherit system pkgs;
           modules = [
             ./modules
+            tuxedo-nixos.nixosModules.default
             ./hardware
             ./user
             home-manager.nixosModules.home-manager
