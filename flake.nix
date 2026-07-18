@@ -33,7 +33,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     tuxedo-nixos = {
-      url = "github:sund3RRR/tuxedo-nixos";
+      url = "github:robert-elles/tuxedo-nixos";
       #inputs.nixpkgs.follows = "nixpkgs";
     };
   };
