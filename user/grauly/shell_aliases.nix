@@ -11,9 +11,9 @@ in
     mntstick = "() {udisksctl mount -b \"/dev/\$1\"}";
     umntstick = "() {udisksctl unmount -b \"/dev/\$1\"}";
     lsmntstick = "ls /run/media/grauly/";
-    reswitch = "sudo ${nh-os} switch /home/grauly/dotfiles#thetanix && ${notify} 'Switch complete'";
-    reswitch-boot = "sudo ${nh-os} boot /home/grauly/dotfiles#thetanix && ${notify} 'Switch complete, ready at next boot'";
-    retest = "sudo ${nh-os} test /home/grauly/dotfiles#thetanix && ${notify} 'Test build complete and deployed'";
+    reswitch = "${nh-os} switch /home/grauly/dotfiles#thetanix && ${notify} 'Switch complete'";
+    reswitch-boot = "${nh-os} boot /home/grauly/dotfiles#thetanix && ${notify} 'Switch complete, ready at next boot'";
+    retest = "${nh-os} test /home/grauly/dotfiles#thetanix && ${notify} 'Test build complete and deployed'";
     rsrc = "source ~/.zshrc";
     rebar = "systemctl --user restart waybar";
     reswitch-bar = "reswitch; rebar";
