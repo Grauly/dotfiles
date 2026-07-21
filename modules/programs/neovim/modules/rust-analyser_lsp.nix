@@ -1,12 +1,12 @@
 { pkgs, pkgs-unstable, ... }:
 
 rec{
-  name = "rust-analyser";
+  name = "rust_analyzer";
   plugins = (with pkgs.vimPlugins; []);
   extra-packages = (with pkgs; []);
   lua-config = ''
     vim.lsp.config('${name}', {
-      cmd = { '${pkgs.rust-analyser}/bin/rust-analyser' },
+      cmd = { '${pkgs.rust-analyzer}/bin/rust-analyzer' },
       
       on_attach = function(client, bufnr)
             vim.lsp.completion.enable(true, client.id, bufnr, {
