@@ -52,6 +52,7 @@
         inherit system;
         config = {
           allowUnfree = true;
+          useCuda = true;
           permittedInsecurePackages = insecurities;
         };
       };
@@ -59,6 +60,7 @@
         inherit system;
         config = {
           allowUnfree = true;
+          useCuda = true;
           permittedInsecurePackages = insecurities;
         };
       };
@@ -69,6 +71,7 @@
         thetanix = lib.nixosSystem {
           inherit system pkgs;
           modules = [
+            ./binary-caches.nix
             ./modules
             tuxedo-nixos.nixosModules.default
             ./hardware
