@@ -6,7 +6,7 @@
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.greetd}/bin/agreety --cmd \"niri-session\"";
+        command = "${pkgs.greetd}/bin/agreety --cmd \"nvidia-offload niri-session\"";
       };
     };
   };
