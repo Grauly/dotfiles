@@ -5,6 +5,10 @@
   plugins = (with pkgs.vimPlugins; [
     telescope-nvim
   ]);
-  extra-packages = (with pkgs; []);
+  extra-packages = (with pkgs; [
+    ripgrep
+    fd
+    fzf
+  ]);
   lua-config = (builtins.readFile ./telescope.lua);
 }

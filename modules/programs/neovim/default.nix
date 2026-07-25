@@ -16,9 +16,7 @@ in {
     enable = true;
     defaultEditor = true;
     extraPackages = (with pkgs; [
-      ripgrep
-      fd
-      fzf
+      
     ] ++ (pkgs.lib.lists.flatten (map (obj: obj.extra-packages) wantedPlugins)));
     plugins = (pkgs.lib.lists.flatten (map (obj: obj.plugins) wantedPlugins)) ++ (with pkgs.vimPlugins; [
       nvim-lspconfig
