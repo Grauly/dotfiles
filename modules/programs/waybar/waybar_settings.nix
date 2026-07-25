@@ -39,9 +39,6 @@ in
     "image#seperator_left"
     "group/control_container"
     "image#seperator_right"
-
-    #"custom/connectivity"
-    #"network"
     
     "image#seperator_left"
     "clock"
@@ -127,7 +124,7 @@ in
   "group/gpu_container" = {
     orientation = "inherit";
     modules = [
-      "image#gpu"
+      #"image#gpu"
       "custom/gpu_utilization"
       "custom/gpu_vram_usage"
     ];
@@ -166,7 +163,7 @@ in
   "group/ram_container" = {
     orientation = "inherit";
     modules = [
-      "image#ram"
+      #"image#ram"
       "memory"
       "custom/swap"
     ];
@@ -211,6 +208,8 @@ in
 
   battery = {
     interval = 5;
+    bat = "BAT0";
+    adapter = "AC";
     states = {
       caution = 30;
       critical = 10;
