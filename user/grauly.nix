@@ -8,7 +8,7 @@
   users.users.grauly = {
     isNormalUser = true;
     description = "Grauly";
-    extraGroups = [ "networkmanager" "wheel" "lp" ];
+    extraGroups = [ "networkmanager" "wheel" "lp" "tux_leds" ];
   };
 
   home-manager.users.grauly = {
