@@ -23,6 +23,7 @@ attach_lsp = function(client, bufnr)
       end,
     })
     vim.keymap.set("i", "<C-space>", vim.lsp.completion.get, { desc = "trigger autocompletion" })
+    vim.keymap.set("n", "<C-k>", vim.diagnostic.open_float, { desc = "open hover info" })
   end
 
 vim.opt.completeopt = { "menuone", "noselect", "popup" }
