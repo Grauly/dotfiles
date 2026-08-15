@@ -27,8 +27,9 @@
       ];
     };
     nvidia = {
-      #branch = "new_feature";
+      branch = "production";
       
+      /*
       package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
         version            = "610.43.03";
         sha256_64bit       = "sha256-ReLUwTSiPDXlDyU6SqY+fl6NF+PRhdSgfIpY6WEu05I=";
@@ -37,6 +38,7 @@
         settingsSha256     = "sha256-z/t+SdEQdVJPwjKIRHO02d264Kt47eWiOwwsaxmh4xQ=";
         persistencedSha256 = "sha256-sOKUsAFHh0/COH+nNgbH9+7hWgivOzq4YmTuk9MOFfI=";
       };
+      */
       
       open = true;
 

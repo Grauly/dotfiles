@@ -9,6 +9,7 @@
   environment.systemPackages = with pkgs; [
     thunderbird
     libreoffice-qt
+    devenv
     #bitwarden-desktop
   ] ++ (with pkgs-unstable; [
     zoom-us
