@@ -4,5 +4,6 @@
     ./gpu.nix
     ./tuxedo.nix
     ./power-mangement.nix
+    ./keylight.nix
   ];
 }
