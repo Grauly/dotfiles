@@ -6,7 +6,6 @@
     ../programs/flameshot.nix
     ../programs/prismlauncher.nix
     ../programs/steam.nix
-    ../programs/monado.nix
   ];
 
   environment.systemPackages = with pkgs; [

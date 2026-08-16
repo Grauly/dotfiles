@@ -36,13 +36,9 @@
       url = "github:robert-elles/tuxedo-nixos";
       #inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixpkgs-xr = {
-      url = "github:nix-community/nixpkgs-xr";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
-    };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, treefmt-nix, agenix, disko, niri, tuxedo-nixos, nixpkgs-xr, ... }@inputs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, treefmt-nix, agenix, disko, niri, tuxedo-nixos, ... }@inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -97,7 +93,6 @@
             }
             disko.nixosModules.disko
             (import ./disko/luks-separate-disks.nix)
-            nixpkgs-xr.nixosModules.nixpkgs-xr
           ];
           specialArgs = {
             inherit pkgs-unstable inputs niri;
