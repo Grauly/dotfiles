@@ -21,5 +21,6 @@
     
     remmina
     nh
+    logseq
   ];
 }
