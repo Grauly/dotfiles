@@ -6,6 +6,7 @@
     ../programs/inkscape.nix
     ../programs/flameshot.nix
     ../programs/gimp.nix
+    ../programs/dungeondraft
   ];
 
   environment.systemPackages = with pkgs; [
