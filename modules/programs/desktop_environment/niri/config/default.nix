@@ -8,6 +8,7 @@
       prefer-no-csd = true;
       screenshot-path = "~/Pictures/Screenshot_%Y-%m-%d_%H-%M-%S.png";
       hotkey-overlay.skip-at-startup = true;
+      clipboard.disable-primary = true;
       input = (import ./inputs.nix);
       outputs = (import ./outputs.nix);
       layout = (import ./layouts.nix { inherit osConfig; });
