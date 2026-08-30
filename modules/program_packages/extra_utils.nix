@@ -22,5 +22,6 @@
     remmina
     nh
     logseq
+    obsidian
   ];
 }
