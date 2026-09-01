@@ -6,5 +6,6 @@
     ./nix.nix
     ./sound.nix
     ./swap.nix
+    ./certs
   ];
 }
