@@ -124,7 +124,7 @@
       matekasse = {
         host = "matekasse";
         user = "root";
-        hostname = "10.10.42.156";
+        hostname = "matekasse.lan.network.hackwerk";
         identityFile = [
           "~/.ssh/sfzkey"
         ];
@@ -141,7 +141,7 @@
       doordisplay = {
         host = "doordisplay";
         user = "root";
-        hostname = "doordisplay.sfz.lab";
+        hostname = "doordisplay.haustechnik.network.hackwerk";
         identityFile = [
           "~/.ssh/sfzkey"
         ];
@@ -149,7 +149,7 @@
       doordisplay_intern = {
         host = "doordisplay.sfz.lab";
         user = "root";
-        hostname = "doordisplay.sfz.lab";
+        hostname = "doordisplay.haustechnik.network.hackwerk";
         identityFile = [
           "~/.ssh/sfzkey"
         ];
