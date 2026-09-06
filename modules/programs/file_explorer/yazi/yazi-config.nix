@@ -9,6 +9,7 @@ let
     "prusa-slicer"
     "aseprite"
     "eog"
+    "vlc"
   ];
 in
 {
@@ -19,21 +20,15 @@ in
     linemode = "mtime";
   };
   opener = ({
-    vlc = [
-      {
-        run = "vlc \"$@\"";
-        orphan = true;
-      }
-    ];
     librewolf = [
       {
-        run = "librewolf --new-window \"$@\"";
+        run = "librewolf --new-window %s";
         orphan = true;
       }
     ];
     nvim = [
       {
-        run = "nvim \"$@\"";
+        run = "nvim %s";
         block = true;
       }
     ];
@@ -42,7 +37,7 @@ in
       (command:
         ({
           name = "${command}";
-          value = [{ run = "${command} \"$@\""; orphan = true; }];
+          value = [{ run = "${command} %s"; orphan = true; }];
         })
       )
       simpleProgams)
