@@ -4,7 +4,7 @@
   home-manager.users.grauly.programs.ssh = {
     enable = true;
     enableDefaultConfig = false;
-    settings = {
+    settings = ({
       "github.com" = {
         hostname = "github.com";
         identityFile = [
@@ -90,6 +90,14 @@
       };
       gamescom-builder-intern = {
         host = "gamescom-builder-intern";
+        user = "root";
+        hostname = "10.20.42.79";
+        identityFile = [
+          "~/.ssh/sfzkey"
+        ];
+      };
+      gamescom-colmena = {
+        host = "10.20.42.79";
         user = "root";
         hostname = "10.20.42.79";
         identityFile = [
@@ -211,6 +219,27 @@
           }
         ]
         )
-      );
+      )) //
+      (builtins.listToAttrs (map (tp:
+        pkgs.lib.nameValuePair tp {
+          host = tp;
+          hostname = "${tp}.lan.network.hackwerk";
+          user = "root";
+          identityFile = [
+            "~/.ssh/space_notebook_access"
+          ];
+        })
+        [
+          "tp01"
+          "tp02"
+          "tp03"
+          "tp04"
+          "tp05"
+          "tp06"
+          "tp07"
+          "tp08"
+          "tp09"
+          "tp10"
+        ]));
   };
 }
