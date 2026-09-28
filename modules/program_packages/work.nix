@@ -3,7 +3,7 @@
 {
   imports = [
     ../programs/browser
-    ../programs/matlab.nix
+    #../programs/matlab.nix
   ];
 
   environment.systemPackages = with pkgs; [
