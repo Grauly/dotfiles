@@ -11,10 +11,10 @@ let
 in
 pkgs.symlinkJoin {
   name = "IntelliJ Minecraft Support";
-  paths = [ pkgs-unstable.jetbrains.idea ];
+  paths = [ pkgs-unstable.intellij-idea ];
   buildInputs = [ pkgs.makeWrapper ];
   postBuild = ''
-    wrapProgram $out/bin/idea \
+    wrapProgram $out/bin/intellij-idea \
       --prefix LD_LIBRARY_PATH : ${pkgs.lib.makeLibraryPath mc-depencencies} \
   '';
 }
