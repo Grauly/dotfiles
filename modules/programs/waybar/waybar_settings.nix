@@ -13,11 +13,16 @@ let
   bat-charge-bar = [ "󰢟" "󰢜" "󰂆" "󰂇" "󰂈" "󰢝" "󰂉" "󰢞" "󰂊" "󰂋" "󰂅" ];
   bat-bar = [ "󰂎" "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹" ];
   bar-height = 39;
-  svg = (import ./scripts/tint_svg.nix { inherit pkgs; });
+  svg_tint = (import ./scripts/tint_svg.nix { inherit pkgs; });
+  render = (import ./scripts/render_svg.nix { inherit pkgs; });
+  svg = { color, path }: (render { path = (svg_tint { inherit color path; }); height = bar-height; });
 in
 {
   layer = "top";
   position = "top";
+  output = [
+      "eDP-1"
+  ];
   modules-left = [
     "niri/workspaces"
     "image#seperator_right"
@@ -43,25 +48,27 @@ in
     "image#seperator_left"
     "clock"
     ];
-  
   # --- Seperator Section ---
 
   "image#seperator_middle" = {
     # CSS has a margin (left, right) of 5px
     path = (svg {color = osConfig.grauly.colors.mix; path = ./assets/seperator-middle.svg; });
     size = bar-height;
+    interval = 0;
   };
 
   "image#seperator_left" = {
     # CSS has a margin-left of 5px
     path = (svg {color = osConfig.grauly.colors.mix; path = ./assets/seperator-left.svg; });
     size = bar-height;
+    interval = 0;
   };
 
   "image#seperator_right" = {
     # CSS has a margin-right of 15px
     path = (svg {color = osConfig.grauly.colors.mix; path = ./assets/seperator-right.svg; });
     size = bar-height;
+    interval = 0;
   };
   
   # --- CPU Section ---
@@ -88,7 +95,7 @@ in
   "group/cpu_container" = {
     orientation = "inherit";
     modules = [
-      "image#cpu"
+      #"image#cpu"
       "cpu"
     ];
   };
