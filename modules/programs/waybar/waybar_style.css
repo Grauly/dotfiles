@@ -17,26 +17,49 @@ tooltip label {
     color: "§text_color";
 }
 
-/* Seperator Section */
-#image.seperator_left {
+/* Background Image */
+#custom-seperator_left,
+#custom-seperator_right,
+#custom-seperator_middle,
+#custom-ram,
+#custom-gpu {
+    min-height: "§bar_height";
+    min-width: "§seperator_width";
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+#custom-seperator_left {
     margin-left: 5px;
+    background-image: url("§img_sep_left");
 }
 
-#image.seperator_right {
+#custom-seperator_right {
     margin-right: 5px;
+    background-image: url("§img_sep_right");
 }
 
-#image.seperator_middle {
+#custom-seperator_middle {
     margin: 5px 0;
-    background-color: "§background_color";
     padding: 0 5px;
+    background-color: "§background_color";
+    background-image: url("§img_sep_middle");
+}
+
+#custom-ram {
+    background-image: url("§img_ram");
+}
+
+#custom-gpu {
+    background-image: url("§img_gpu");
 }
 
 
 /* Header Images */
 #image.cpu,
-#image.gpu,
-#image.ram 
+#custom-gpu,
+#custom-ram 
 {
     padding: 4px;
 }

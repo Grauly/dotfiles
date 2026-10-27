@@ -1,4 +1,4 @@
-{ pkgs, osConfig, ... }:
+{ pkgs, osConfig, bar-height, ... }:
 
 let
   terminal = "${pkgs.kitty}/bin/kitty";
@@ -12,7 +12,6 @@ let
   load-bar-idle = ["-" "▁" "▂" "▃" "▄" "▅" "▆" "▇" "█"];
   bat-charge-bar = [ "󰢟" "󰢜" "󰂆" "󰂇" "󰂈" "󰢝" "󰂉" "󰢞" "󰂊" "󰂋" "󰂅" ];
   bat-bar = [ "󰂎" "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹" ];
-  bar-height = 39;
   svg_tint = (import ./scripts/tint_svg.nix { inherit pkgs; });
   render = (import ./scripts/render_svg.nix { inherit pkgs; });
   svg = { color, path }: (render { path = (svg_tint { inherit color path; }); height = bar-height; });
@@ -25,50 +24,47 @@ in
   ];
   modules-left = [
     "niri/workspaces"
-    "image#seperator_right"
+    "custom/seperator_right"
     ];
   modules-right = [
-    "image#seperator_left"
+    "custom/seperator_left"
     "group/cpu_container"
     
-    "image#seperator_middle"
+    "custom/seperator_middle"
 
     "group/gpu_container"
 
-    "image#seperator_middle"
+    "custom/seperator_middle"
     
     "group/ram_container"
-    "image#seperator_right"
+    "custom/seperator_right"
     
     
-    "image#seperator_left"
+    "custom/seperator_left"
     "group/control_container"
-    "image#seperator_right"
+    "custom/seperator_right"
     
-    "image#seperator_left"
+    "custom/seperator_left"
     "clock"
     ];
   # --- Seperator Section ---
 
-  "image#seperator_middle" = {
+  "custom/seperator_middle" = {
     # CSS has a margin (left, right) of 5px
-    path = (svg {color = osConfig.grauly.colors.mix; path = ./assets/seperator-middle.svg; });
+    format = " ";
     size = bar-height;
-    interval = 0;
   };
 
-  "image#seperator_left" = {
+  "custom/seperator_left" = {
     # CSS has a margin-left of 5px
-    path = (svg {color = osConfig.grauly.colors.mix; path = ./assets/seperator-left.svg; });
+    format = " ";
     size = bar-height;
-    interval = 0;
   };
 
-  "image#seperator_right" = {
+  "custom/seperator_right" = {
     # CSS has a margin-right of 15px
-    path = (svg {color = osConfig.grauly.colors.mix; path = ./assets/seperator-right.svg; });
+    format = " ";
     size = bar-height;
-    interval = 0;
   };
   
   # --- CPU Section ---
@@ -95,16 +91,15 @@ in
   "group/cpu_container" = {
     orientation = "inherit";
     modules = [
-      #"image#cpu"
+      "image#cpu"
       "cpu"
     ];
   };
   
   # --- GPU Section ---
 
-  "image#gpu" = {
-    # CSS has a padding of 2px
-    path = ./assets/gpu.svg;
+  "custom/gpu" = {
+    format = " ";
     size = bar-height - 8;
   };
 
@@ -131,7 +126,7 @@ in
   "group/gpu_container" = {
     orientation = "inherit";
     modules = [
-      #"image#gpu"
+      "custom/gpu"
       "custom/gpu_utilization"
       "custom/gpu_vram_usage"
     ];
@@ -139,9 +134,9 @@ in
 
   # --- RAM Section ---
 
-  "image#ram" = {
+  "custom/ram" = {
     # CSS has a padding of 2px
-    path = ./assets/ram.svg;
+    format = " ";
     size = bar-height - 8;
   };
   
@@ -170,7 +165,7 @@ in
   "group/ram_container" = {
     orientation = "inherit";
     modules = [
-      #"image#ram"
+      "custom/ram"
       "memory"
       "custom/swap"
     ];
