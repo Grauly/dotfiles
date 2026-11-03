@@ -155,7 +155,7 @@
         ];
       };
       doordisplay_intern = {
-        host = "doordisplay.sfz.lab";
+        host = "doordisplay.haustechnik.network.hackwerk";
         user = "root";
         hostname = "doordisplay.haustechnik.network.hackwerk";
         identityFile = [
