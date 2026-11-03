@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   imports = [
     ../programs/application_launcher
@@ -12,4 +14,9 @@
     ../programs/swaylock
     ../programs/multibg
   ];
+  /*
+  environment.systemPackages = [
+    (import ../programs/tuxedo-control-center { inherit pkgs; })
+  ];
+  */
 }

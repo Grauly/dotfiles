@@ -34,7 +34,7 @@
     };
     tuxedo-nixos = {
       url = "github:robert-elles/tuxedo-nixos";
-      #inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
