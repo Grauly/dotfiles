@@ -48,10 +48,12 @@ tooltip label {
 }
 
 #custom-ram {
+    min-height: "§img_height";
     background-image: url("§img_ram");
 }
 
 #custom-gpu {
+    min-height: "§img_height";
     background-image: url("§img_gpu");
 }
 

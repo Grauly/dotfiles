@@ -20,6 +20,7 @@ in {
       highlight_color = osConfig.grauly.colors.mix;
       text_color = osConfig.grauly.colors.text.color;
       bar_height = (builtins.toString bar-height);
+      img_height = (builtins.toString (bar-height - 8));
       seperator_width = (builtins.toString seperator_width);
       img_sep_right = (svg {color = osConfig.grauly.colors.mix; path = ./assets/seperator-right.svg; });
       img_sep_left = (svg {color = osConfig.grauly.colors.mix; path = ./assets/seperator-left.svg; });

@@ -5,6 +5,7 @@
   highlight_color,
   text_color,
   bar_height,
+  img_height,
   seperator_width,
   img_sep_right,
   img_sep_left,
@@ -18,6 +19,7 @@
    sed "s/\"§highlight_color\"/${highlight_color}/g" |\
    sed "s/\"§text_color\"/${text_color}/g" |\
    sed "s/\"§bar_height\"/${bar_height}px/g" |\
+   sed "s/\"§img_height\"/${img_height}px/g" |\
    sed "s/\"§seperator_width\"/${seperator_width}px/g" |\
    sed "s#§img_sep_right#${img_sep_right}#g" |\
    sed "s#§img_sep_left#${img_sep_left}#g" |\
