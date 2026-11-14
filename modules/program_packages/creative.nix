@@ -16,6 +16,7 @@
     qrencode
     aseprite
     dune3d
+    freecad
   ] ++ (with pkgs-unstable; [
     prusa-slicer
   ]);
