@@ -21,6 +21,6 @@
     
     remmina
     nh
-    obsidian
+    pkgs-unstable.obsidian
   ];
 }
